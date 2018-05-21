@@ -47,3 +47,25 @@ Statistics provides methods for:
 - **Inferential Statistics**: use data to make predictions about a Population, using sample data
 - **Parameter**: a numerical summary of the Population
 - **Statistic**: a numerical summary of the sample data
+
+# Sampling and Measurement
+
+## Variables and Measurement
+A **variable** is a *characteristic* that can vary in value among subjects in a sample or population. A variation in observations across a data set.
+
+The values that a variable can take on are called the **measurement scale**. (e.g., Age: 0-100, Gender: M | F, Political Party Affiliation: Democrat | Republican | Independent | other,...)
+
+**Quantitative**: measurement scale is numeric
+- measured on an **interval scale** (there is an equal distance between each level)
+
+**Qualitative** (or **Categorical**): measurement scale is a set of categories
+- non-ordered categorical variable: a categorical variable for which there is no natural inherent ranking or ordering
+- measured on a *nominal* or *ordinal* scale
+- **nominal scale**: no implicit ranking (e.g., ice cream flavors)
+- **ordinal scale**: implicit ranking (e.g., social class)
+
+**Discrete variables** may take values that form a set of separate numbers, such as 0, 1, 2, 3, ...
+
+**Continuous variables** may take values along the infinite continuum of possible real number values.
+
+> The statistical method used to analyze data depends on whether the variable is quantitative vs. categorical, or discrete vs. continuous
