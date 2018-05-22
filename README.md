@@ -97,3 +97,35 @@ Simple random sampling can be used to:
 An **observational study** is a study in which data are self-reported by subjects. There is no random procedure in place.
 
 Without any randomization we don't know the extent to which the people participating in the survey or the study actually represent the population of interest. There may be very systematic differences between the types of people that selected themselves into the study as compared to the broader overall population of interest. This raises reason to question whether or not the findings of the study can be generalized. There is also reason to think that the results may be biased one way or the other depending on the over or under representation of certain types of people in the data set compared to the population of interest.
+
+## Sampling variability and potential bias
+
+### Sampling Error
+The **sampling error** of a statistic equals the error that occurs when we use a statistic based on a sample to predict the value of a population parameter.
+
+In other words, it is the difference between the **sample statistic** and the true **population parameter** (often unknown).
+
+Rule of thumb: for sample sizes of about 1000, the sampling error for estimating percentages is usually no greater than +/- 3%. This is known as the **margin of error**.
+
+### Sampling bias: non-probability sampling
+In **probability sampling**, the probability that a person will be sampled from the population of interest in known.
+
+In **non-probability sampling**, the probability that a person will be sampled from the population of interest is unknown.
+
+- convenience samples
+- volunteer samples
+
+Non-probability samples result in **sampling bias** because they are not generally representative of the population of interest.
+
+- undercoverage (under-representation)
+- overcoverage (over-representation)
+
+> Increasing sampling size does not improve sampling bias!
+
+### Response and non-response bias
+**Response bias** occurs when the subject gives an incorrect response (perhaps lying), or the question wording or the way the interviewer asks the questions is confusing or misleading.
+
+**Nonresponse bias** occurs when some sampled subjects cannot be reached or refuse to participate or fail to answer some questions.
+
+- those who refuse to be in-sample may be systematically different from those who do
+- even those who comply with being in-sample often do not answer some questions, resulting in missing data
