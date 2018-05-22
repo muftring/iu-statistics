@@ -129,3 +129,25 @@ Non-probability samples result in **sampling bias** because they are not general
 
 - those who refuse to be in-sample may be systematically different from those who do
 - even those who comply with being in-sample often do not answer some questions, resulting in missing data
+
+## Other probability sampling methods
+
+### Systematic Random Sampling
+1. denote the sample size by $n$ and the population size by $N$
+2. let $k = \frac{N}{n}$, the population size divided by the sample size
+3. a systematic random sample:
+    1. selects a subject at random from the first $k$ names in the sampling frame, and
+    2. selects every $k$th subject listed after that one
+    3. the number $k$ is called the **skip number**
+
+### Stratified Random Sampling
+A stratified random sample divides the population into separate groups, called **strata**, and then selects a simple random sample from each stratum.
+
+Two types:
+- **Proportional**: groups are sampled in proportion with their overall population representations
+- **Disproportional**: useful when some strata have small populations
+
+### Cluster Sampling
+Cluster sampling is useful when a complete listing of the population is not available. Or when the population is located in naturally occurring clusters.
+
+Cluster sampling involves dividing the population of interest into a large number of **clusters**, such as city blocks... then selecting a simple random sample of the clusters. Subjects in those clusters are the sample.
