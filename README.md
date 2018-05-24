@@ -40,11 +40,14 @@ Statistics provides methods for:
 - **Description**: summarizing the data
 - **Inference**: making predictions based on the data
 
+Statistics consists of methods for designing studies and analyzing data collected in the studies.
+
 # Statistical Analysis: Key Terms
+- **Subjects**: the entities that a study observes
 - **Population**: total set of subject of interest in a study
 - **Sample**: subset of the Population on which the study collects data
 - **Descriptive Statistics**: summarize the data using graphs, tables and numbers
-- **Inferential Statistics**: use data to make predictions about a Population, using sample data
+- **Inferential Statistics**: provide *predictions* about a Population, based on data from a sample of that population
 - **Parameter**: a numerical summary of the Population
 - **Statistic**: a numerical summary of the sample data
 
