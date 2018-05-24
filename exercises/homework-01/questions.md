@@ -29,29 +29,34 @@ Homework Exercise 1
 ## 2. Samples and Population
 A sociologist wants to estimate the average age at marriage for women in New England in the early eighteenth century.  She finds within her state archives marriage records for a large Puritan village for the years 1700-1730.  She then takes a sample of those records, noting the age of the bride for each.  The average age in the sample is 24.1 years.  Using a statistical method from Chapter 5, the sociologist estimates the average age of brides at marriage for the population to be between 23.5 and 24.7 years.
 
-- ( a ) What part of this example is descriptive?
+- *( a ) What part of this example is descriptive?*<br>
+The average age in the sample is 24.1 years.
 
+- *( b ) What part of this example is inferential?*<br>
+the sociologist estimates the average age of brides at marriage for the population to be between 23.5 and 24.7 years
 
-- ( b ) What part of this example is inferential?
-
-
-- ( c ) To what population does the inference refer?
-
+- *( c ) To what population does the inference refer?*<br>
+married women in New England in the early eighteenth century
 
 ## 3. Statistics and Parameters
 In the 2014 gubernatorial election in California, a CBS News exit poll of 1824 voters stated that 60.5% voted for the Democratic candidate, Jerry Brown. Of all 7.3 million voters, 60.0% voted for Brown.
 
-- ( a ) What was the population and what was the sample?
+- *( a ) What was the population and what was the sample?*<br>
+The population was the 7.3 million voters in California.<br>
+The sample was 1824 voters in the exit poll.
 
-- ( b ) Identify a statistic and a parameter.
+- *( b ) Identify a statistic and a parameter.*<br>
+Statistic: 60.5% of 1824 voters in an exit poll voted for Jerry Brown.<br>
+Parameter: 60.0% of all 7.3 million voters voted for Jerry Brown.
 
 ## 4. Description and Inference.
 The Current Population Survey (CPS) is a monthly survey of households conducted by the U.S. Census Bureau. A CPS of 68,000 households in 2013 indicated that of those households, 9.6% of the whites, 27.2% of the blacks, 23.5% of the Hispanics, and 10.5% of the Asians had annual income below the poverty level.
 
-- ( a ) Are these numbers statistics, or parameters? Explain.
+- *( a ) Are these numbers statistics, or parameters? Explain.*<br>
+These numbers are statistics because they are derived from a sample of 68,000 of all households in the United States. To find the corresponding actual parameter values, all households in the United States would need to be surveyed.
 
-- ( b ) A method from this text predicts that the percentage of all black households in the United States having income below the poverty level is at least 25% but no greater than 29%. What type of statistical method does this illustrate – descriptive or inferential? Why?
-
+- *( b ) A method from this text predicts that the percentage of all black households in the United States having income below the poverty level is at least 25% but no greater than 29%. What type of statistical method does this illustrate – descriptive or inferential? Why?*<br>
+This is an inferential statistic because it is making a prediction about a population.
 
 ## 5. Simple Random Sampling
 A local telephone directory has 400 pages with 130 names per page, a total of 52,000 names. Explain how you could choose a simple random sample of five names. Show how to select five random numbers to identify subjects for the sample.
