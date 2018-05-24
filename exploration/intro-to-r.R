@@ -17,3 +17,6 @@ gpa <- read_csv("~/git/iu-statistics/data-sets/Wooldridge GPA2 Data Set.csv")
 # import an Excel workbook
 library(readxl)
 gpa_excel <- read_excel("git/iu-statistics/data-sets/Wooldridge GPA2 Data Set.xlsx")
+
+# load a library
+library(car)
