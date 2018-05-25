@@ -8,22 +8,22 @@ Homework Exercise 1
 # Questions
 
 ## 1. Identify the following variable characteristics
-- Type: quantitative or qualitative
+- Type: quantitative or categorical (qualitative)
 - Range: discrete or continuous
 - Scale: interval, nominal, or ordinal
 
 | Variable | Type   | Range  | Scale |
 | -------- | ------ | ------ | ----- |
-|Occupation (plumber, teacher, secretary) | qualitative | discrete | nominal |
-|Occupational status (blue collar, white collar) | qualitative | discrete | nominal |
-|Social status (lower, middle, upper class)| qualitative | discrete | ordinal |
-|Race| qualitative | discrete | nominal |
-|Statewide murder rate (number of murders per 1000 population) | quantitative | continuous | interval |
+|Occupation (plumber, teacher, secretary) | categorical | discrete | nominal |
+|Occupational status (blue collar, white collar) | categorical | discrete | ordinal |
+|Social status (lower, middle, upper class)| categorical | discrete | ordinal |
+|Race| categorical | discrete | nominal |
+|Statewide murder rate (number of murders per 1000 population) | quantitative | discrete | interval |
 |County population size (number of people) | quantitative | discrete | interval |
 |Population growth rate (in percentages) | quantitative | continuous | interval |
-|Community size (rural, small town, large town, small city, large city) | qualitative | discrete | ordinal |
+|Community size (rural, small town, large town, small city, large city) | categorical | discrete | ordinal |
 |Annual income (thousands of dollars per year) | quantitative | discrete | interval |
-|Attitude toward affirmative action (favorable, neutral, unfavorable) | qualitative | discrete | ordinal |
+|Attitude toward affirmative action (favorable, neutral, unfavorable) | categorical | discrete | ordinal |
 |Lifetime number of sexual partners   | quantitative  | discrete  | interval |
 
 ## 2. Samples and Population
