@@ -52,22 +52,21 @@ Statistics consists of methods for designing studies and analyzing data collecte
 - **Statistic**: a numerical summary of the sample data
 
 # Sampling and Measurement
+A measure should have *validity*, describing what it is intended to measure and accurately reflecting the concept. It should also have *reliability*, being consistent in the sense that a subject will give the same response when asked again.
 
 ## Variables and Measurement
-A **variable** is a *characteristic* that can vary in value among subjects in a sample or population. A variation in observations across a data set.
+A **variable** is a *characteristic* that can vary in value among subjects in a sample or population. (A variation in observations across a data set.)
 
 The values that a variable can take on are called the **measurement scale**. (e.g., Age: 0-100, Gender: M | F, Political Party Affiliation: Democrat | Republican | Independent | other,...)
 
 **Quantitative**: measurement scale is numeric
 - measured on an **interval scale** (there is an equal distance between each level)
 
-**Qualitative** (or **Categorical**): measurement scale is a set of categories
-- non-ordered categorical variable: a categorical variable for which there is no natural inherent ranking or ordering
-- measured on a *nominal* or *ordinal* scale
-- **nominal scale**: no implicit ranking (e.g., ice cream flavors)
-- **ordinal scale**: implicit ranking (e.g., social class)
+**Categorical** (or **Qualitative**): measurement scale is a set of categories, measured on a *nominal* or *ordinal* scale
+- **nominal scale**: no implicit ranking (e.g., ice cream flavors); *non-ordered categorical variable*: a categorical variable for which there is no natural ranking or ordering
+- **ordinal scale**: implicit ranking (e.g., social class); *ordered categorical variable*: a categorical variable for which there is a natural ranking or ordering
 
-**Discrete variables** may take values that form a set of separate numbers, such as 0, 1, 2, 3, ...
+**Discrete variables** may take values that form a finite set of separate numbers, such as 0, 1, 2, 3, ...
 
 **Continuous variables** may take values along the infinite continuum of possible real number values.
 
@@ -81,7 +80,7 @@ The values that a variable can take on are called the **measurement scale**. (e.
 
 A **simple random sample** of *n* subjects from a population is one in which each possible sample of that size has the same probability (chance) of being selected.
 
-*n* denotes the number of subjects in the sample, or the sample size
+*n* denotes the number of subjects in the sample, or the **sample size**
 
 How to select a simple random sample:
 1. list all subjects in the population. This list is called the **sampling frame**.
@@ -95,6 +94,12 @@ Simple random sampling can be used to:
 1. generate a sample of people to survey (random selection)
 2. randomly assign people to treatment and control groups in an experiment (random assignment)
 
+A **sample survey** is a data collection method where a sample of people are randomly selected from a population and interviewed. The interview could be an in-person interview, telephone interview (or online chat), or a self-administered questionnaire.
+
+**Experiment**: a planned study, the purpose of which is to compare responses of subjects on some measurable outcome. The subjects are often exposed to different conditions, which may (or may not) have some impact on the outcome. The plan for assigning a subject to a treatment is called **experimental design**. Use of a randomization process to determine which treatment a subject receives is a best practice.
+
+**Treatment**: a condition in the experimental study (e.g., receiving a real drug vs. receiving a placebo)
+
 > **Caution!** observational studies often rely on sample data that were not randomly selected from the population of interest. <p> *What challenges arise when this happens?*
 
 An **observational study** is a study in which data are self-reported by subjects. There is no random procedure in place.
@@ -106,7 +111,9 @@ Without any randomization we don't know the extent to which the people participa
 ### Sampling Error
 The **sampling error** of a statistic equals the error that occurs when we use a statistic based on a sample to predict the value of a population parameter.
 
-In other words, it is the difference between the **sample statistic** and the true **population parameter** (often unknown).
+In other words, it is the difference between the **sample statistic** and the true **population parameter**. In practice, the sampling error is unknown because the values of population parameters are unknown.
+
+> For conclusions based on statistical inference to be worthwhile, we should know the potential **sampling error** -- how much the statistic differs from the parameter it predicts because of the way results naturally exhibit variation from sample to sample.
 
 Rule of thumb: for sample sizes of about 1000, the sampling error for estimating percentages is usually no greater than +/- 3%. This is known as the **margin of error**.
 
