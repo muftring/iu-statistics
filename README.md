@@ -161,3 +161,53 @@ Two types:
 Cluster sampling is useful when a complete listing of the population is not available. Or when the population is located in naturally occurring clusters.
 
 Cluster sampling involves dividing the population of interest into a large number of **clusters**, such as city blocks... then selecting a simple random sample of the clusters. Subjects in those clusters are the sample.
+
+# Descriptive Statistics
+Descriptive Statistics essentially describe the data, and there are two ways to do this
+1. measures of central tendency
+    - what are the most common or most likely values in the data set
+    - median, mean, mode
+2. measures of dispersion
+    - variance or variability in the data set
+    - variance, standard deviation, range
+
+## Histogram
+A plot used to summarize the distribution of responses for a quantitative continuous variable.
+- where are the responses clustered?
+- where are there more responses>
+- where are there less responses?
+
+**Frequency**: number of observations
+
+Notes:
+- implied ordering (along x axis, meaning range is small -> large traversing left -> right)
+- bars touch which implies continuous values
+
+## Bar Plot
+- for categorical data
+- for ordinal or nominal data
+
+## Scatter Plot
+plot the relationship between two variables
+
+# Recoding variables
+- sometimes necessary to recode some values
+- need to recode some values to "missing"
+
+Need to identify the cases
+- consult a code book or data description which identifies value ranges
+- start with the R `summary()` function
+- then look closer at specific variables with `table()` function
+
+Need to know how to recode
+- load the `car` library
+- use the `recode()` function
+- provide the recoding rule in second parameter
+- e.g., `recode(data$column,"c(-1,-2)=NA")`
+- note: `c()` means *combine* in R
+
+Another approach:
+- set the values using a directive
+- e.g., `data$column2[data$column == -1] = NA`
+- note that we can use logical operators within the brackets to do more complex selections
+- basically, the expression in the brackets will return a set of row indexes that meet the condition
