@@ -1,0 +1,95 @@
+# Michael Uftring   
+# Indiana University   
+# V506 - Statistical Analysis, Summer 2018   
+# Homework Exercise 1   
+# --------------------------------------------------
+
+library(readr)
+library(DescTools)
+library(car)
+
+# 1. import the General Social Survey 2008 data
+gss <- read_csv("General Social Survey 2008.csv")
+
+# 2. derive basic descriptive statistics: mean, median, mode, range, variance, and standard deviation
+#    for the variables: AGE, HRS1, TVHOURS, EDUC
+
+compute.stats <- function(n, v) {
+  v.mean = mean(v, na.rm=T)
+  v.median = median(v, na.rm=T)
+  v.mode = Mode(v, na.rm=T)
+  v.result <- range(v, na.rm=T)
+  v.min <-v.result[1]
+  v.max <- v.result[2]
+  v.range <- v.max - v.min
+  v.var = var(v, na.rm=T)
+  v.sd = sd(v, na.rm=T)
+  print(sprintf("variable: %s mean: %.3f median: %.3f mode = %.3f range: %.3f (%.3f - %.3f) variance: %.3f stddev: %.3f",
+                n, v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd))
+}
+
+# AGE
+# need to recode: 99 means did not answer
+gss$AGE1 <- recode(gss$AGE, "c(-1, 98, 99)=NA")
+compute.stats("AGE", gss$AGE1)
+
+# HRS1 (number of hours worked the previous week)
+# need to recode -1, 98, and 99 as they don't represent actual values; the should be treated as NA
+gss$HRS1A <- recode(gss$HRS1, "c(-1, 98, 99)=NA")
+compute.stats("HRS1", gss$HRS1A)
+
+# TVHOURS (total number of hours watched on daily basis)
+# need to recode -1, 98, and 99 as they don't represent actual values; the should be treated as NA
+gss$TVHOURS1 <- recode(gss$TVHOURS, "c(-1, 98, 99)=NA")
+compute.stats("TVHOURS", gss$TVHOURS1)
+
+# EDUC (years of education)
+# need to recode -1, 98, and 99 as they don't represent actual values; the should be treated as NA
+gss$EDUC1 <- recode(gss$EDUC, "c(-1, 98, 99)=NA")
+compute.stats("EDUC", gss$EDUC1)
+
+# 3. generate histograms for the following: AGE, HAPMAR, LIFE
+# AGE
+hist(gss$AGE1,
+     main = "General Social Survey 2008\nHistogram: Age of Respondents",
+     xlab = "Age",
+     xlim = c(15,100),
+     ylim = c(0, 250),
+     col = "lightblue")
+
+# HAPMAR (marriage happiness rating)
+# need to recode, remove 0, 8, and 9 because they are no answer or not married
+gss$HAPMAR1 <- recode(gss$HAPMAR, "c(0, 8, 9)=NA")
+hist(gss$HAPMAR1,
+     main = "General Social Survey 2008\nHistogram: Marriage Happiness of Respondents",
+     xlab = "Response",
+     col = "orange",
+     breaks = 3)
+
+# maybe a bar chart would work better...
+barplot(table(gss$HAPMAR1),
+        main = "General Social Survey 2008\nMarriage Happiness of Respondents",
+        names.arg=c("very happy","pretty happy","not too happy"),
+        xlab = "Happiness Scale",
+        ylab = "Frequency",
+        ylim = c(0, 600),
+        col = "orange")
+
+# LIFE (general life happiness rating)
+# need to recode, remove 0, 8, and 9 because they are no answer or not married
+gss$LIFE1 <- recode(gss$LIFE, "c(0, 8, 9)=NA")
+hist(gss$LIFE1,
+     main = "General Social Survey 2008\nHistogram: Life Happiness of Respondents",
+     xlab = "Response",
+     ylim = c(0, 700),
+     col = "green",
+     breaks = 3)
+
+# try with bar plot..
+barplot(table(gss$LIFE1),
+        main = "General Social Survey 2008\nLife Happiness of Respondents",
+        names.arg=c("exciting","routine","dull"),
+        xlab = "Happiness Scale",
+        ylab = "Frequency",
+        ylim = c(0, 700),
+        col = "green")
