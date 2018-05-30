@@ -203,6 +203,12 @@ A plot used to summarize the distribution of responses for a quantitative contin
 - where are there more responses>
 - where are there less responses?
 
+**Frequency**: number of observations
+
+Notes:
+- implied ordering (along x axis, meaning range is small -> large traversing left -> right)
+- bars touch which implies continuous values
+
 ### Stem and Leaf Plot
 **Stem-and-leaf plots** represent each observation by its leading digits (the stem) and by its final digit (the leaf). What you see is a picture of the distribution of the data.
 - same shape as a histogram, but displays the value of each observation, thereby preserving information that is typically lost in a Histogram
@@ -223,6 +229,63 @@ Distributions may be symmetric around a central value. However, most real distri
 
 ## Describing The Center of The Data
 
+### The Mean
+The most common measure of the center of data is the **mean**, or the **average**. The mean is only applicable to quantitative variables. We obtain the mean by summing the observations and dividing by the total number of observations.
+
+Notation:
+- the sample size is denoted by $n$
+- observations are denoted by $y_{1}, y_{2}, ..., y_{n}$
+- the sample mean is denoted by $\bar{y}$
+- the sample mean is defined as:<br>
+$$\bar{y}=\frac{y_{1} + y_{2} + ... + y_{n}}{n}$$
+- to simplify:<br>
+$$\sum y{i} = y_{1} + y_{2} + ... + y_{n}$$
+- so, by substitution we obtain:<br>
+$$\bar{y} = \frac{\sum y{i}}{n}$$
+
+Properties:
+- the mean can only be calculated for quantitative variables, not qualitative nominal variables
+- taking the mean of an ordinal dichotomous (0, 1) variable provides the proportion of observations where the variable value = 1
+- the mean can be highly influenced by **outliers**, which are observations well above or below the mean
+- outliers tend to have the most influence in small samples with skewed distributions
+
+Effects of an outlier:
+- the mean is pulled in the direction of the longer tail of a skewed distribution, relative to most of the data
+- the more skewed the distribution, the less typical the mean is of the data
+- the mean is the *point of balance* on the number line when an equal weight is at each observation point
+- the mean is the center of gravity, and the sum of the distances to the mean from observations above the mean is equal to the sum of distances to the mean from observations below the mean
+
+### Weighted Average
+Denote the sample means for two sets of data with (different) sample sizes $n_{1}$ and $n_{2}$ by $y_{1}$ and $y_{2}$. The mean across the two samples must be weighted to account for the different sample sizes.
+
+The weighted average is given by:<br>
+$$\bar{y} = \frac{n_{1}\bar{y_{1}} + n_{2}\bar{y_{2}}}{n_{1} + n_{2}}$$
+
+### The Median
+The **median** is the observation that falls in the middle of the ordered sample. When the sample size $n$ is odd, a single observation occurs in the middle. When the sample size is even, two middle observations occur, and the median is the midpoint between the two. When a distribution is highly skewed, the median describes a typical value better than the mean.
+
+Rank order the data by the values of the observation, low to high or high to low. The median is the value of observation $(n+1)/2$. When $n$ is even, the value falls halfway between two numbers. Essentially, we need to find the 50th percentile.
+
+Properties:
+- the median is appropriate for quantitative and ordinal-scale qualitative variables, not nominal-scale variables
+- for symmetric distributions, the mean is equal to the median
+- for skewed distributions, the mean lies toward the direction of the skew relative to the median
+- the median is insensitive to distances of observations in the middle
+- the median is not affected by outliers
+
+Median compared to Mean
+- for discrete data with few values, very different data patterns have the same median
+- "shifting" of a large amount of values from one end of the value spectrum to the other has no affect on the median, but dramatically changes the mean
+- the median is least informative with binary data, because it takes on the most common value (0 or 1) without providing information on the proportion of observations in each category
+- however, with binary data, the mean is equal to the proportion of observations that equal 1
+
+### The Mode
+The mode is the value that occurs most frequently and is useful for describing highly discrete data. It can be used to describe nominal and ordinal qualitative data, as well as quantitative data. Frequency distributions are called bimodal if two distinct modes occur. The mean, median, and mode are identical for unimodal, symmetric distributions.
+
+> **bimodal** |bīˈmōdl|<br>
+*adjective*<br>
+having or involving two modes, in particular (of a statistical distribution) having two maxima.
+
 ## Describing The Variability of The Data
 
 ## Measures of Position
@@ -232,15 +295,6 @@ Distributions may be symmetric around a central value. However, most real distri
 ## Sample Statistics and Population Parameters
 
 -----
-
-
-
-
-**Frequency**: number of observations
-
-Notes:
-- implied ordering (along x axis, meaning range is small -> large traversing left -> right)
-- bars touch which implies continuous values
 
 ## Bar Plot
 - for categorical data
