@@ -163,7 +163,15 @@ Cluster sampling is useful when a complete listing of the population is not avai
 Cluster sampling involves dividing the population of interest into a large number of **clusters**, such as city blocks... then selecting a simple random sample of the clusters. Subjects in those clusters are the sample.
 
 # Descriptive Statistics
-Descriptive Statistics essentially describe the data, and there are two ways to do this
+
+## Describing Data with Tables and Graphs
+To describe quantitative data, we use measures of:
+1. The center of data (to describe a typical observation, and what it looks like within a data set)
+2. The variability of the data (the spread around the center for a particular variable)
+
+To describe categorical data, we use measures of relative frequency: the *proportion* or *percentage* of the observations that fall into that category.
+
+> Descriptive Statistics essentially describe the data, and there are two ways to do this
 1. measures of central tendency
     - what are the most common or most likely values in the data set
     - median, mean, mode
@@ -171,11 +179,62 @@ Descriptive Statistics essentially describe the data, and there are two ways to 
     - variance or variability in the data set
     - variance, standard deviation, range
 
-## Histogram
+**Frequency distribution**: a listing of possible values for a variable, together with the number of observations at each value.
+
+**Relative frequency distribution**: lists the possible values together with their proportions or percentages.
+
+> Both frequency distributions and relative frequency distributions can be illustrated using a bar chart or pie chart.
+
+Frequency distributions and graphs are also useful for quantitative variables.
+
+For example, a complete listing of all values in a category with the number of observations per unit of data (e.g., list of states with violent crime rate measured per 10,000 population; measured on a continuous interval, and summarized by state).
+
+If a quantitative variable is to be summarized and presented in value ranges, the intervals should be of equal width and mutually exclusive.
+
+### Histogram
+A **histogram** is a graph of a relative frequency distribution for a quantitative variable.
+- information can be lost if too few intervals are used (the intervals are too wide)
+- the objective is to get a good sense of how spread out the distribution is
+- finding the optimal interval width often requires some exploration and experimenting
+- there are some algorithms which can automatically find the optimal width
+
 A plot used to summarize the distribution of responses for a quantitative continuous variable.
 - where are the responses clustered?
 - where are there more responses>
 - where are there less responses?
+
+### Stem and Leaf Plot
+**Stem-and-leaf plots** represent each observation by its leading digits (the stem) and by its final digit (the leaf). What you see is a picture of the distribution of the data.
+- same shape as a histogram, but displays the value of each observation, thereby preserving information that is typically lost in a Histogram
+- useful for quick portrayals of small data sets; larger data sets may require splitting the stem
+
+Stem-and-leaf plots can also provide a visual comparison of two small samples on a quantitative variable. (Display them side-by-side, with the stem in the middle and each set of leaves either side.)
+
+### Population Distribution and Sample Data Distribution
+Frequency distributions and histograms can be used to describe population-level data (called population histograms) and to data sampled from a population (called sample data distributions).
+
+As long as the sample data are randomly selected from the population, the sample distribution will look closer to the true population distribution as the sample size increases.
+
+For a continuous variable, we can think of a histogram with very narrow ranges. As sample size increases (e.g., from 100 to 500), the variable may take on many different values within a continuous range. We can approximate these distributions using a smooth curve. With increased sample size we will get a relatively smoothed distribution of the sample data over the continuous range of possible values.
+
+Sample and population distributions may take on any shape; it depends on how the variable is distributed across the data at which you are looking. These may result in shapes such as a U-shape or a bell-shape. A U-shape curve generally reflects something like polarized opinion on a value-based question. A bell-shape curve occurs when most observations tend to cluster towards one central value.
+
+Distributions may be symmetric around a central value. However, most real distributions are not symmetric. The parts of the curve for the lowest and highest values are called the **tails** of the distribution. A distribution is said to be **skewed** to the right or left according to which tail is longer.
+
+## Describing The Center of The Data
+
+## Describing The Variability of The Data
+
+## Measures of Position
+
+## Bivariate Descriptive Statistics
+
+## Sample Statistics and Population Parameters
+
+-----
+
+
+
 
 **Frequency**: number of observations
 
@@ -190,7 +249,12 @@ Notes:
 ## Scatter Plot
 plot the relationship between two variables
 
-# Recoding variables
+
+-----
+
+# Appendix
+
+## Recoding Variables
 - sometimes necessary to recode some values
 - need to recode some values to "missing"
 
