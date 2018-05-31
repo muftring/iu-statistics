@@ -288,6 +288,43 @@ having or involving two modes, in particular (of a statistical distribution) hav
 
 ## Describing The Variability of The Data
 
+### The Range
+Measure of center (e.g., mean, median, mode) do not provide information about the spread of the data around the typical value. The simplest way to capture this information is through the **range**, the difference between the largest and smallest observations. The range does not, however, capture information about how the data vary around the center. No information about the shape of the data (distribution).
+
+### Standard Deviation
+The **standard deviation** is based on deviations of the data from a measure of center, like the mean. The deviation of observation $y_{i}$ from the sample mean $\bar{y}$ is $(y_{i} - \bar{y})$, the difference between them.
+
+The deviation is positive when the observation falls above the mean, and negative when the observation falls below the mean.
+
+The sum of deviations around the mean, $\sum (y_{i} - \bar{y})$, equals 0. Because of this, the most popular measure of variability use the absolute values of the deviations, or square the deviations. The expression $\sum (y_{i} - \bar{y})^2$ is the "sum of squares."
+
+The **standard deviation** $s$ of $n$ observations is:
+$$s = \sqrt{\frac{\sum (y_{i} - \bar{y})^2}{n - 1}}$$
+
+This is the positive square root of the **variance** $s^2$, which is:
+$$s^2 = \frac{\sum (y_{i} - \bar{y})^2}{n - 1} = \frac{(y_{1} - \bar{y})^2 + (y_{2} - \bar{y})^2 + ... + (y_{n} - \bar{y})^2}{n - 1}$$
+
+Properties:
+- the standard deviation $s \geq 0$
+- $s = 0$ only when all observations have the same value, because then each value of $y_{i}$ is equal to $\bar{y}$ and thus:
+$$s^2 = \frac{\sum (y_{i} - \bar{y})^2}{n - 1} = \frac{(y_{1} - \bar{y})^2 + (y_{2} - \bar{y})^2 + ... + (y_{n} - \bar{y})^2}{n - 1} = 0$$
+- the greater the variability around the mean, the larger is the value of $s$
+- the standard deviation is reported in the same units as the variable (e.g., dollars, number of people, percentages) and if the variable is re-scaled, the standard deviation is also re-scaled.
+
+Interpreting the magnitude of $s$:
+- the standard deviation provides the typical distance between a given observation and the mean
+- how large $s$ is depends on the distribution of the data. We have a nice rule for interpreting standard deviations in the case of a bell-shaped normal distribution of the sample data.
+
+**Empirical Rule**:<br>
+If the histogram of the data is approximately bell-shaped, then:
+1. about 68% of the observations fall between $\bar{y} + s$ and $\bar{y} - s$
+2. about 95% of the observations fall between $\bar{y} \pm 2s$
+3. all or nearly all observations fall between $\bar{y} \pm 3s$
+
+Additional notes:
+- if the smallest or largest observation is less than a standard deviation from the mean, this is evidence of severe skew
+- the standard deviation can be greatly affected by an outlier, especially in small data sets
+
 ## Measures of Position
 
 ## Bivariate Descriptive Statistics
