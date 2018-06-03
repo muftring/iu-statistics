@@ -362,6 +362,9 @@ Note:
 - the bivariate (two-variable) analysis can be extended to multiple variables. For example, we might want to examine how cell phone use and GDP are related to fertility
 
 ## Sample Statistics and Population Parameters
+- we denote the sample mean as $\bar{y}$, and the standard deviation as $s$
+- we denote the population mean as $\mu$ and the population standard deviation as $\sigma$
+- the sample means and standard deviations are variables because they depend on the sample selected from the population; the population mean and standard deviation are constants
 
 -----
 
