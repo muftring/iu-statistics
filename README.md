@@ -326,8 +326,40 @@ Additional notes:
 - the standard deviation can be greatly affected by an outlier, especially in small data sets
 
 ## Measures of Position
+(read chapter 3.4)
 
 ## Bivariate Descriptive Statistics
+
+### Association between Response and Explanatory Variables
+
+An analysis of association between two variables is called a **bivariate** analysis, because there are two variables. Usually, one variable is called the **response** or **outcome** variable. This variable can also be called the **dependent** variable. The other variable is called the **explanatory** or **independent** variable.
+
+Usually we define the outcome and explanatory variables according to some theoretical framework. For example, we could look at how ethnic group (the explanatory variable) explains variation in religious affiliation (the outcome or response variable).
+
+> If we are interested in the relationship between two variables, we think of one explaining variation in the other, but not the other way around. "a influences b, but b does not influence a"
+
+Think: how does the variation in something explain the outcome of something else?
+
+### Comparing Two Groups is a Bivariate Analysis
+*Bivariate Analysis Using Categorical Data*
+
+Example 1: comparing average number of friends (response variable, categorical) by gender (explanatory variable, categorical); our gender influences the number of friends we have, but the number of friends we have does not influence our gender.
+
+Example 2: opinions about homosexuality and religion
+
+A **contingency table** displays how outcomes of a response variable are contingent on -- or vary with-- an explanatory variable.
+
+*Bivariate Analysis Using Quantitative Data*
+- when both variables are quantitative, it may be useful to display data using a **scatterplot**, because the data are not easily divided into categories
+- values of the response variable are plotted on the vertical axis (y-axis), and values of the explanatory variable are plotted on the horizontal axis (x-axis)
+- there are two ways to describe the linear association between two quantitative variables: **correlation** and **regression**
+
+#### Regression Analysis
+**Regression Analysis** provides a straight-line formula for predicting the value of the response variable from a given value of the explanatory variable. This is in the form $y = mx+b$, where $y$ is the response variable, $x$ is the explanatory variable, $m$ is the slope of the line, and $b$ is the intercept (the value of $y$ when $x=0$).
+
+Note:
+- a linear relationship between two variable does not imply anything about a causal relationship between the two
+- the bivariate (two-variable) analysis can be extended to multiple variables. For example, we might want to examine how cell phone use and GDP are related to fertility
 
 ## Sample Statistics and Population Parameters
 
