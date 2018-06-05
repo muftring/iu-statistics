@@ -1,30 +1,29 @@
-# iu-statistics
-IU Statistical Analysis for Effective Decision Making (Summer, 2018)
-
 # Introduction
 The purpose of statistics is to make sense of the world using information or data.
 
-# Data
+> IU Statistical Analysis for Effective Decision Making (Summer, 2018)
+
+## Data
 Tabular format:
 - **rows** are observations, or records
 - **columns** are variables, or fields
 
-# Data Sources
+## Data Sources
 
-## Primary Data Collection
+### Primary Data Collection
 generally collected ourselves
 - surveys
 - experiments
 - direct observation
 
-## Secondary Data Collection
+### Secondary Data Collection
 obtain a data set that has already been collected by a third party
 - public use data sets (e.g., Census data)
 - administrative data sets
   - from an agency: government, non profit, public or private agency
   - usually related to and collected by the agency
 
-# Unit of Analysis
+## Unit of Analysis
 - data collected at the *individual* level; a single record per individual
 - survey of household, and every record would be for a single household
 - average measures of cities
@@ -32,7 +31,7 @@ obtain a data set that has already been collected by a third party
 
 > the important thing when thinking about data and doing analysis with data, you want the unit of analysis in the data sets to be consistent
 
-# What is Statistics?
+## What is Statistics?
 Statistics consists of a body of methods for obtaining and analyzing data.
 
 Statistics provides methods for:
@@ -42,7 +41,7 @@ Statistics provides methods for:
 
 Statistics consists of methods for designing studies and analyzing data collected in the studies.
 
-# Statistical Analysis: Key Terms
+## Statistical Analysis: Key Terms
 - **Subjects**: the entities that a study observes
 - **Population**: total set of subject of interest in a study
 - **Sample**: subset of the Population on which the study collects data
@@ -326,7 +325,36 @@ Additional notes:
 - the standard deviation can be greatly affected by an outlier, especially in small data sets
 
 ## Measures of Position
-(read chapter 3.4)
+**Measures of position** tell us the point at which a given percentage of the data fall below (or above) that point. Some measures of position describe center and some describe variability.
+- the **range** uses two measures of position, the maximum value and the minimum value
+- the **median** is a measure of position, with half the data falling below and half above it
+- the **pth percentile** is the point such that p% of the observations fall below or at that point, and (100-p)% fall above it
+- the **median** is a special case of percentiles: it represents the 50th percentile
+- the 25th percentile is called the **lower quartile** (p=25). The 75th percentile is called the **upper quartile** (p=75). One quarter of the data fall below the lower quartile, and one quarter fall above the upper quartile
+- the **interquartile range** (IQR): the range between the lower quartile and the upper quartile (the middle 50% of the range)
+- comparing the distance between the upper quartile and the median, and the distance between the lower quartile and the median can indicate whether there is skew in the data set
+- a greater value in the distances will indicate more or less spread in the quartile, which is indicative of skew in one direction or the other
+- the difference between the upper and lower quartiles is called the **interquartile range**, or **IQR**
+- the IQR increases as the variability increases and is useful for comparing variability of different groups
+- unlike standard deviations, the IQR is not sensitive to outliers
+- for bell-shaped distributions, the distance from the mean to either quartile is approximately 2/3 of a standard deviation
+
+### Box Plots
+**Box-and-whisker plots** can be used to visually display measures of position
+- the box contains the central 50% of the distribution, from the lower to the upper quartile
+- the line in the middle of the box is the median
+- the lines extending from the box are called whiskers, and extend to the minimum and maximum, excluding any outliers. A longer whisker in one direction indicates skew.
+- outliers are indicated separately
+- an **outlier** an observation that falls more than 1.5 x the IQR *above* the upper quartile, or 1.5 x the IQR *below* the lower quartile
+
+### z-score
+*How many standard deviations from the mean?*
+
+The number of standard deviations that an observation falls from the mean is called its **z-score**.
+
+$$z = \frac{Observation - Mean}{s} = \frac{y_{i}-\bar{y}}{s}$$
+
+> By the Empirical Rule, for bell-shaped distributions, it is unusual for an observation to fall above or below three standard deviations from the mean. 
 
 ## Bivariate Descriptive Statistics
 
