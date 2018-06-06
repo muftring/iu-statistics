@@ -410,6 +410,42 @@ Let $P(A)$ denote the probability of a possible outcome or set of outcomes denot
 - if $A$ and $B$ are possible outcomes (with no overlap), then $P(A\:and\:B) = P(A) \times P(B\:given\:A)$
 - if $A$ and $B$ are independent, then $P(A\:and\:B) = P(A) \times P(B)$
 
+## Probability Distributions for Discrete and Continuous Variables
+
+### Probability Distributions
+A **random variable** refers to a variable for which the value from observation to observation can vary according to random variation summarized by probabilities.
+
+A **probability distribution** lists possible variable outcomes and their associated probabilities.
+
+Probability distributions look different for discrete and continuous variables.
+
+### Probability Distributions for Discrete Variables
+The probability distribution of a discrete variable assigns a probability to each possible value of the variable. Each probability is a number between 0 and 1.
+
+The sum of probabilities of all possible values equals 1.
+
+Let $P(y)$ denote the probability of a possible outcome for a variable $y$. Then:
+
+$$0 \leq P(y) \leq 1$$
+
+and
+
+$$\sum_{y}P(y) = 1$$
+
+### Probability Distributions for Continuous Variables
+The probability distribution of a continuous variable assigns probabilities to intervals of numbers. The probability that a variable falls into any particular interval is between 0 and 1.
+
+A graph of the probability distribution of a continuous variable is a smooth, continuous curve. The area under the curve for an interval of values represents the probability that the variable takes a value in that interval.
+
+### Parameters Describe Probability Distributions
+Probability distributions are similar to population and sample distributions. Instead of describing the number (frequency) of observations taking a particular value, they provide the probability that a random draw from the population of interest will take on a particular value.
+
+The mean of the probability distribution for a discrete variable $y$ is:
+
+$$\mu = \sum yP(y)$$
+
+The sum is over all possible values of the variable. The parameter is called the **expected value of y** and is denoted $E(y)$.
+
 -----
 
 ## Bar Plot
