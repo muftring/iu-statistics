@@ -446,6 +446,18 @@ $$\mu = \sum yP(y)$$
 
 The sum is over all possible values of the variable. The parameter is called the **expected value of y** and is denoted $E(y)$.
 
+## The Normal Probability Distribution
+The **normal distribution** describes how many continuous values are distributed. It is symmetric, bell-shaped, and characterized by its mean and standard deviation. The *Empirical Rule* applies.
+
+> For every **Normal Distribution**, the probability equals (rounded) 0.68 within $\sigma$ of $\mu$, 0.95 within $2\sigma$ of $\mu$, and 0.997 within $3\sigma$ of $\mu$.
+
+### z-score table
+
+### The Standard Normal Distribution
+A special case of the normal distribution, the **Standard Normal Distribution** has mean 0 and standard deviation 1. Its ordinary scores are the same as its z-scores.
+
+If a variable has a normal distribution, and if its values are converted to z-scores by subtracting the mean and dividing by the standard deviation, then the z-scores have the standard normal distribution.
+
 -----
 
 ## Bar Plot
