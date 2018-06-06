@@ -354,7 +354,7 @@ The number of standard deviations that an observation falls from the mean is cal
 
 $$z = \frac{Observation - Mean}{s} = \frac{y_{i}-\bar{y}}{s}$$
 
-> By the Empirical Rule, for bell-shaped distributions, it is unusual for an observation to fall above or below three standard deviations from the mean. 
+> By the Empirical Rule, for bell-shaped distributions, it is unusual for an observation to fall above or below three standard deviations from the mean.
 
 ## Bivariate Descriptive Statistics
 
@@ -393,6 +393,22 @@ Note:
 - we denote the sample mean as $\bar{y}$, and the standard deviation as $s$
 - we denote the population mean as $\mu$ and the population standard deviation as $\sigma$
 - the sample means and standard deviations are variables because they depend on the sample selected from the population; the population mean and standard deviation are constants
+
+# Probability Distributions
+
+## Introduction to Probability
+With a random sample or randomized experiment, the **probability** an observation has a particular outcome is the proportion of times that outcome would occur in a very long sequence of observations.
+
+Probabilities can be expresses as:
+- Proportions (ranging from 0 to 1)
+- Percentages (ranging from 0% and 100%)
+
+### Basic Probability Rules
+Let $P(A)$ denote the probability of a possible outcome or set of outcomes denoted by the letter $A$
+- $P(not\:A) = 1 - P(A)$
+- If $A$ and $B$ are distinct possible outcomes (with no overlap), then $P(A\:or\:B) = P(A) + P(B)$
+- if $A$ and $B$ are possible outcomes (with no overlap), then $P(A\:and\:B) = P(A) \times P(B\:given\:A)$
+- if $A$ and $B$ are independent, then $P(A\:and\:B) = P(A) \times P(B)$
 
 -----
 
