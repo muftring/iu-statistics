@@ -471,6 +471,14 @@ All *sampling distributions* take on the normal distribution. Repeated sampling 
 
 A **simulation** can tell us how an exit poll result approximates the population proportion voting for a candidate.
 
+| Sampling Distribution |
+| --------------------- |
+| A sampling distribution of a statistic is the probability distribution that specifies probabilities for the possible values the statistic can take. |
+
+> A probability distribution that describes the distribution of a statistic over several repeated samples is called the **sampling distribution** of that statistic.
+> - each sample statistic, such as the median, mean, proportion, etc. has a sampling distribution.
+
+
 -----
 
 ## Bar Plot
