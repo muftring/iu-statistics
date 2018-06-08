@@ -452,11 +452,17 @@ The **normal distribution** describes how many continuous values are distributed
 > For every **Normal Distribution**, the probability equals (rounded) 0.68 within $\sigma$ of $\mu$, 0.95 within $2\sigma$ of $\mu$, and 0.997 within $3\sigma$ of $\mu$.
 
 ### z-score table
+(see back inside cover of text book)
 
 ### The Standard Normal Distribution
 A special case of the normal distribution, the **Standard Normal Distribution** has mean 0 and standard deviation 1. Its ordinary scores are the same as its z-scores.
 
 If a variable has a normal distribution, and if its values are converted to z-scores by subtracting the mean and dividing by the standard deviation, then the z-scores have the standard normal distribution.
+
+## Sampling Distributions Describe How Statistics Vary
+
+### Simulating the Estimation Process
+A **simulation** can tell us how an exit poll result approximates the population proportion voting for a candidate.
 
 -----
 
