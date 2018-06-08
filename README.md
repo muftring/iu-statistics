@@ -462,6 +462,13 @@ If a variable has a normal distribution, and if its values are converted to z-sc
 ## Sampling Distributions Describe How Statistics Vary
 
 ### Simulating the Estimation Process
+Some concepts and points to draw distinctions on and clarify:
+- *sample distribution*: what does the distribution look like if we take a particular draw from a population, and take repeated draws, what sort of pattern of the data emerges. (Looked at nominal, and ordinal data, plotted histograms and continuous graphs plotting curves, ...)
+- *sampling distribution*: if we take a sample of a population and took the mean, and then take another sample of the population and took the mean, and repeat... presumably the different sample means would be different from each other. A frequency distribution would obtain a distribution that looks like a normal distribution.
+
+While *sample distributions* can take on any value or any distribution and can look like "anything," and we think of the normal distribution as a special case.
+All *sampling distributions* take on the normal distribution. Repeated sampling and calculation of means from a population over time, most of the means will tend to cluster around a central value, and some will fall into the tails. Over time with infinite repeated samples, the normal distribution will emerge.
+
 A **simulation** can tell us how an exit poll result approximates the population proportion voting for a candidate.
 
 -----
