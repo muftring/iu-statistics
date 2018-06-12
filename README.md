@@ -477,7 +477,38 @@ A **simulation** can tell us how an exit poll result approximates the population
 
 > A probability distribution that describes the distribution of a statistic over several repeated samples is called the **sampling distribution** of that statistic.
 > - each sample statistic, such as the median, mean, proportion, etc. has a sampling distribution.
+> - a certain predictable amount of variation will occur in the sample proportion values
 
+### Constructing a Sampling Distribution
+It is sometimes possible to construct the sampling distribution without resorting to simulations or complex mathematical derivations.
+
+To illustrate, we construct the sampling distribution of the sample proportion for an exit poll of $n = 4$ voters from a population in which half voted for each candidate.
+
+For each voter, define the $y$ variable representing the vote as follows:
+- we use a symbol with four entries to represent the $y$-values for a potential sample size of 4.
+- for instance, $(1,0,0,1)$ represents a sample in which the first and fourth subjects voted for the Republican and the second and third voted for the Democrat
+
+For a sample size 4, the proportion of the sample that voted Republican can be 0.0, 0.25, 0.5, 0.75, or 1.0.
+
+| Sample Proportion | Probability |
+| ----------------- | ----------- |
+| 0.00              | 0.0625      |
+| 0.25              | 0.2500      |
+| 0.50              | 0.3750      |
+| 0.75              | 0.2500      |
+| 1.00              | 0.0626      |
+
+Where do the probabilities come from?
+- count the number of permutations which produce the sample proportion
+- divide by the total number of permutations
+
+| Sample Proportion | Combinations | Count |
+| ----------------- | ------------ | ----- |
+| 0.0               | `(0,0,0,0)`    |  1    |
+| 0.25              | `(0,0,0,1) (0,0,1,0) (0,1,0,0) (1,0,0,0)`    | 4  |
+| 0.50   | `(0,0,1,1) (1,1,0,0) (0,1,1,0) (1,0,0,1) (1,0,1,0) (0,1,0,1)`  | 6  |
+| 0.75   | `(0,1,1,1) (1,0,1,1) (1,1,0,1) (1,1,1,0)`  | 4  |
+| 1.0   |  `(1,1,1,1)`  | 1  |
 
 -----
 
