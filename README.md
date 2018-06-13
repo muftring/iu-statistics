@@ -510,6 +510,23 @@ Where do the probabilities come from?
 | 0.75   | `(0,1,1,1) (1,0,1,1) (1,1,0,1) (1,1,1,0)`  | 4  |
 | 1.0   |  `(1,1,1,1)`  | 1  |
 
+## Sampling Distributions of Sample Means
+Take repeated samples over time from the same population and graph a distribution around the means from the samples. The distribution of the mean values will approximate a normal distribution centered around the true population mean.
+
+We can calculate the standard deviation across repeated samples. Taking the standard deviation of the sampling distribution. Which means we are looking at the deviation from each sample mean $\bar{y}$ from the overall mean across all the samples.
+
+The standard error of the sampling distribution of $\bar{y}$ is given by the standard deviation of the full population sample divided by the square root of $n$ where $n$ is the number of samples drawn.
+
+$$\sigma_{\bar{y}} = \frac{\sigma}{\sqrt{N}}$$
+
+The standard error gets smaller as the sample size $n$ gets larger. Larger samples provide more precise estimates of population characteristics.
+
+**The Central Limit Theorem**: the concept that as your sample size increases and drawing repeated samples from a given population, the average of those values will converge over a central value which is equal to the true population mean.
+
+The approximate normality of the sampling distribution applies *no matter what the shape* of the population distribution. As long as you take repeated samples that are randomly sampled from a given population.
+
+General rule of thumb: a sample size of about 30 tends to be sufficient for getting some normality around the sampling distribution. 
+
 -----
 
 ## Bar Plot
