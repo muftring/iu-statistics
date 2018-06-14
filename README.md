@@ -240,7 +240,7 @@ $$\bar{y}=\frac{y_{1} + y_{2} + ... + y_{n}}{n}$$
 - to simplify:<br>
 $$\sum y{i} = y_{1} + y_{2} + ... + y_{n}$$
 - so, by substitution we obtain:<br>
-$$\bar{y} = \frac{\sum y{i}}{n}$$
+$$\bar{y} = \frac{\sum y_{i}}{n}$$
 
 Properties:
 - the mean can only be calculated for quantitative variables, not qualitative nominal variables
@@ -525,7 +525,7 @@ The standard error gets smaller as the sample size $n$ gets larger. Larger sampl
 
 The approximate normality of the sampling distribution applies *no matter what the shape* of the population distribution. As long as you take repeated samples that are randomly sampled from a given population.
 
-General rule of thumb: a sample size of about 30 tends to be sufficient for getting some normality around the sampling distribution. 
+General rule of thumb: a sample size of about 30 tends to be sufficient for getting some normality around the sampling distribution.
 
 -----
 
@@ -562,3 +562,19 @@ Another approach:
 - e.g., `data$column2[data$column == -1] = NA`
 - note that we can use logical operators within the brackets to do more complex selections
 - basically, the expression in the brackets will return a set of row indexes that meet the condition
+
+## Symbols
+
+| Symbol          | Meaning |
+| --------------- | -----------------------------------------------------------------|
+| $E$             | the expected value (the mean of the probability distribution)  |
+| $k$             | the population size divided by the sample size (in systematic random sampling) |
+| $N$             | the population size  |
+| $n$             | the sample size  |
+| $P$             | the Probability  |
+| $y$             | an observation |
+| $\bar{y}$       | the sample mean  |
+| $\mu$           | the mean  |
+| $s$, $\sigma$   | the standard deviation  |
+| $s^{2}$         | the variance  |
+| $z$             | the z-score, the number of standard deviations away from the mean  |
