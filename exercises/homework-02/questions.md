@@ -57,15 +57,75 @@ The number of days between premature and the mean is: $258 - 281.9 = -23.9$, and
 
 - *( b ) The actual proportion born prematurely during the period was 0.036. Based on this information, how would you expect the distribution of gestation time to differ from the normal distribution?*<p>
 
-With a normal distribution, 0.36 would have a z-score of 1.79. The difference in the computed and actual z-scores is approximately 0.31, which means the actual value is almost 1/3 of a standard deviation different from what is expected for a normal distribution. This suggests that the distribution would be shifted left from a normal distribution, and there are more premature births than expected given the mean and standard deviation computed in this sample. 
+With a normal distribution, 0.36 would have a z-score of 1.79. The difference in the computed and actual z-scores is approximately 0.31, which means the actual value is almost 1/3 of a standard deviation different from what is expected for a normal distribution. This suggests that the distribution would be shifted left from a normal distribution, and there are more premature births than expected given the mean and standard deviation computed in this sample.
 
 ## 4. Sampling Distribution of the Sample Mean.
-The probability distribution associated with the outcome of rolling a balanced die has probability 1/6 attached to each integer, {1, 2, 3, 4, 5, 6}. Let (y1, y2) denote the outcomes for rolling the die twice.
-- *( a ) Enumerate the 36 possible (y1, y2) pairs (e.g., (2,1) represents a 2 followed by a 1).*<br>
-- *( b ) Treating the 36 pairs as equally likely, construct the sampling distribution for the sample mean y-bar of the two numbers rolled.*<br>
-- *( c ) Construct a histogram of the (i) probability distribution for each roll, (ii) sampling distribution of y-bar in (b). Describe their shapes.*<br>
-- *( d ) What are the means of the two distributions in (c)? Why are they the same?*<br>
-- *( e ) Explain why the sampling distribution of y-bar has relatively more probability near the middle than at the minimum and maximum values. (Hint: Note there are many more (y1, y2) pairs that have a sample mean near the middle than near the minimum or maximum.)*<br>
+The probability distribution associated with the outcome of rolling a balanced die has probability 1/6 attached to each integer, {1, 2, 3, 4, 5, 6}. Let (y1, y2) denote the outcomes for rolling the die twice.<p>
+
+- *( a ) Enumerate the 36 possible (y1, y2) pairs (e.g., (2,1) represents a 2 followed by a 1).*
+
+```
+(1,1) (1,2) (1,3) (1,4) (1,5) (1,6)   
+(2,1) (2,2) (2,3) (2,4) (2,5) (2,6)   
+(3,1) (3,2) (3,3) (3,4) (3,5) (3,6)   
+(4,1) (4,2) (4,3) (4,4) (4,5) (4,6)   
+(5,1) (5,2) (5,3) (5,4) (5,5) (5,6)   
+(6,1) (6,2) (6,3) (6,4) (6,5) (6,6)   
+```
+
+- *( b ) Treating the 36 pairs as equally likely, construct the sampling distribution for the sample mean y-bar of the two numbers rolled.*
+
+I wrote a Python program that stores in a dictionary each of the 36 possible 2-die rolls identified in (a) above. Next, I used the `random.randint` function to generate a value between 1 and 36 to select a roll. The random selection of a roll was repeated 255 times. On each roll the sample mean was computed (add the two die values, and divide by two). The sample means were accumulated in another dictionary keyed by the sample mean (a value between 1.0 and 6.0).
+
+| Die Roll Mean | Probability |
+| --- | --- |
+| 1.0 | 0.039 |
+| 1.5 | 0.047 |
+| 2.0 | 0.082 |
+| 2.5 | 0.110 |
+| 3.0 | 0.153 |
+| 3.5 | 0.169 |
+| 4.0 | 0.118 |
+| 4.5 | 0.122 |
+| 5.0 | 0.098 |
+| 5.5 | 0.051 |
+| 6.0 | 0.012 |
+**Table 1: Sampling Distribution For the Sample Mean**<P>
+
+- *( c ) Construct a histogram of the (i) probability distribution for each roll, (ii) sampling distribution of y-bar in ( b ). Describe their shapes.*
+
+
+| Die Roll Mean | Frequency   | Probability |
+| ------------- | ----------- | ----------- |
+| 1.0 | 1 | 0.03 |
+| 1.5 | 2 | 0.06 |
+| 2.0 | 3 | 0.08 |
+| 2.5 | 4 | 0.11 |
+| 3.0 | 5 | 0.14 |
+| 3.5 | 6 | 0.17 |
+| 4.0 | 5 | 0.14 |
+| 4.5 | 4 | 0.11 |
+| 5.0 | 3 | 0.08 |
+| 5.5 | 2 | 0.06 |
+| 6.0 | 1 | 0.03 |
+**Table 2: Frequency and Probability Distribution for 2-die Roll**<P>
+
+![](2-die-roll-probability-distribution.png)<p>
+**Figure 1: 2-die Roll Probability Distribution Histogram**<P>
+
+![](2-die-roll-sampling-distribution-histogram.png)<p>
+**Figure 2: 2-die Roll Sampling Distribution of $\bar{y}$ Histogram**<P>
+
+- *( d ) What are the means of the two distributions in ( c )? Why are they the same?*
+
+The mean of the Probability Distribution is 3.5.<P>
+The mean of the Sampling Distribution is 3.4568.<P>
+
+The means are approximately the same because the mean of the sampling distribution will approximate the actual probability distribution as the number of samples increases (towards infinity).
+
+- *( e ) Explain why the sampling distribution of y-bar has relatively more probability near the middle than at the minimum and maximum values. (Hint: Note there are many more (y1, y2) pairs that have a sample mean near the middle than near the minimum or maximum.)*
+
+The sampling distribution of $\bar{y}$ is accumulating mean values. As such, and as the hint indicates, there will be many more values near the actual mean value than out towards the tails. 
 
 ## 5. Point and Interval Estimates.
 One question on a recent General Social Survey asked, “Do you think that it should be government’s responsibility to reduce income differences between the rich and the poor?” Those answering yes included 90 out of the 142 subjects who called themselves strong Democrats in political party identification and 26 of the 102 who called themselves strong Republicans.
