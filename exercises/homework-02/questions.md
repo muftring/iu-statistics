@@ -10,9 +10,11 @@ Homework Exercise 2
 ## 1. Basic Probability Rules.
 A GSS estimates the probability than an American adult believes in heaven is 0.85.<p>
 - *( a ) Estimate the probability that an American adult does not believe in heaven.*<p>
-this is my answer<p><p>
+Consider $A$ as the variable representing the condition: **an American adult believes in heaven**. We now can state that as a probability by $P(A) = 0.85$. And so the **probability that an American adult does not believe in heaven** is expressed as $P(not\:A) = 1 - P(A)$ = 1.0 - 0.85 = 0.15.<p><p>
 - *( b ) Of those who believe in heaven, about 84% believe in hell. Estimate the probability a randomly chosen adult believes in both heaven and hell.*<p>
-this is my answer<p><p>
+Let $A$ be the probability an American adult believes in heaven, which is $0.85$ or $85\%$.<br>
+Let $B$ represent the 84% that believe in hell, given they believe in heaven.<br>
+So, then $P(A \: and \: B) = P(A) \times P(B \: given \: A) = 0.85 \times 0.84 = 0.714$, or $71.4\%$.<p><p>
 
 ## 2. Probability Distributions for Discrete and Continuous Variables.
 Let y be the number of languages in which a person is fluent. According to Statistics Canada, for residents of Canada y has a probability distribution P(0) = 0.02, P(1) = 0.81, and P(2) = 0.17, with negligible probability for higher values of y.
