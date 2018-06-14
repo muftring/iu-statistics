@@ -9,19 +9,43 @@ Homework Exercise 2
 
 ## 1. Basic Probability Rules.
 A GSS estimates the probability than an American adult believes in heaven is 0.85.<p>
-- *( a ) Estimate the probability that an American adult does not believe in heaven.*<p>
-Consider $A$ as the variable representing the condition: **an American adult believes in heaven**. We now can state that as a probability by $P(A) = 0.85$. And so the **probability that an American adult does not believe in heaven** is expressed as $P(not\:A) = 1 - P(A)$ = 1.0 - 0.85 = 0.15.<p><p>
-- *( b ) Of those who believe in heaven, about 84% believe in hell. Estimate the probability a randomly chosen adult believes in both heaven and hell.*<p>
-Let $A$ be the probability an American adult believes in heaven, which is $0.85$ or $85\%$.<br>
-Let $B$ represent the 84% that believe in hell, given they believe in heaven.<br>
-So, then $P(A \: and \: B) = P(A) \times P(B \: given \: A) = 0.85 \times 0.84 = 0.714$, or $71.4\%$.<p><p>
+- *( a ) Estimate the probability that an American adult does not believe in heaven.*
+
+Consider $A$ as the variable representing the condition: **an American adult believes in heaven**. We now can state that as a probability by $P(A) = 0.85$. And so the **probability that an American adult does not believe in heaven** is expressed as $P(not\:A) = 1 - P(A)$ = 1.0 - 0.85 = 0.15.
+
+- *( b ) Of those who believe in heaven, about 84% believe in hell. Estimate the probability a randomly chosen adult believes in both heaven and hell.*
+
+Let $A$ be the probability an American adult believes in heaven, which is $0.85$ or $85\%$.<p>
+Let $B$ represent the 84% that believe in hell, given they believe in heaven.<p>
+So, then $P(A \: and \: B) = P(A) \times P(B \: given \: A) = 0.85 \times 0.84 = 0.714$, or $71.4\%$.
 
 ## 2. Probability Distributions for Discrete and Continuous Variables.
-Let y be the number of languages in which a person is fluent. According to Statistics Canada, for residents of Canada y has a probability distribution P(0) = 0.02, P(1) = 0.81, and P(2) = 0.17, with negligible probability for higher values of y.
-- *( a ) Is y a discrete, or a continuous variable? Why?*<br>
-- *( b ) Construct a table showing the probability distribution of y.*<br>
-- *( c ) Find the probability that a Canadian is not multilingual.*<br>
-- *( d ) Find the mean of this probability distribution.*<br>
+Let y be the number of languages in which a person is fluent. According to Statistics Canada, for residents of Canada y has a probability distribution P(0) = 0.02, P(1) = 0.81, and P(2) = 0.17, with negligible probability for higher values of y.<p>
+- *( a ) Is y a discrete, or a continuous variable? Why?*<p>
+
+$y$ is a discrete variable because it is a count (number of items), which means the value can only be whole numbers (fractional values do not make sense).
+
+- *( b ) Construct a table showing the probability distribution of y.*<p>
+
+|  y  | P(y)  |
+| --- | ----- |
+|  0  | 0.02  |
+|  1  | 0.81  |
+|  2  | 0.17  |
+| *Total*   | 1.0  |
+
+- *( c ) Find the probability that a Canadian is not multilingual.*<p>
+
+If $P(A)$ represents the probability that a Canadian is multilingual, then $P(not \: A)$ is the probability that a Canadian is not multilingual.
+
+$P(not \: A) = 1 - P(A) = 1.0 - 0.17 = 0.83$
+
+- *( d ) Find the mean of this probability distribution.*<p>
+
+The mean of the probability distribution for a discrete variable is:<p>
+$\mu = \sum yP(y)$<p>
+
+For this probability distribution the mean equals: $0(0.02) + 1(0.81) + 2(0.17) = 1.15$
 
 ## 3. The Normal Probability Distribution.
 For a study in Aarhus University Hospital (Denmark), 5459 pregnant women who reported information on length of gestation until birth had mean = 281.9 days and standard deviation = 11.4 days. A baby is classified as premature if the gestation time is 258 days or less.
