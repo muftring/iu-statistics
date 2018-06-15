@@ -515,7 +515,7 @@ Take repeated samples over time from the same population and graph a distributio
 
 We can calculate the standard deviation across repeated samples. Taking the standard deviation of the sampling distribution. Which means we are looking at the deviation from each sample mean $\bar{y}$ from the overall mean across all the samples.
 
-The standard error of the sampling distribution of $\bar{y}$ is given by the standard deviation of the full population sample divided by the square root of $n$ where $n$ is the number of samples drawn.
+The **standard error of the sampling distribution** of $\bar{y}$ is given by the standard deviation of the full population sample divided by the square root of $n$ where $n$ is the number of samples drawn.
 
 $$\sigma_{\bar{y}} = \frac{\sigma}{\sqrt{N}}$$
 
@@ -529,6 +529,9 @@ General rule of thumb: a sample size of about 30 tends to be sufficient for gett
 
 -----
 
+# Topics to be Filed
+at a later date, once we determine the appropriate place
+
 ## Bar Plot
 - for categorical data
 - for ordinal or nominal data
@@ -537,11 +540,12 @@ General rule of thumb: a sample size of about 30 tends to be sufficient for gett
 plot the relationship between two variables
 
 
-## Standard Error
-The formula for the **standard error** of a sample mean equals $\sigma_{\bar{y}} = \sigma / \sqrt{n}$
+## Standard Error of a Sample Mean
+The formula for the **standard error of a sample mean** equals
+$$\sigma_{\bar{y}} = \frac{\sigma}{\sqrt{n}}$$
 
-The standard error $\sigma_{\hat{\pi}}$ of the sample proportion $\hat{\pi}$ is<br>
-$\sigma_{\hat{\pi}} = \sigma / \sqrt{n} = \sqrt{\frac{\pi(1-\pi)}{n}}$
+The standard error $\sigma_{\hat{\pi}}$ of the sample proportion $\hat{\pi}$ is
+$$\sigma_{\hat{\pi}} = \frac{\sigma}{\sqrt{n}} = \sqrt{\frac{\pi(1-\pi)}{n}}$$
 
 As the sample size increases, the standard error gets smaller. The sample proportion then tends to fall closer to the population proportion.
 
@@ -570,6 +574,28 @@ Another approach:
 - e.g., `data$column2[data$column == -1] = NA`
 - note that we can use logical operators within the brackets to do more complex selections
 - basically, the expression in the brackets will return a set of row indexes that meet the condition
+
+## Terminology
+
+| Term | Definition / Description |
+| ---- | ------------------------ |
+| mean   |   |
+| median   |   |
+| mode                 |   |
+| observation   |   |
+| population           |   |
+| probability   |   |
+| sample               |   |
+| standard deviation   |   |
+| variance   |   |
+| z-score   |   |
+
+## Concepts
+to write up
+
+### Central Limit Theorem
+
+### Sampling Distribution
 
 ## Symbols
 

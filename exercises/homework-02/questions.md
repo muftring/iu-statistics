@@ -156,7 +156,13 @@ In response to the GSS question in 2014 about the number of hours daily spent wa
 
 - *( a ) Estimate the mean, standard deviation, and standard error.*
 
-answer
+```
+data:	[1, 1, 1, 2, 2, 3, 6]
+n:	7
+mean:	2.286
+stddev:	1.799
+stderr:	0.68
+```
 
 - *( b ) Construct a 95% confidence interval for the population mean, specifying its assumptions. Interpret.*
 
