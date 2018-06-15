@@ -153,17 +153,28 @@ We can therefore conclude that at least half, 50.2%, but no more than 57.3% beli
 
 ## 7. Confidence Interval for a Mean.
 In response to the GSS question in 2014 about the number of hours daily spent watching TV, the responses by the seven subjects who identified themselves as being raised Islamic were 1, 1, 1, 2, 2, 3, 6.<P>
-- *( a ) Estimate the mean, standard deviation, and standard error.*<br>
-- *( b ) Construct a 95% confidence interval for the population mean, specifying its assumptions. Interpret.*<br>
+
+- *( a ) Estimate the mean, standard deviation, and standard error.*
+
+answer
+
+- *( b ) Construct a 95% confidence interval for the population mean, specifying its assumptions. Interpret.*
+
+answer
 
 ## 8. Choice of Sample Size.
 A 2011 poll in Canada indicated that 41% of Canadians favored bringing back the death penalty for convicted murderers. (The United States is the only Western democracy that has it.). A report by Amnesty International on this and related polls (www.amnesty.ca) did not report the sample size but states, “Polls of this size are considered to be accurate within 2.5 percentage points 95% of the time.”
 
-*If this is the case, about how large was the sample size?*<br>
+*If this is the case, about how large was the sample size?*
+
+answer
 
 ## 9. The Five Parts of a Significance Test.
-You want to know whether adults in your country think the ideal number of children is equal to 2, or higher or lower than that. (7.5 total points, 2.5 points for each part)
+You want to know whether adults in your country think the ideal number of children is equal to 2, or higher or lower than that. (7.5 total points, 2.5 points for each part)<p>
 - *( a ) Define notation and state the null and alternative hypotheses for studying this.*
+
+answer
+
 - *( b ) For responses in a recent GSS to the question “What do you think is the ideal number of children to have?” software shows results:*
 
 Test of mu = 2.0 vs mu not = 2.0
@@ -171,8 +182,13 @@ Test of mu = 2.0 vs mu not = 2.0
 | -------- | --- | ---- | ----- | ------- | --- | ------- |
 |Children	|1302	|2.490	|0.850	|0.0236		|20.80	|0.0000
 
-*Report the test statistic value, and show how it was obtained from other values reported in the table.*<br>
-- *( c ) Explain what the P-value represents, and interpret its value.*<br>
+*Report the test statistic value, and show how it was obtained from other values reported in the table.*
+
+answer
+
+- *( c ) Explain what the P-value represents, and interpret its value.*
+
+answer
 
 ## 10. Significance Test for a Mean.
 By law, an industrial plant can discharge no more than 500 gallons of waste water per hour, on the average, into a neighboring lake. Based on other infractions they have noticed, an environmental action group believes this limit is being exceeded. Monitoring the plan is expensive, and a random sample of four hours is selected over a period of a week. Software reports
@@ -181,23 +197,49 @@ By law, an industrial plant can discharge no more than 500 gallons of waste wate
 |---------|-----------|-------|---------|----------|
 |WASTE	|4		|1000.0		|400.0		|200.0|
 
-- *( a ) Test whether the mean discharge equals 500 gallons per hour against the alternative that the limit is being exceeded. Find the P-value, and interpret.*<br>
-- *( b ) Explain why the test may be highly approximate or even invalid if the population distribution of discharge is far from normal.*<br>
-- *( c ) Explain how your one-sided analysis implicitly tests the broader null hypothesis that μ  500.*<br>
+- *( a ) Test whether the mean discharge equals 500 gallons per hour against the alternative that the limit is being exceeded. Find the P-value, and interpret.*
+
+answer
+
+- *( b ) Explain why the test may be highly approximate or even invalid if the population distribution of discharge is far from normal.*
+
+answer
+
+- *( c ) Explain how your one-sided analysis implicitly tests the broader null hypothesis that μ  500.*
+
+answer
 
 ## 11. Significance Test for a Proportion.
-Same-sex marriage was legalized across Canada by the Civil Marriage Act enacted in 2005. Is this supported by a majority, or a minority, of the Canadian population? In an Ipsos Global poll conducted for Reuter News in May 2013 of 1000 Canadians that asked whether legalization should stand or be repealed, 63% supported legalization. Let π denote the population proportion of Canadian adults who support legalization. For testing H0: μ = 0.50 against Ha: μ  0.50
-- *( a ) Find the standard error, and interpret.*<br>
-- *( b ) Find the test statistic, and interpret.*<br>
-- *( c ) Fine the P-value, and interpret in context.*<br>
+Same-sex marriage was legalized across Canada by the Civil Marriage Act enacted in 2005. Is this supported by a majority, or a minority, of the Canadian population? In an Ipsos Global poll conducted for Reuter News in May 2013 of 1000 Canadians that asked whether legalization should stand or be repealed, 63% supported legalization. Let π denote the population proportion of Canadian adults who support legalization. For testing H0: μ = 0.50 against Ha: μ  0.50<P>
+- *( a ) Find the standard error, and interpret.*
+
+answer
+
+- *( b ) Find the test statistic, and interpret.*
+
+answer
+
+- *( c ) Fine the P-value, and interpret in context.*
+
+answer
 
 ## 12. Decisions and Types of Errors in Tests.
-Example 6.4 (page 148 in the 5th edition and page 151 in the 4th edition) tested a therapy for anorexia, using Ho: μ = 0 and Ha: μ  0 about the population mean weight change.
-- *( a ) In the words of that example, what is (i) Type I error? (ii) Type II error?*<br>
-- *( b ) The P-value was 0.018 (5th edition) or 0.017 (4th edition). If the decision for α = 0.05 were in error, what type of error is it?*<br>
-- *( c ) Suppose instead α = 0.01. What decision would you make? If it is in error, what type of error is it?*<br>
+Example 6.4 (page 148 in the 5th edition and page 151 in the 4th edition) tested a therapy for anorexia, using Ho: μ = 0 and Ha: μ  0 about the population mean weight change.<P>
+- *( a ) In the words of that example, what is (i) Type I error? (ii) Type II error?*
+
+answer
+
+- *( b ) The P-value was 0.018 (5th edition) or 0.017 (4th edition). If the decision for α = 0.05 were in error, what type of error is it?*
+
+answer
+
+- *( c ) Suppose instead α = 0.01. What decision would you make? If it is in error, what type of error is it?*
+
+answer
 
 ## 13. Limitations of Significance Tests.
 A report by the Collaborative on Academic Careers in Higher Education indicated that there is a notable gap between female and male academics in their confidence that tenure rules are clear, with men feeling more confident. The 4500 faculty members in the survey were asked to evaluate policies on a scale of 1 to 5 (very unclear to very clear). The mean response about the criteria for tenure was 3.51 for females and 3.55 for males, which was indicated to meet the test for statistical significance.
 
-*Use this study to explain the distinction between statistical significance and practical significance.*<br>
+*Use this study to explain the distinction between statistical significance and practical significance.*
+
+answer
