@@ -57,7 +57,7 @@ The number of days between premature and the mean is: $258 - 281.9 = -23.9$, and
 
 - *( b ) The actual proportion born prematurely during the period was 0.036. Based on this information, how would you expect the distribution of gestation time to differ from the normal distribution?*<p>
 
-With a normal distribution, 0.36 would have a z-score of 1.79. The difference in the computed and actual z-scores is approximately 0.31, which means the actual value is almost 1/3 of a standard deviation different from what is expected for a normal distribution. This suggests that the distribution would be shifted left from a normal distribution, and there are more premature births than expected given the mean and standard deviation computed in this sample.
+With a normal distribution, 0.36 would have a z-score of 1.79. The difference in the computed and actual z-scores is approximately 0.31, which means the actual value is almost 1/3 of a standard deviation different from what is expected for a normal distribution. This suggests that the distribution would be skewed to the right from a normal distribution, and there are more premature births than expected given the mean and standard deviation computed in this sample.
 
 ## 4. Sampling Distribution of the Sample Mean.
 The probability distribution associated with the outcome of rolling a balanced die has probability 1/6 attached to each integer, {1, 2, 3, 4, 5, 6}. Let (y1, y2) denote the outcomes for rolling the die twice.<p>
@@ -121,25 +121,39 @@ I wrote a Python program that stores in a dictionary each of the 36 possible 2-d
 The mean of the Probability Distribution is 3.5.<P>
 The mean of the Sampling Distribution is 3.4568.<P>
 
-The means are approximately the same because the mean of the sampling distribution will approximate the actual probability distribution as the number of samples increases (towards infinity).
+The means are approximately the same because the sampling distribution of the sample mean will approximate the mean of the actual probability distribution as the number of samples increases (towards infinity).
 
 - *( e ) Explain why the sampling distribution of y-bar has relatively more probability near the middle than at the minimum and maximum values. (Hint: Note there are many more (y1, y2) pairs that have a sample mean near the middle than near the minimum or maximum.)*
 
-The sampling distribution of $\bar{y}$ is accumulating mean values. As such, and as the hint indicates, there will be many more values near the actual mean value than out towards the tails. 
+The sampling distribution of $\bar{y}$ is essentially accumulating mean values. As such, and as the hint indicates, there will be many more values near the actual mean value than out towards the tails. This is because the sampling distribution finds the mean of the values in each sample, which will over time tend to center on the actual mean.
 
 ## 5. Point and Interval Estimates.
-One question on a recent General Social Survey asked, “Do you think that it should be government’s responsibility to reduce income differences between the rich and the poor?” Those answering yes included 90 out of the 142 subjects who called themselves strong Democrats in political party identification and 26 of the 102 who called themselves strong Republicans.
-- *( a ) Find the point estimate of the population proportion who would answer yes for each group.*<br>
-- *( b ) The 95% confidence interval for the population proportion of yes responses is (0.55, 0.71) for strong Democrats and (0.17, 0.34) for strong Republicans. Explain how to interpret the intervals.*<br>
+One question on a recent General Social Survey asked, “Do you think that it should be government’s responsibility to reduce income differences between the rich and the poor?” Those answering yes included 90 out of the 142 subjects who called themselves strong Democrats in political party identification and 26 of the 102 who called themselves strong Republicans.<P>
+- *( a ) Find the point estimate of the population proportion who would answer yes for each group.*
+
+The point estimate for strong Democrats is 0.634   
+The point estimate for strong Republicans is 0.255   
+
+- *( b ) The 95% confidence interval for the population proportion of yes responses is (0.55, 0.71) for strong Democrats and (0.17, 0.34) for strong Republicans. Explain how to interpret the intervals.*
+
+The intervals are intended to give a value range within which the parameter value is expected to be. In this case, the strong Democrat interval is +/-0.08 from its point estimate, and the strong Republican interval is +/-0.085 from its point interval. These +/- values are the margin of error and intend to provide some insight into the precision of the point estimate.
 
 ## 6. Confidence Interval for a Proportion.
-When the GSS most recently asked whether human beings developed from earlier species of animals, 53.8% of 1095 respondents answered that this was probably or definitely not true.
+When the GSS most recently asked whether human beings developed from earlier species of animals, 53.8% of 1095 respondents answered that this was probably or definitely not true.<P>
 
-*Find a 99% confidence interval for the corresponding population proportion, and indicate whether you can conclude that a majority of Americans felt this way.*<br>
+*Find a 99% confidence interval for the corresponding population proportion, and indicate whether you can conclude that a majority of Americans felt this way.*<P>
+
+$$se = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}} = \sqrt{\frac{(0.538)(0.462)}{1095}} = \sqrt{0.0002} = 0.015$$
+
+A 99% confidence interval for $\pi$ is
+
+$$\hat{\pi} \pm 2.33(se) = 0.538 \pm 2.33(0.015) = 0.538 \pm 0.035, \: or \:(0.502, 0.573)$$
+
+We can therefore conclude that at least half, 50.2%, but no more than 57.3% believe human beings probably or definitely did not develop from earlier species of animals.
 
 ## 7. Confidence Interval for a Mean.
-In response to the GSS question in 2014 about the number of hours daily spent watching TV, the responses by the seven subjects who identified themselves as being raised Islamic were 1, 1, 1, 2, 2, 3, 6.
-- ( a ) *Estimate the mean, standard deviation, and standard error.*<br>
+In response to the GSS question in 2014 about the number of hours daily spent watching TV, the responses by the seven subjects who identified themselves as being raised Islamic were 1, 1, 1, 2, 2, 3, 6.<P>
+- *( a ) Estimate the mean, standard deviation, and standard error.*<br>
 - *( b ) Construct a 95% confidence interval for the population mean, specifying its assumptions. Interpret.*<br>
 
 ## 8. Choice of Sample Size.

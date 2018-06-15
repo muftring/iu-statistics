@@ -537,6 +537,14 @@ General rule of thumb: a sample size of about 30 tends to be sufficient for gett
 plot the relationship between two variables
 
 
+## Standard Error
+The formula for the **standard error** of a sample mean equals $\sigma_{\bar{y}} = \sigma / \sqrt{n}$
+
+The standard error $\sigma_{\hat{\pi}}$ of the sample proportion $\hat{\pi}$ is<br>
+$\sigma_{\hat{\pi}} = \sigma / \sqrt{n} = \sqrt{\frac{\pi(1-\pi)}{n}}$
+
+As the sample size increases, the standard error gets smaller. The sample proportion then tends to fall closer to the population proportion.
+
 -----
 
 # Appendix
@@ -575,6 +583,10 @@ Another approach:
 | $y$             | an observation |
 | $\bar{y}$       | the sample mean  |
 | $\mu$           | the mean  |
-| $s$, $\sigma$   | the standard deviation  |
+| $\pi$           | the population proportion (percentage)  |
+| $s$             | the sample standard deviation  |
+| $\sigma$        | the population standard deviation  |
+| $se$            | the sample estimate of a standard error  |
 | $s^{2}$         | the variance  |
 | $z$             | the z-score, the number of standard deviations away from the mean  |
+| $\hat{}$        | caret, placed over a symbol to indicate it is an estimated value  |
