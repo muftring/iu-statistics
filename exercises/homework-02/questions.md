@@ -147,9 +147,9 @@ $$se = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}} = \sqrt{\frac{(0.538)(0.462)}{109
 
 A 99% confidence interval for $\pi$ is
 
-$$\hat{\pi} \pm 2.33(se) = 0.538 \pm 2.33(0.015) = 0.538 \pm 0.035, \: or \:(0.502, 0.573)$$
+$$\hat{\pi} \pm 2.58(se) = 0.538 \pm 2.58(0.015) = 0.538 \pm 0.0387, \: or \:(0.4993, 0.5767)$$
 
-We can therefore conclude that at least half, 50.2%, but no more than 57.3% believe human beings probably or definitely did not develop from earlier species of animals.
+We can therefore conclude that at least very close to half, 49.93%, but no more than 57.67% believe human beings probably or definitely did not develop from earlier species of animals.
 
 ## 7. Confidence Interval for a Mean.
 In response to the GSS question in 2014 about the number of hours daily spent watching TV, the responses by the seven subjects who identified themselves as being raised Islamic were 1, 1, 1, 2, 2, 3, 6.<P>
