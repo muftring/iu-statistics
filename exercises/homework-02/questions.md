@@ -156,17 +156,31 @@ In response to the GSS question in 2014 about the number of hours daily spent wa
 
 - *( a ) Estimate the mean, standard deviation, and standard error.*
 
+$se = s / \sqrt{n}$
+
 ```
-data:	[1, 1, 1, 2, 2, 3, 6]
-n:	7
-mean:	2.286
-stddev:	1.799
-stderr:	0.68
+data:     [1, 1, 1, 2, 2, 3, 6]
+n:        7
+Mean:     2.286
+StDev:    1.799
+SE Mean:  0.68
 ```
 
 - *( b ) Construct a 95% confidence interval for the population mean, specifying its assumptions. Interpret.*
 
-answer
+A 95% Confidence Interval for a Mean is:
+
+$\bar{y} \pm t_{.025}(se)$, with $se = s / \sqrt{n}$, where $df = n-1$ for the t-score.
+
+In this case $df = 7-1 = 6$.
+
+$\bar{y} \pm t_{.025}(se)$   
+$\bar{y} \pm t_{.025}(s / \sqrt{n})$    
+$2.286 \pm 2.447(1.799/\sqrt{7})$   
+$2.286 \pm 1.664$   
+(0.622, 3.95)   
+
+The 95% confidence interval has a broad range. The low end is 0.622 and the high end is 3.95, with a point estimate of approximately $2\frac{1}{4}$. The wide range, even with high confidence interval value, is likely due to the small sample size. The standard deviation value is close to the mean, which generally indicates a skew in the distribution; in this case, where negative values do not make sense, we can conclude that the distribution is skewed to the right. Looking closer at the data we observe that the median is 2 and the mode is 1. We also observe a single value of 6, which could be considered an outlier and be the cause for large standard deviation and thus such a wide range in the confidence interval.
 
 ## 8. Choice of Sample Size.
 A 2011 poll in Canada indicated that 41% of Canadians favored bringing back the death penalty for convicted murderers. (The United States is the only Western democracy that has it.). A report by Amnesty International on this and related polls (www.amnesty.ca) did not report the sample size but states, “Polls of this size are considered to be accurate within 2.5 percentage points 95% of the time.”
