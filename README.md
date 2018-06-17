@@ -579,6 +579,7 @@ Another approach:
 
 | Term | Definition / Description |
 | ---- | ------------------------ |
+| margin of error   |   |
 | mean   |   |
 | median   |   |
 | mode                 |   |
@@ -586,7 +587,9 @@ Another approach:
 | population           |   |
 | probability   |   |
 | sample               |   |
+| sample size   |   |
 | standard deviation   |   |
+| standard error   |   |
 | variance   |   |
 | z-score   |   |
 

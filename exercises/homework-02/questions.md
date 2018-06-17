@@ -187,10 +187,22 @@ A 2011 poll in Canada indicated that 41% of Canadians favored bringing back the 
 
 *If this is the case, about how large was the sample size?*
 
-answer
+The margin of error is 2.5%.   
+The probability with which the margin of error is to be achieved is 0.95.   
+Objective: determine the sample size $n$ such that a 95% confidence interval for $\pi$ equals $\hat{\pi} \pm 0.025$.
+
+$\hat{\pi}$ falls within 1.96 standard errors of $\pi$ with probability 0.95.
+
+$0.025 = 1.96\sqrt{\frac{\pi(1-\pi)}{n}}$   
+...   
+$n = \frac{(1.96)^{2}\pi(1-\pi)}{(0.025)^{2}}$   
+in this case, $\pi = 0.41$, so   
+$n = \frac{(1.96)^{2}(0.41)(1-0.41)}{(0.025)^{2}} = 1486.85$
+
+In this case, the sample size was approximately 1487.
 
 ## 9. The Five Parts of a Significance Test.
-You want to know whether adults in your country think the ideal number of children is equal to 2, or higher or lower than that. (7.5 total points, 2.5 points for each part)<p>
+You want to know whether adults in your country think the ideal number of children is equal to 2, or higher or lower than that.<p>
 - *( a ) Define notation and state the null and alternative hypotheses for studying this.*
 
 answer
