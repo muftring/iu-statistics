@@ -205,22 +205,27 @@ In this case, the sample size was approximately 1487.
 You want to know whether adults in your country think the ideal number of children is equal to 2, or higher or lower than that.<p>
 - *( a ) Define notation and state the null and alternative hypotheses for studying this.*
 
-answer
+Let $\mu$ denote the ideal number of children.   
+The *null hypothesis* claim is that the majority of the population believe the ideal number of children is 2, thus ${H_0}: \mu = 2.0$.   
+The *alternative hypothesis* is that a majority of the population do not believe that the ideal number of children is 2, and so $H_{a}: \mu > 2.0$
 
 - *( b ) For responses in a recent GSS to the question “What do you think is the ideal number of children to have?” software shows results:*
 
 Test of mu = 2.0 vs mu not = 2.0
-| Variable |	n  | Mean	| StDev	| SE Mean	|  T  | P-value |
-| -------- | --- | ---- | ----- | ------- | --- | ------- |
-|Children	|1302	|2.490	|0.850	|0.0236		|20.80	|0.0000
+| Variable |	n   | Mean	| StDev	| SE Mean	|  T    | P-value |
+| -------- | ---- | ----- | ----- | ------- | ----- | ------- |
+| Children | 1302 | 2.490	| 0.850	| 0.0236	| 20.80	| 0.0000  |
 
 *Report the test statistic value, and show how it was obtained from other values reported in the table.*
 
-answer
+The test statistic is number of children and the T value here is 20.80, reporting the number of standard errors away the value in the null hypothesis is from the mean of the observed data. Its value is derived by computing the difference between the $\mu$ value in the null hypotheses and the mean in the observed data, and dividing by the standard error.
+
+$se = s / \sqrt{n} = 0.023556644807631963$
+$0.490 / 0.023556644807631963 = 20.8$
 
 - *( c ) Explain what the P-value represents, and interpret its value.*
 
-answer
+The P-value is a probability indicator of whether the observed data support or reject the null hypothesis. The larger the value, the more likely it is that the observed data would not be unusual given the null hypothesis is true. The smaller the value, the less evidence there is to support the null hypothesis. In this case the P-value is 0.0000, which is indeed "very small" (a value of 0.01 is sufficient to debunk a null hypothesis), and so we may conclude that the alternative hypothesis is more likely.
 
 ## 10. Significance Test for a Mean.
 By law, an industrial plant can discharge no more than 500 gallons of waste water per hour, on the average, into a neighboring lake. Based on other infractions they have noticed, an environmental action group believes this limit is being exceeded. Monitoring the plan is expensive, and a random sample of four hours is selected over a period of a week. Software reports
