@@ -256,18 +256,39 @@ The small sample size and large standard deviation introduce some doubt, and sug
 In the original $H_{0}$ we are testing the distance from $\mu = 500$, and are able to conclude that we can reject that null hypothesis. If $\mu$ were smaller in $H_{0}$, that is less than 500, we would be testing the same observed values against a distance already further away and could thus reach the same conclusion.
 
 ## 11. Significance Test for a Proportion.
-Same-sex marriage was legalized across Canada by the Civil Marriage Act enacted in 2005. Is this supported by a majority, or a minority, of the Canadian population? In an Ipsos Global poll conducted for Reuter News in May 2013 of 1000 Canadians that asked whether legalization should stand or be repealed, 63% supported legalization. Let π denote the population proportion of Canadian adults who support legalization. For testing H0: μ = 0.50 against Ha: μ  0.50<P>
+Same-sex marriage was legalized across Canada by the Civil Marriage Act enacted in 2005. Is this supported by a majority, or a minority, of the Canadian population? In an Ipsos Global poll conducted for Reuter News in May 2013 of 1000 Canadians that asked whether legalization should stand or be repealed, 63% supported legalization. Let π denote the population proportion of Canadian adults who support legalization. For testing $H_{0}: \mu = 0.50$ against, $H_{a}: \mu \ne  0.50$<P>
+
+| Variable | n       | $\pi$  |
+| -------- | ------- | ------ |
+| SUPPORT  | 1000    | 0.63   |
+
 - *( a ) Find the standard error, and interpret.*
 
-answer
+$se_{0} = \sqrt{\frac{\pi_{0}(1 - \pi_{0})}{n}}$
+$ = \sqrt{\frac{(0.50)(1-0.50)}{1000}}$
+$ = 0.0158$
+
+The standard error here is rather small, which indicates that the sample size is sufficient for an accurate standard deviation of the mean..
 
 - *( b ) Find the test statistic, and interpret.*
+> This measures the number of standard errors that the sample proportion $\hat{\pi}$ falls from $\pi_{0}$
 
-answer
+$z = \frac{\hat{\pi} - \pi_{0}}{se_{0}}$
+$ = \frac{0.63 - 0.50}{0.0158}$
+$ = 8.228$
 
-- *( c ) Fine the P-value, and interpret in context.*
+The sample proportion falls a large number of standard errors away from the the $H_{0}$ value.
 
-answer
+- *( c ) Find the P-value, and interpret in context.*
+> The P-value for a test statistic measures the number of standard errors a point estimate falls from a $H_{0}$ value.
+
+Since $H_{a}: \pi \ne \pi_{0}$, the P-value will be a two-tail probability. This result will be double the single-tail probability beyond the observed z-value.
+
+$z = 0.823$
+From Table A, the greatest right-hand tail probability is for a z-score of 5.0 =  $0.000000287$
+$2(0.000000287) = 0.000000547$
+
+This is an incredibly tiny P-value, so we can definitely conclude that the null hypothesis is rejected. The poll of 1000 Canadians is sufficient, and the results are conclusive: a majority of Canadians support same-sex marriage.
 
 ## 12. Decisions and Types of Errors in Tests.
 Example 6.4 (page 148 in the 5th edition and page 151 in the 4th edition) tested a therapy for anorexia, using Ho: μ = 0 and Ha: μ  0 about the population mean weight change.<P>
