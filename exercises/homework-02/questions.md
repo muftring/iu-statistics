@@ -206,8 +206,8 @@ You want to know whether adults in your country think the ideal number of childr
 - *( a ) Define notation and state the null and alternative hypotheses for studying this.*
 
 Let $\mu$ denote the ideal number of children.   
-The *null hypothesis* claim is that the majority of the population believe the ideal number of children is 2, thus ${H_0}: \mu = 2.0$.   
-The *alternative hypothesis* is that a majority of the population do not believe that the ideal number of children is 2, and so $H_{a}: \mu > 2.0$
+The *null hypothesis* claim is that the ideal number of children is 2, thus ${H_0}: \mu = 2.0$.   
+The *alternative hypothesis* is that the ideal number of children is not 2, and so $H_{a}: \mu \ne 2.0$
 
 - *( b ) For responses in a recent GSS to the question “What do you think is the ideal number of children to have?” software shows results:*
 
@@ -230,21 +230,30 @@ The P-value is a probability indicator of whether the observed data support or r
 ## 10. Significance Test for a Mean.
 By law, an industrial plant can discharge no more than 500 gallons of waste water per hour, on the average, into a neighboring lake. Based on other infractions they have noticed, an environmental action group believes this limit is being exceeded. Monitoring the plan is expensive, and a random sample of four hours is selected over a period of a week. Software reports
 
-|Variable	|No. Cases	|Mean		|StDev		|SE of Mean|
-|---------|-----------|-------|---------|----------|
-|WASTE	|4		|1000.0		|400.0		|200.0|
+| Variable	| No. Cases	  | Mean		| StDev		  | SE of Mean |
+| --------- | ----------- | ------- | --------- | ---------- |
+| WASTE     | 4           | 1000.0  | 400.0     | 200.0      |
+
+> **Note**:
+> - The null hypothesis: the waste discharge is 500 gallons per hour, $H_{0}: \mu = 500$
+> - the alternative hypothesis: the waste discharge is much greater than 500 gallons per hour, $H_{a}: \mu > 500$
 
 - *( a ) Test whether the mean discharge equals 500 gallons per hour against the alternative that the limit is being exceeded. Find the P-value, and interpret.*
 
-answer
+$se = s / \sqrt{n}$
+$t = \frac{\bar{y} - \mu_{0}}{se}$
+$t = \frac{1000 - 500}{200.0} = 2.5$
+Consulting Table B, with $df = 3$, the one-tail P-value will be between 0.025 and 0.050.
+
+With a P-value in this range we can reject the null hypothesis (outright). The general convention is that when $P \le 0.05$ the null hypotheses can be rejected.
 
 - *( b ) Explain why the test may be highly approximate or even invalid if the population distribution of discharge is far from normal.*
 
-answer
+The small sample size and large standard deviation introduce some doubt, and suggest this test could be highly approximate.
 
-- *( c ) Explain how your one-sided analysis implicitly tests the broader null hypothesis that μ  500.*
+- *( c ) Explain how your one-sided analysis implicitly tests the broader null hypothesis that μ <= 500.*
 
-answer
+In the original $H_{0}$ we are testing the distance from $\mu = 500$, and are able to conclude that we can reject that null hypothesis. If $\mu$ were smaller in $H_{0}$, that is less than 500, we would be testing the same observed values against a distance already further away and could thus reach the same conclusion.
 
 ## 11. Significance Test for a Proportion.
 Same-sex marriage was legalized across Canada by the Civil Marriage Act enacted in 2005. Is this supported by a majority, or a minority, of the Canadian population? In an Ipsos Global poll conducted for Reuter News in May 2013 of 1000 Canadians that asked whether legalization should stand or be repealed, 63% supported legalization. Let π denote the population proportion of Canadian adults who support legalization. For testing H0: μ = 0.50 against Ha: μ  0.50<P>
