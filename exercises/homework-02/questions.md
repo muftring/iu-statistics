@@ -291,18 +291,29 @@ $2(0.000000287) = 0.000000547$
 This is an incredibly tiny P-value, so we can definitely conclude that the null hypothesis is rejected. The poll of 1000 Canadians is sufficient, and the results are conclusive: a majority of Canadians support same-sex marriage.
 
 ## 12. Decisions and Types of Errors in Tests.
-Example 6.4 (page 148 in the 5th edition and page 151 in the 4th edition) tested a therapy for anorexia, using Ho: μ = 0 and Ha: μ  0 about the population mean weight change.<P>
-- *( a ) In the words of that example, what is (i) Type I error? (ii) Type II error?*
+Example 6.4 (page 148 in the 5th edition and page 151 in the 4th edition) tested a therapy for anorexia, using Ho: μ = 0 and Ha: μ  0 about the population mean weight change.
 
-answer
+>$\mu$ denotes the population mean change in weight for the cognitive behavioral treatment
+if this treatment has beneficial effect, as expected, then $\mu$ is positive
+to test for no treatment effect versus a positive mean weight change, we test
+$H_{0}: \mu = 0$
+$H_{a}: \mu > 0$
+
+- *( a ) In the words of that example, what is (i) Type I error? (ii) Type II error?*
+>When $H_{0}$ is *true*, a Type I error occurs if $H_{0}$ is rejected
+When $H_{0}$ is *false*, a Type II error occurs if $H_{0}$ is not rejected
+
+In this study:
+A Type I error would occur if there truly was no effect from the treatment and that hypothesis was rejected.
+A Type II error would occur if there was a beneficial effect from the treatment and the null hypothesis (there is no effect from the treatment) was not rejected.
 
 - *( b ) The P-value was 0.018 (5th edition) or 0.017 (4th edition). If the decision for α = 0.05 were in error, what type of error is it?*
 
-answer
+a Type I error
 
 - *( c ) Suppose instead α = 0.01. What decision would you make? If it is in error, what type of error is it?*
 
-answer
+In this case, with $\alpha = 0.01$ the decision for a P-value of $0.017$ (I'm working with the 4th edition) would be to not reject $H{0}$ but also to not accept $H_{a}$. Given that we believe $H_{0}$ is false, this would be a Type II error.
 
 ## 13. Limitations of Significance Tests.
 A report by the Collaborative on Academic Careers in Higher Education indicated that there is a notable gap between female and male academics in their confidence that tenure rules are clear, with men feeling more confident. The 4500 faculty members in the survey were asked to evaluate policies on a scale of 1 to 5 (very unclear to very clear). The mean response about the criteria for tenure was 3.51 for females and 3.55 for males, which was indicated to meet the test for statistical significance.
