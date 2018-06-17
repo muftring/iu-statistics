@@ -320,4 +320,12 @@ A report by the Collaborative on Academic Careers in Higher Education indicated 
 
 *Use this study to explain the distinction between statistical significance and practical significance.*
 
-answer
+> “When the null hypothesis is rejected, the effect is said to be statistically significant.”
+“Thus, finding that an effect is statistically significant signifies that the effect is real and not due to chance.”
+“it does not mean that the effect is important, which is what “significant” usually means.”
+
+Excerpts From: David M. Lane. “Introduction to Statistics: An Interactive e-Book.” David Lane, 2013. iBooks. https://itunes.apple.com/us/book/introduction-to-statistics-an-interactive-e-book/id684001500?mt=11
+
+The results concluded that there was statistical significance in this test, further meaning that the null hypothesis was rejected. It would be noted that there was a notable gap in confidence of clarity of tenure rules between female and male academics.
+
+If we just look at the mean responses -- female = 3.51, male = 3.55 -- we might conclude on our own that they are nearly identical. The gap between them is only 0.04. How would we quantify, in words, that amount of difference? We might simply conclude that the results were practically the same and there was not a notable gap. 
