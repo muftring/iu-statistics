@@ -1,7 +1,7 @@
-Michael Uftring   
-Indiana University   
-V506 - Statistical Analysis, Summer 2018   
-Homework Exercise 2   
+Michael Uftring
+Indiana University
+V506 - Statistical Analysis, Summer 2018
+Homework Exercise 2
 
 -----
 
@@ -65,12 +65,12 @@ The probability distribution associated with the outcome of rolling a balanced d
 - *( a ) Enumerate the 36 possible (y1, y2) pairs (e.g., (2,1) represents a 2 followed by a 1).*
 
 ```
-(1,1) (1,2) (1,3) (1,4) (1,5) (1,6)   
-(2,1) (2,2) (2,3) (2,4) (2,5) (2,6)   
-(3,1) (3,2) (3,3) (3,4) (3,5) (3,6)   
-(4,1) (4,2) (4,3) (4,4) (4,5) (4,6)   
-(5,1) (5,2) (5,3) (5,4) (5,5) (5,6)   
-(6,1) (6,2) (6,3) (6,4) (6,5) (6,6)   
+(1,1) (1,2) (1,3) (1,4) (1,5) (1,6)
+(2,1) (2,2) (2,3) (2,4) (2,5) (2,6)
+(3,1) (3,2) (3,3) (3,4) (3,5) (3,6)
+(4,1) (4,2) (4,3) (4,4) (4,5) (4,6)
+(5,1) (5,2) (5,3) (5,4) (5,5) (5,6)
+(6,1) (6,2) (6,3) (6,4) (6,5) (6,6)
 ```
 
 - *( b ) Treating the 36 pairs as equally likely, construct the sampling distribution for the sample mean y-bar of the two numbers rolled.*
@@ -131,8 +131,8 @@ The sampling distribution of $\bar{y}$ is essentially accumulating mean values. 
 One question on a recent General Social Survey asked, “Do you think that it should be government’s responsibility to reduce income differences between the rich and the poor?” Those answering yes included 90 out of the 142 subjects who called themselves strong Democrats in political party identification and 26 of the 102 who called themselves strong Republicans.<P>
 - *( a ) Find the point estimate of the population proportion who would answer yes for each group.*
 
-The point estimate for strong Democrats is 0.634   
-The point estimate for strong Republicans is 0.255   
+The point estimate for strong Democrats is 0.634
+The point estimate for strong Republicans is 0.255
 
 - *( b ) The 95% confidence interval for the population proportion of yes responses is (0.55, 0.71) for strong Democrats and (0.17, 0.34) for strong Republicans. Explain how to interpret the intervals.*
 
@@ -174,11 +174,11 @@ $\bar{y} \pm t_{.025}(se)$, with $se = s / \sqrt{n}$, where $df = n-1$ for the t
 
 In this case $df = 7-1 = 6$.
 
-$\bar{y} \pm t_{.025}(se)$   
-$\bar{y} \pm t_{.025}(s / \sqrt{n})$    
-$2.286 \pm 2.447(1.799/\sqrt{7})$   
-$2.286 \pm 1.664$   
-(0.622, 3.95)   
+$\bar{y} \pm t_{.025}(se)$
+$\bar{y} \pm t_{.025}(s / \sqrt{n})$
+$2.286 \pm 2.447(1.799/\sqrt{7})$
+$2.286 \pm 1.664$
+(0.622, 3.95)
 
 The 95% confidence interval has a broad range. The low end is 0.622 and the high end is 3.95, with a point estimate of approximately $2\frac{1}{4}$. The wide range, even with high confidence interval value, is likely due to the small sample size. The standard deviation value is close to the mean, which generally indicates a skew in the distribution; in this case, where negative values do not make sense, we can conclude that the distribution is skewed to the right. Looking closer at the data we observe that the median is 2 and the mode is 1. We also observe a single value of 6, which could be considered an outlier and be the cause for large standard deviation and thus such a wide range in the confidence interval.
 
@@ -187,16 +187,16 @@ A 2011 poll in Canada indicated that 41% of Canadians favored bringing back the 
 
 *If this is the case, about how large was the sample size?*
 
-The margin of error is 2.5%.   
-The probability with which the margin of error is to be achieved is 0.95.   
+The margin of error is 2.5%.
+The probability with which the margin of error is to be achieved is 0.95.
 Objective: determine the sample size $n$ such that a 95% confidence interval for $\pi$ equals $\hat{\pi} \pm 0.025$.
 
 $\hat{\pi}$ falls within 1.96 standard errors of $\pi$ with probability 0.95.
 
-$0.025 = 1.96\sqrt{\frac{\pi(1-\pi)}{n}}$   
-...   
-$n = \frac{(1.96)^{2}\pi(1-\pi)}{(0.025)^{2}}$   
-in this case, $\pi = 0.41$, so   
+$0.025 = 1.96\sqrt{\frac{\pi(1-\pi)}{n}}$
+...
+$n = \frac{(1.96)^{2}\pi(1-\pi)}{(0.025)^{2}}$
+in this case, $\pi = 0.41$, so
 $n = \frac{(1.96)^{2}(0.41)(1-0.41)}{(0.025)^{2}} = 1486.85$
 
 In this case, the sample size was approximately 1487.
@@ -205,8 +205,8 @@ In this case, the sample size was approximately 1487.
 You want to know whether adults in your country think the ideal number of children is equal to 2, or higher or lower than that.<p>
 - *( a ) Define notation and state the null and alternative hypotheses for studying this.*
 
-Let $\mu$ denote the ideal number of children.   
-The *null hypothesis* claim is that the ideal number of children is 2, thus ${H_0}: \mu = 2.0$.   
+Let $\mu$ denote the ideal number of children.
+The *null hypothesis* claim is that the ideal number of children is 2, thus ${H_0}: \mu = 2.0$.
 The *alternative hypothesis* is that the ideal number of children is not 2, and so $H_{a}: \mu \ne 2.0$
 
 - *( b ) For responses in a recent GSS to the question “What do you think is the ideal number of children to have?” software shows results:*
@@ -328,15 +328,221 @@ Excerpts From: David M. Lane. “Introduction to Statistics: An Interactive e-Bo
 
 The results concluded that there was statistical significance in this test, further meaning that the null hypothesis was rejected. It would be noted that there was a notable gap in confidence of clarity of tenure rules between female and male academics.
 
-If we just look at the mean responses -- female = 3.51, male = 3.55 -- we might conclude on our own that they are nearly identical. The gap between them is only 0.04. How would we quantify, in words, that amount of difference? We might simply conclude that the results were practically the same and there was not a notable gap. 
+If we just look at the mean responses -- female = 3.51, male = 3.55 -- we might conclude on our own that they are nearly identical. The gap between them is only 0.04. How would we quantify, in words, that amount of difference? We might simply conclude that the results were practically the same and there was not a notable gap.
 # Analysis
 
 ## 1. Ohio School Districts
 Using the SCHOOLS.CSV data set which contains data on a sample of school districts in Ohio.
 
 - ( a ) Find the mean, median, mode, range, variance, and standard deviation for the variables: Number of Students (Students), the Percent of Families Receiving Welfare (Welfare), the Amount Spent per Pupil (Instruct), and Average Instructor Salary (Salary).<p>
-- ( b ) Create a new variable called “AmtPerPupil_StdScore” which is equal to the Amount Spent per Pupil (Instruct) converted to standard scores (i.e., z-scores) and print out the original and new variable values.  Then interpret the highest and lowest values for the Amt_Per_Pupil_Std_Score.<p>
+
+```
+> library(readr)
+> library(DescTools)
+> library(car)
+> compute.stats <- function(n, l, v) {
++   v.mean = mean(v, na.rm=T)
++   v.median = median(v, na.rm=T)
++   v.mode = Mode(v, na.rm=T)[1]
++   v.result <- range(v, na.rm=T)
++   v.min <-v.result[1]
++   v.max <- v.result[2]
++   v.range <- v.max - v.min
++   v.var = var(v, na.rm=T)
++   v.sd = sd(v, na.rm=T)
++   print(sprintf("variable: %s mean: %.3f median: %.3f mode = %.3f range: %.3f (%.3f - %.3f) variance: %.3f stddev: %.3f",
++                 n, v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd))
++   return(list(n, v.mean, v.median, v.mode, v.min, v.max, v.range, v.var, v.sd))
++ }
+> SCHOOLS <- read_csv("SCHOOLS.csv")
+Parsed with column specification:
+cols(
+  Schools = col_character(),
+  Students = col_integer(),
+  Income = col_integer(),
+  Property = col_integer(),
+  Welfare = col_double(),
+  Salary = col_integer(),
+  Instruct = col_integer(),
+  Attend = col_double(),
+  Passing = col_integer()
+)
+> # create summary table
+> df = data.frame(Variable=character(), Mean=double(), Median=double(), Mode=double(), Min=double(), Max=double(), Range=double(), Variance=double(), StdDev=double(), stringsAsFactors=FALSE)
+> # find mean, median, mode, range, variance, and standard deviation for...
+> df[nrow(df) + 1,] = compute.stats("Students","Number of Students", SCHOOLS$Students)
+[1] "variable: Students mean: 2134.053 median: 1226.500 mode = 20.000 range: 36770.000 (20.000 - 36790.000) variance: 15171368.610 stddev: 3895.044"
+> df[nrow(df) + 1,] = compute.stats("Welfare","Percent of Families Receiving Welfare", SCHOOLS$Welfare)
+[1] "variable: Welfare mean: 7.233 median: 5.350 mode = 3.900 range: 42.600 (0.200 - 42.800) variance: 42.540 stddev: 6.522"
+> df[nrow(df) + 1,] = compute.stats("Instruct","Amount Spent per Pupil", SCHOOLS$Instruct)
+[1] "variable: Instruct mean: 2724.606 median: 2508.500 mode = 2250.000 range: 9310.000 (1916.000 - 11226.000) variance: 1199502.284 stddev: 1095.218"
+> df[nrow(df) + 1,] = compute.stats("Salary","Average Instructor Salary", SCHOOLS$Salary)
+[1] "variable: Salary mean: 33181.404 median: 32708.000 mode = 26125.000 range: 17131.000 (26125.000 - 43256.000) variance: 12591883.276 stddev: 3548.504"
+> # show the summary table
+> print(df)
+  Variable         Mean   Median    Mode     Min     Max   Range     Variance      StdDev
+1 Students  2134.053191  1226.50    20.0    20.0 36790.0 36770.0 1.517137e+07 3895.044109
+2  Welfare     7.232979     5.35     3.9     0.2    42.8    42.6 4.253987e+01    6.522259
+3 Instruct  2724.606383  2508.50  2250.0  1916.0 11226.0  9310.0 1.199502e+06 1095.217916
+4   Salary 33181.404255 32708.00 26125.0 26125.0 43256.0 17131.0 1.259188e+07 3548.504372
+```
+
+|Variable|Mean|Median|Mode|Min|Max|Range|Variance|StdDev|
+| ------ | -- | -----|----|---|---|-----|--------|------|
+|Students|2134.053191|1226.50|20.0|20.0|36790.0|36770.0|1.517137e+07|3895.044109|
+|Welfare|7.232979|5.35|3.9|0.2|42.8|42.6|4.253987e+01|6.522259|
+|Instruct|2724.606383|2508.50|2250.0|1916.0|11226.0|9310.0|1.199502e+06|1095.217916|
+|Salary|33181.404255|32708.00|26125.0|26125.0|43256.0|17131.0|1.259188e+07|3548.504372|
+
+- ( b ) Create a new variable called “AmtPerPupil_StdScore” which is equal to the Amount Spent per Pupil (Instruct) converted to standard scores (i.e., z-scores) and print out the original and new variable values.  Then interpret the highest and lowest values for the Amt_Per_Pupil_Std_Score.<P>
+
+```
+> # compute the z-score for each value of Instruct
+> ## find the number of samples
+> samples <- length(SCHOOLS$Instruct)
+> ## create new column in SCHOOLS to hold Amount sSpent per Pupil Standard Score
+> SCHOOLS$AmtPerPupil_StdScore <- double(samples)
+> ## function to compute z-score
+> compute.zscore <- function(yi, ybar, s) {
++   z <- (yi - ybar)/s
++   return(z)
++ }
+> ## get the mean and standard deviation from the summary table (data frame)
+> ybar <- df[df$Variable == "Instruct","Mean"]
+> s <- df[df$Variable == "Instruct","StdDev"]
+> ## compute the z-scores
+> z <- double(samples)
+> for (i in 1:samples) {
++   yi = SCHOOLS$Instruct[i]
++   z[i] = compute.zscore(yi, ybar, s)
++   print(sprintf("Observation: %d Value: %.3f Z-score: %.3f",i , yi, z[i]))
++ }
+[1] "Observation: 1 Value: 2130.000 Z-score: -0.543"
+[1] "Observation: 2 Value: 2570.000 Z-score: -0.141"
+[1] "Observation: 3 Value: 2262.000 Z-score: -0.422"
+[1] "Observation: 4 Value: 2506.000 Z-score: -0.200"
+[1] "Observation: 5 Value: 2250.000 Z-score: -0.433"
+[1] "Observation: 6 Value: 2657.000 Z-score: -0.062"
+[1] "Observation: 7 Value: 2431.000 Z-score: -0.268"
+[1] "Observation: 8 Value: 2693.000 Z-score: -0.029"
+[1] "Observation: 9 Value: 2438.000 Z-score: -0.262"
+[1] "Observation: 10 Value: 2351.000 Z-score: -0.341"
+[1] "Observation: 11 Value: 2496.000 Z-score: -0.209"
+[1] "Observation: 12 Value: 2564.000 Z-score: -0.147"
+[1] "Observation: 13 Value: 2861.000 Z-score: 0.125"
+[1] "Observation: 14 Value: 2968.000 Z-score: 0.222"
+[1] "Observation: 15 Value: 2464.000 Z-score: -0.238"
+[1] "Observation: 16 Value: 2766.000 Z-score: 0.038"
+[1] "Observation: 17 Value: 11226.000 Z-score: 7.762"
+[1] "Observation: 18 Value: 2834.000 Z-score: 0.100"
+[1] "Observation: 19 Value: 2252.000 Z-score: -0.432"
+[1] "Observation: 20 Value: 2250.000 Z-score: -0.433"
+[1] "Observation: 21 Value: 2837.000 Z-score: 0.103"
+[1] "Observation: 22 Value: 2309.000 Z-score: -0.379"
+[1] "Observation: 23 Value: 2492.000 Z-score: -0.212"
+[1] "Observation: 24 Value: 2615.000 Z-score: -0.100"
+[1] "Observation: 25 Value: 2205.000 Z-score: -0.474"
+[1] "Observation: 26 Value: 2420.000 Z-score: -0.278"
+[1] "Observation: 27 Value: 2063.000 Z-score: -0.604"
+[1] "Observation: 28 Value: 2584.000 Z-score: -0.128"
+[1] "Observation: 29 Value: 2416.000 Z-score: -0.282"
+[1] "Observation: 30 Value: 2752.000 Z-score: 0.025"
+[1] "Observation: 31 Value: 2321.000 Z-score: -0.369"
+[1] "Observation: 32 Value: 2860.000 Z-score: 0.124"
+[1] "Observation: 33 Value: 2380.000 Z-score: -0.315"
+[1] "Observation: 34 Value: 2512.000 Z-score: -0.194"
+[1] "Observation: 35 Value: 2431.000 Z-score: -0.268"
+[1] "Observation: 36 Value: 2552.000 Z-score: -0.158"
+[1] "Observation: 37 Value: 2422.000 Z-score: -0.276"
+[1] "Observation: 38 Value: 2454.000 Z-score: -0.247"
+[1] "Observation: 39 Value: 2474.000 Z-score: -0.229"
+[1] "Observation: 40 Value: 2374.000 Z-score: -0.320"
+[1] "Observation: 41 Value: 2347.000 Z-score: -0.345"
+[1] "Observation: 42 Value: 2384.000 Z-score: -0.311"
+[1] "Observation: 43 Value: 4150.000 Z-score: 1.301"
+[1] "Observation: 44 Value: 2844.000 Z-score: 0.109"
+[1] "Observation: 45 Value: 2943.000 Z-score: 0.199"
+[1] "Observation: 46 Value: 3933.000 Z-score: 1.103"
+[1] "Observation: 47 Value: 2941.000 Z-score: 0.198"
+[1] "Observation: 48 Value: 2997.000 Z-score: 0.249"
+[1] "Observation: 49 Value: 2774.000 Z-score: 0.045"
+[1] "Observation: 50 Value: 2611.000 Z-score: -0.104"
+[1] "Observation: 51 Value: 3444.000 Z-score: 0.657"
+[1] "Observation: 52 Value: 3158.000 Z-score: 0.396"
+[1] "Observation: 53 Value: 2845.000 Z-score: 0.110"
+[1] "Observation: 54 Value: 2926.000 Z-score: 0.184"
+[1] "Observation: 55 Value: 7824.000 Z-score: 4.656"
+[1] "Observation: 56 Value: 2560.000 Z-score: -0.150"
+[1] "Observation: 57 Value: 2588.000 Z-score: -0.125"
+[1] "Observation: 58 Value: 2174.000 Z-score: -0.503"
+[1] "Observation: 59 Value: 2274.000 Z-score: -0.411"
+[1] "Observation: 60 Value: 2225.000 Z-score: -0.456"
+[1] "Observation: 61 Value: 2154.000 Z-score: -0.521"
+[1] "Observation: 62 Value: 2078.000 Z-score: -0.590"
+[1] "Observation: 63 Value: 2811.000 Z-score: 0.079"
+[1] "Observation: 64 Value: 2242.000 Z-score: -0.441"
+[1] "Observation: 65 Value: 2306.000 Z-score: -0.382"
+[1] "Observation: 66 Value: 2616.000 Z-score: -0.099"
+[1] "Observation: 67 Value: 2227.000 Z-score: -0.454"
+[1] "Observation: 68 Value: 2383.000 Z-score: -0.312"
+[1] "Observation: 69 Value: 2394.000 Z-score: -0.302"
+[1] "Observation: 70 Value: 2435.000 Z-score: -0.264"
+[1] "Observation: 71 Value: 2743.000 Z-score: 0.017"
+[1] "Observation: 72 Value: 2564.000 Z-score: -0.147"
+[1] "Observation: 73 Value: 2501.000 Z-score: -0.204"
+[1] "Observation: 74 Value: 2506.000 Z-score: -0.200"
+[1] "Observation: 75 Value: 2455.000 Z-score: -0.246"
+[1] "Observation: 76 Value: 2511.000 Z-score: -0.195"
+[1] "Observation: 77 Value: 1916.000 Z-score: -0.738"
+[1] "Observation: 78 Value: 2382.000 Z-score: -0.313"
+[1] "Observation: 79 Value: 2706.000 Z-score: -0.017"
+[1] "Observation: 80 Value: 2349.000 Z-score: -0.343"
+[1] "Observation: 81 Value: 2654.000 Z-score: -0.064"
+[1] "Observation: 82 Value: 2470.000 Z-score: -0.232"
+[1] "Observation: 83 Value: 2617.000 Z-score: -0.098"
+[1] "Observation: 84 Value: 3011.000 Z-score: 0.261"
+[1] "Observation: 85 Value: 2643.000 Z-score: -0.075"
+[1] "Observation: 86 Value: 2849.000 Z-score: 0.114"
+[1] "Observation: 87 Value: 2539.000 Z-score: -0.169"
+[1] "Observation: 88 Value: 2979.000 Z-score: 0.232"
+[1] "Observation: 89 Value: 2499.000 Z-score: -0.206"
+[1] "Observation: 90 Value: 2820.000 Z-score: 0.087"
+[1] "Observation: 91 Value: 3258.000 Z-score: 0.487"
+[1] "Observation: 92 Value: 2331.000 Z-score: -0.359"
+[1] "Observation: 93 Value: 2267.000 Z-score: -0.418"
+[1] "Observation: 94 Value: 2513.000 Z-score: -0.193"
+> ## Store the z-scores in the table
+> SCHOOLS$AmtPerPupil_StdScore <- z
+> ## find the highest and lowest z-score values
+> a = integer(samples)
+> for (i in 1:samples) {a[i]=i}
+> df2 = data.frame(Index=a, School=SCHOOLS$Schools, Value=SCHOOLS$Instruct, Score=SCHOOLS$AmtPerPupil_StdScore)
+> print("The Maximum z-score:")
+[1] "The Maximum z-score:"
+> df2[which.max(df2$Score),]
+   Index         School Value    Score
+17    17 Kelleys Island 11226 7.762285
+> print("The Minimum z-score:")
+[1] "The Minimum z-score:"
+> df2[which.min(df2$Score),]
+   Index         School Value      Score
+77    77 Edon-Northwest  1916 -0.7383064
+```
+
+The lowest z-score is $-0.7383064$ for the Edon-Northwest schools. This represents a value that is 0.7 standard deviations below the mean value. The highest z-score of $7.762285$ belongs to the Kelleys Island schools and represents a value much higher than the mean. The Kelleys Island score is 7.7 standard deviations greater than the mean, and is clearly an outlier.
+
 - ( c ) Create a plot where you overlay the normal curve on a histogram for average instructor salary (hint: to do this, you will need to use the curve and dnorm functions in R as demonstrated in the tutorial video). Be sure to add appropriate label axes and other elements necessary to enhance the readability of your graph. After constructing your plot, discuss any similarities or differences you observe between the observed distribution for instructor salary and the normal distribution.<p>
+
+```
+> # plot histogram of Salary with normal distribution overlay
+> hist(SCHOOLS$Salary, prob=T, main="Instructor Salary - Histogram\nPlotted With Normal Distribution", xlab = "Salary", col="lightblue")
+> curve(dnorm(x, mean(SCHOOLS$Salary, na.rm=T), sd(SCHOOLS$Salary, na.rm=T)), add=T, lwd=3, col="red")
+```
+
+![](schools-instructor-salary.png)<p>
+**Figure 3: Ohio School Disctricts - Instructor Salaries**<P>
+
+The distribution for the instructor salaries in the Ohiio School disctricts has a bell-shaped curve, but with a definite skew to the right. We can see that the peak of the actual salary distribution is to the left of the peak of the normal distribution with the same parameters (mean, standard deviation). This would indicate that there are some instructors with very high salaries well above the mean and many instructors with salaries below the mean.
 
 ## 2. Baltimore Longitudinal Study of Aging
 This data set is named:  BLSA.csv, which is a text file available from Canvas. The variables in this data set are, in order, subject number, sex, age, smoker, systolic blood pressure (SBP), diastolic blood pressure (DBP), height, and weight for a random sample of 720 adults. Ages are given in years, blood pressure readings are in millimeters of mercury, heights are given in centimeters, and weights are given in kilograms. Male gender is indicated with a value of M and female gender with a value of F. A smoker is given a value of Y and a non-smoker a value of N.
@@ -346,3 +552,10 @@ This data set is named:  BLSA.csv, which is a text file available from Canvas. T
 - ( c ) Construct a 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old. Interpret the results.<p>
 - ( d ) Test the claim, at the .05 level of significance, that males who are 50 and older have a mean systolic blood pressure that is greater than the mean systolic blood pressure for all men. Use the p-value method.<p>
 - ( e ) Test the claim, at the .01 level, that females who have lower weight than the mean weight of all females also have a lower mean systolic blood pressure than the average female. Use the p-value method.<p>
+
+# Appendix
+
+## Schools Analysis - R Script (source)
+
+
+## Aging Study - R Script (source)
