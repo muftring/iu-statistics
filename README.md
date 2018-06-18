@@ -619,3 +619,11 @@ to write up
 | $s^{2}$         | the variance  |
 | $z$             | the z-score, the number of standard deviations away from the mean  |
 | $\hat{}$        | caret, placed over a symbol to indicate it is an estimated value  |
+
+-----
+
+# Resources and References
+
+[Statistical Methods for the Social Sciences (4th Edition)](https://www.amazon.com/Statistical-Methods-Social-Sciences-4th/dp/0130272957)
+[Introduction to Statistics: An Interactive e-Book](https://itunes.apple.com/us/book/introduction-to-statistics-an-interactive-e-book/id684001500?mt=11)
+[Online Statistics Education: An Interactive Multimedia Course of Study](http://onlinestatbook.com)
