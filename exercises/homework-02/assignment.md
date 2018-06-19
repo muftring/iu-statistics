@@ -245,7 +245,7 @@ $t = \frac{\bar{y} - \mu_{0}}{se}$
 $t = \frac{1000 - 500}{200.0} = 2.5$
 Consulting Table B, with $df = 3$, the one-tail P-value will be between 0.025 and 0.050.
 
-With a P-value in this range we can reject the null hypothesis (outright). The general convention is that when $P \le 0.05$ the null hypotheses can be rejected.
+With a P-value in this range we can reject the null hypothesis (confidently). The general convention is that when $P \le 0.05$ the null hypotheses can be rejected.
 
 - *( b ) Explain why the test may be highly approximate or even invalid if the population distribution of discharge is far from normal.*
 
@@ -329,12 +329,13 @@ Excerpts From: David M. Lane. “Introduction to Statistics: An Interactive e-Bo
 The results concluded that there was statistical significance in this test, further meaning that the null hypothesis was rejected. It would be noted that there was a notable gap in confidence of clarity of tenure rules between female and male academics.
 
 If we just look at the mean responses -- female = 3.51, male = 3.55 -- we might conclude on our own that they are nearly identical. The gap between them is only 0.04. How would we quantify, in words, that amount of difference? We might simply conclude that the results were practically the same and there was not a notable gap.
+
 # Analysis
 
 ## 1. Ohio School Districts
 Using the SCHOOLS.CSV data set which contains data on a sample of school districts in Ohio.
 
-- ( a ) Find the mean, median, mode, range, variance, and standard deviation for the variables: Number of Students (Students), the Percent of Families Receiving Welfare (Welfare), the Amount Spent per Pupil (Instruct), and Average Instructor Salary (Salary).<p>
+- *( a ) Find the mean, median, mode, range, variance, and standard deviation for the variables: Number of Students (Students), the Percent of Families Receiving Welfare (Welfare), the Amount Spent per Pupil (Instruct), and Average Instructor Salary (Salary).*<p>
 
 ```
 > library(readr)
@@ -394,7 +395,7 @@ cols(
 |Instruct|2724.606383|2508.50|2250.0|1916.0|11226.0|9310.0|1.199502e+06|1095.217916|
 |Salary|33181.404255|32708.00|26125.0|26125.0|43256.0|17131.0|1.259188e+07|3548.504372|
 
-- ( b ) Create a new variable called “AmtPerPupil_StdScore” which is equal to the Amount Spent per Pupil (Instruct) converted to standard scores (i.e., z-scores) and print out the original and new variable values.  Then interpret the highest and lowest values for the Amt_Per_Pupil_Std_Score.<P>
+- *( b ) Create a new variable called “AmtPerPupil_StdScore” which is equal to the Amount Spent per Pupil (Instruct) converted to standard scores (i.e., z-scores) and print out the original and new variable values.  Then interpret the highest and lowest values for the Amt_Per_Pupil_Std_Score.*<P>
 
 ```
 > # compute the z-score for each value of Instruct
@@ -531,7 +532,7 @@ cols(
 
 The lowest z-score is $-0.7383064$ for the Edon-Northwest schools. This represents a value that is 0.7 standard deviations below the mean value. The highest z-score of $7.762285$ belongs to the Kelleys Island schools and represents a value much higher than the mean. The Kelleys Island score is 7.7 standard deviations greater than the mean, and is clearly an outlier.
 
-- ( c ) Create a plot where you overlay the normal curve on a histogram for average instructor salary (hint: to do this, you will need to use the curve and dnorm functions in R as demonstrated in the tutorial video). Be sure to add appropriate label axes and other elements necessary to enhance the readability of your graph. After constructing your plot, discuss any similarities or differences you observe between the observed distribution for instructor salary and the normal distribution.<p>
+- *( c ) Create a plot where you overlay the normal curve on a histogram for average instructor salary (hint: to do this, you will need to use the curve and dnorm functions in R as demonstrated in the tutorial video). Be sure to add appropriate label axes and other elements necessary to enhance the readability of your graph. After constructing your plot, discuss any similarities or differences you observe between the observed distribution for instructor salary and the normal distribution.*<p>
 
 ```
 > # plot histogram of Salary with normal distribution overlay
@@ -547,11 +548,183 @@ The distribution for the instructor salaries in the Ohiio School disctricts has 
 ## 2. Baltimore Longitudinal Study of Aging
 This data set is named:  BLSA.csv, which is a text file available from Canvas. The variables in this data set are, in order, subject number, sex, age, smoker, systolic blood pressure (SBP), diastolic blood pressure (DBP), height, and weight for a random sample of 720 adults. Ages are given in years, blood pressure readings are in millimeters of mercury, heights are given in centimeters, and weights are given in kilograms. Male gender is indicated with a value of M and female gender with a value of F. A smoker is given a value of Y and a non-smoker a value of N.
 
-- ( a ) Construct a 95% confidence interval for the mean diastolic blood pressure of all males. Interpret the results.<p>
-- ( b ) Construct a 99% confidence interval for the proportion of males that smoke. Interpret the results.<p>
-- ( c ) Construct a 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old. Interpret the results.<p>
-- ( d ) Test the claim, at the .05 level of significance, that males who are 50 and older have a mean systolic blood pressure that is greater than the mean systolic blood pressure for all men. Use the p-value method.<p>
-- ( e ) Test the claim, at the .01 level, that females who have lower weight than the mean weight of all females also have a lower mean systolic blood pressure than the average female. Use the p-value method.<p>
+```
+> library(readr)
+> library(DescTools)
+> library(car)
+> BLSA <- read_csv("BLSA.csv")
+Parsed with column specification:
+cols(
+  subjectnumber = col_integer(),
+  sex = col_character(),
+  age = col_integer(),
+  smoke = col_character(),
+  SBP = col_integer(),
+  DBP = col_integer(),
+  height = col_double(),
+  weight = col_double()
+)
+```
+
+- *( a ) Construct a 95% confidence interval for the mean diastolic blood pressure of all males. Interpret the results.*
+
+$\bar{y} \pm t_{.025}(se)$ with $se = s / \sqrt{n}$ where $df = n - 1$ for the t-score
+
+```
+> # Construct a 95% confidence interval for the mean diastolic blood pressure of all males
+> males <- subset(BLSA, sex=="M")
+> # A 95% Confidence Interval for a Mean is:
+> #
+> # \bar{y} \pm t_{.025}(se) with se = s / \sqrt{n} where df = n−1 for the t-score.
+> ybar <- mean(males$DBP)
+> s <- sd(males$DBP)
+> n <- length(males$sex)
+> se <- s/sqrt(n)
+> # df = n - 1, which is 360 - 1 = 359
+> # lookup in Table B (Agresti) for df = 359, which is "infinity"
+> t <- 1.960
+> ci <- t * se
+> print("The 95% confidence interval for the mean diastolic blood pressure of all males is")
+[1] "The 95% confidence interval for the mean diastolic blood pressure of all males is"
+> print(sprintf("%.3f +/- %.3f, or (%.3f, %.3f)", ybar, ci, ybar-ci, ybar+ci))
+[1] "79.994 +/- 1.129, or (78.866, 81.123)"
+```
+
+> The 95% confidence interval for the mean diastolic blood pressure of all males is 79.994 +/- 1.129, or (78.866, 81.123)
+
+- ( b ) *Construct a 99% confidence interval for the proportion of males that smoke. Interpret the results.*<p>
+
+$se = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}}$
+
+A 99% confidence interval for $\pi$ is
+
+$\hat{\pi} \pm 2.58(se)$
+
+```
+> # Construct a 99% confidence interval for the proportion of males that smoke
+> male_smokers <- subset(males, smoke=="Y")
+> hatpi <- length(male_smokers$sex) / length(males$sex)
+> se <- sqrt((hatpi*(1-hatpi))/n)
+> # lookup in Table A (Agresti) for 99%
+> z <- 2.58
+> ci <- z * se
+> print("The 99% confidence interval for the proportion of males that smoke")
+[1] "The 99% confidence interval for the proportion of males that smoke"
+> print(sprintf("%.3f +/- %.3f, or (%.3f, %.3f)", hatpi, ci, hatpi-ci, hatpi+ci))
+[1] "0.358 +/- 0.065, or (0.293, 0.424)"
+```
+
+> The 99% confidence interval for the proportion of males that smoke 0.358 +/- 0.065, or (0.293, 0.424)
+
+- *( c ) Construct a 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old. Interpret the results.*<p>
+
+```
+> # Construct a 90% confidence interval for the mean systolic blood pressure of all
+> # females who are over 30 years old
+> females_over_30 <- subset(BLSA, sex=="F" & age>30)
+> ybar <- mean(females_over_30$SBP)
+> s <- sd(females_over_30$SBP)
+> n <- length(females_over_30$sex)
+> se <- s/sqrt(n)
+> # df = n - 1, which is 297 - 1 = 296
+> # lookup in Table B (Agresti) for df = 296, which is "infinity"
+> t <- 1.645
+> ci <- t * se
+> print("The 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old")
+[1] "The 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old"
+> print(sprintf("%.3f +/- %.3f, or (%.3f, %.3f)", ybar, ci, ybar-ci, ybar+ci))
+[1] "125.912 +/- 1.967, or (123.945, 127.880)"
+```
+> The 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old 125.912 +/- 1.967, or (123.945, 127.880)
+
+- *( d ) Test the claim, at the .05 level of significance, that males who are 50 and older have a mean systolic blood pressure that is greater than the mean systolic blood pressure for all men. Use the p-value method.*<p>
+
+Let $\mu_{0}$ denote the mean for all men, and $\mu_{f}$ denote the mean for males who are 50 and older. $\bar{y}$ denotes the mean for the sample of males 50 and older, $n$ is the number of males 50 and older, $se$ is the standard error.
+
+The null and alternative hypotheses are expressed as:
+$H_{0}: \mu_{f} = \mu_{0}$
+$H_{a}: \mu_{f} > \mu_{0}$
+
+$se = s / \sqrt{n}$
+$t = \frac{\bar{y} - \mu_{0}}{se}$
+
+```
+> # select the males from the data set
+> males <- subset(BLSA, sex=="M")
+> # the mean for all males selected
+> u0 <- mean(males$SBP)
+> # select males 50 and older
+> males_over_50 <- subset(males, age>=50)
+> # the mean and stddev for males 50 and older
+> ybar <- mean(males_over_50$SBP)
+> s <- sd(males_over_50$SBP)
+> n <- length(males_over_50$sex)
+> # compute the standard error
+> se <- s / sqrt(n)
+> # compute the t-value
+> t <- (ybar - u0) / se
+> # find the p-value
+> p <- 1 - pnorm(t, 0, 1)
+> # summary of values
+> cat("u0:   ", u0, "\nybar: ", ybar, "\ns:    ", s, "\nn:    ",n)
+u0:    130.8417
+ybar:  139.1111
+s:     23.3233
+n:     180
+> cat("se: ", se, "\nt:  ",t)
+se:  1.738416
+t:   4.756884
+> # reporting the p-value
+> print(sprintf("The P-value is %f",p))
+[1] "The P-value is 0.000001"
+```
+With a P-value of 0.000001 we can reject the null hypothesis that the mean systolic blood pressure in males 50 and older is the same as the mean for all males. We thus accept the alternative hypothesis which claims that the mean systolic blood pressure for males 50 and older is greater than the mean for all males.
+
+- *( e ) Test the claim, at the .01 level, that females who have lower weight than the mean weight of all females also have a lower mean systolic blood pressure than the average female. Use the p-value method.*<p>
+
+Let $\mu_{0}$ denote the mean systolic blood pressure for all females, and $\mu_{f}$ denote the mean for females who have lower weight than the mean weight of all females. $\bar{y}$ denotes the mean for the sample of females who have lower weight than the mean weight of all females, $n$ is the number of females who have lower weight than the mean weight of all females, $se$ is the standard error.
+
+The null and alternative hypotheses are expressed as:
+$H_{0}: \mu_{f} = \mu_{0}$
+$H_{a}: \mu_{f} > \mu_{0}$
+
+$se = s / \sqrt{n}$
+$t = \frac{\bar{y} - \mu_{0}}{se}$
+
+```
+> # select females
+> females <- subset(BLSA, sex=="F")
+> # find the mean weight of all females
+> uw <- mean(females$weight)
+> # and the mean systolic blood pressure for all females
+> u0 <- mean(females$SBP)
+> # select females with lower weight than the mean weight of all females
+> females_lower_weight <- subset(females, weight < uw)
+> # compute the mean and stddev
+> ybar <- mean(females_lower_weight$SBP)
+> s <- sd(females_lower_weight$SBP)
+> n <- length(females_lower_weight$sex)
+> # compute the standard error
+> se <- s / sqrt(n)
+> # compute the t-value
+> t <- (ybar - u0) / se
+> # find the p-value
+> p <- 1 - pnorm(t, 0, 1)
+> # summary of values
+> cat("u0:   ", u0, "\nybar: ", ybar, "\ns:    ", s, "\nn:    ",n)
+u0:    122.9417
+ybar:  121.0622
+s:     19.52934
+n:     209
+> cat("se: ", se, "\nt:  ",t)
+se:  1.350873
+t:   -1.391297
+> # reporting the p-value
+> print(sprintf("The P-value is %f",p))
+[1] "The P-value is 0.917932"
+```
+
+With a P-value of 0.91 and a 0.01 threshold, we must not reject the null hypothesis and do not accept the alternative hypothesis. The findings support the null hypothesis that the mean systolic blood pressure for females who have lower weight than the mean weight of all females is equal to the mean systolic blood pressure for all females. And thus, females who have lower weight than the mean weight of all females do not have a lower mean systolic blood pressure than the average female.
 
 # Appendix
 
@@ -640,4 +813,155 @@ hist(SCHOOLS$Salary, prob=T, main="Instructor Salary - Histogram\nPlotted With N
 curve(dnorm(x, mean(SCHOOLS$Salary, na.rm=T), sd(SCHOOLS$Salary, na.rm=T)), add=T, lwd=3, col="red")
 ```
 
-## Aging Study - R Script (source)
+## Baltimore Longitudinal Study of Aging - R Script (source)
+```
+# Michael Uftring
+# Indiana University
+# V506 - Statistical Analysis, Summer 2018
+# Homework Exercise 2 : analysis of BLSA data
+# --------------------------------------------------
+
+library(readr)
+library(DescTools)
+library(car)
+
+# The variables in this data set are, in order,
+# - subject number
+# - sex
+# - age
+# - smoker
+# - systolic blood pressure (SBP)
+# - diastolic blood pressure (DBP)
+# - height
+# - weight
+
+BLSA <- read_csv("BLSA.csv")
+#View(BLSA)
+
+# (a) Construct a 95% confidence interval for the mean diastolic blood pressure of all males
+males <- subset(BLSA, sex=="M")
+
+# A 95% Confidence Interval for a Mean is:
+#
+# \bar{y} \pm t_{.025}(se) with se = s / \sqrt{n} where df = n−1 for the t-score.
+ybar <- mean(males$DBP)
+s <- sd(males$DBP)
+n <- length(males$sex)
+se <- s/sqrt(n)
+
+# df = n - 1, which is 360 - 1 = 359
+# lookup in Table B (Agresti) for df = 359, which is "infinity"
+t <- 1.960
+
+ci <- t * se
+
+print("The 95% confidence interval for the mean diastolic blood pressure of all males is")
+print(sprintf("%.3f +/- %.3f, or (%.3f, %.3f)", ybar, ci, ybar-ci, ybar+ci))
+
+# (b) Construct a 99% confidence interval for the proportion of males that smoke
+male_smokers <- subset(males, smoke=="Y")
+
+hatpi <- length(male_smokers$sex) / length(males$sex)
+se <- sqrt((hatpi*(1-hatpi))/n)
+
+# lookup in Table A (Agresti) for 99%
+z <- 2.58
+
+ci <- z * se
+
+print("The 99% confidence interval for the proportion of males that smoke")
+print(sprintf("%.3f +/- %.3f, or (%.3f, %.3f)", hatpi, ci, hatpi-ci, hatpi+ci))
+
+# (c) Construct a 90% confidence interval for the mean systolic blood pressure of all
+#     females who are over 30 years old
+females_over_30 <- subset(BLSA, sex=="F" & age>30)
+
+ybar <- mean(females_over_30$SBP)
+s <- sd(females_over_30$SBP)
+n <- length(females_over_30$sex)
+se <- s/sqrt(n)
+
+# df = n - 1, which is 297 - 1 = 296
+# lookup in Table B (Agresti) for df = 296, which is "infinity"
+t <- 1.645
+
+ci <- t * se
+
+print("The 90% confidence interval for the mean systolic blood pressure of all females who are over 30 years old")
+print(sprintf("%.3f +/- %.3f, or (%.3f, %.3f)", ybar, ci, ybar-ci, ybar+ci))
+
+# (d) Test the claim, at the .05 level of significance, that males who are 50 and older have a mean
+#     systolic blood pressure that is greater than the mean systolic bloodpressure for all men.
+#     Use the p-value method.
+
+# select the males from the data set
+males <- subset(BLSA, sex=="M")
+
+# the mean for all males selected
+u0 <- mean(males$SBP)
+
+# select males 50 and older
+males_over_50 <- subset(males, age>=50)
+
+# the mean and stddev for males 50 and older
+ybar <- mean(males_over_50$SBP)
+s <- sd(males_over_50$SBP)
+n <- length(males_over_50$sex)
+
+# compute the standard error
+se <- s / sqrt(n)
+
+# compute the t-value
+t <- (ybar - u0) / se
+
+# find the p-value
+p <- 1 - pnorm(t, 0, 1)
+
+# summary of values
+cat("u0:   ", u0, "\nybar: ", ybar, "\ns:    ", s, "\nn:    ",n)
+cat("se: ", se, "\nt:  ",t)
+
+# reporting the p-value
+print(sprintf("The P-value is %f",p))
+
+# (e) Test the claim, at the .01 level, that females who have lower weight than the mean weight
+#     of all females also have a lower mean systolic blood pressure than the average female.
+#     Use the p-value method.
+
+# select females
+females <- subset(BLSA, sex=="F")
+
+# find the mean weight of all females
+uw <- mean(females$weight)
+
+# and the mean systolic blood pressure for all females
+u0 <- mean(females$SBP)
+
+# select females with lower weight than the mean weight of all females
+females_lower_weight <- subset(females, weight < uw)
+
+# compute the mean and stddev
+ybar <- mean(females_lower_weight$SBP)
+s <- sd(females_lower_weight$SBP)
+n <- length(females_lower_weight$sex)
+
+# compute the standard error
+se <- s / sqrt(n)
+
+# compute the t-value
+t <- (ybar - u0) / se
+
+# find the p-value
+p <- 1 - pnorm(t, 0, 1)
+
+# summary of values
+cat("u0:   ", u0, "\nybar: ", ybar, "\ns:    ", s, "\nn:    ",n)
+cat("se: ", se, "\nt:  ",t)
+
+# reporting the p-value
+print(sprintf("The P-value is %f",p))
+
+# cleanup
+rm(ybar, s, n, se, t, ci, hatpi, z, u0, p, uw)
+rm(males, male_smokers, females_over_30, males_over_50, females, females_lower_weight)
+```
