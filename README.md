@@ -629,3 +629,4 @@ to write up
 [Online Statistics Education: An Interactive Multimedia Course of Study](http://onlinestatbook.com)
 [An Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
 [Tidyverse](https://www.tidyverse.org)
+[T Table](https://www.stat.tamu.edu/~lzhou/stat302/T-Table.pdf)
