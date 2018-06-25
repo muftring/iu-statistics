@@ -628,3 +628,4 @@ to write up
 [Introduction to Statistics: An Interactive e-Book](https://itunes.apple.com/us/book/introduction-to-statistics-an-interactive-e-book/id684001500?mt=11)
 [Online Statistics Education: An Interactive Multimedia Course of Study](http://onlinestatbook.com)
 [An Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
+[Tidyverse](https://www.tidyverse.org)
