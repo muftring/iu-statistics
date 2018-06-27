@@ -9,7 +9,13 @@ Mid-term Exam
 
 **1.** *A company was studying the demographics of their customers. As part of the study, they collected the following variables: political party, marital status, credit rating (low, medium, high), annual income, and age. Label each variable as qualitative or quantitative, discrete or continuous, and nominal, ordinal, interval, or ratio.*
 
-answer
+| Variable                          | Type         | Range      | Scale    |
+| --------------------------------- | ------------ | ---------- | -------- |
+| political party                   | qualitative  | discrete   | nominal  |
+| marital status                    | qualitative  | discrete   | nominal  |
+| credit rating (low, medium, high) | qualitative  | discrete   | ordinal  |
+| annual income                     | quantitative | continuous | interval |
+| age                               | quantitative | continuous | interval |
 
 **2.** *When describing a variable, we often want to know its central tendency (i.e. mean, median, mode). What are the advantages and disadvantages of each of these measures? Under what circumstances would it be best to use each measure?*
 
