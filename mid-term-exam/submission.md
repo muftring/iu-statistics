@@ -63,7 +63,7 @@ $E(x) = 12$
 
 **7.** *For a normal distribution, what is the likelihood (expressed as a percentage) that a random variable is within plus or minus two standard deviations of the mean? What about three standard deviations?*
 
-For a normal distribution, the likelihood that a random variable is within... 
+For a normal distribution, the likelihood that a random variable is within...
 - plus or minus two standard deviations of the mean? 95%
 - plus or minus three standard deviations of the mean? 99.7%
 
@@ -77,7 +77,11 @@ answer
 
 **10.** *What is the area under the normal curve between z = -1.0 and z = -2.0? What about between z=1.0 and z=3.0? What about z=-1.0 and z=3.0?*
 
-answer
+Given that we know: the total area under the normal curve is 1.0, the area between -3.0 and 3.0 is 0.997, between -2.0 and 2.0 is 0.95, and the area between -1.0 and 1.0 is 0.68; we can calculate the following based on the portions and differences between the known points.
+
+- between z = -1.0 and z = -2.0? 0.135
+- between z = 1.0 and z = 3.0? 0.1585
+- between z = -1.0 and z = 3.0? 0.8385
 
 **11.** *The mean score of a college entrance test is 500; the population standard deviation is 75. The scores are normally distributed. What percent of the students scored below 320?*
 
