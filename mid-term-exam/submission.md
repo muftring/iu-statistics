@@ -29,7 +29,11 @@ The mode is the value occurring most often in a sample. It is a count, and repre
 
 **3.** *A study by the National Park Service revealed that 50% of the vacationers going to the Rocky Mountain region visit Yellowstone Park, 40% visit the Grand Tetons, and 35% visit both. What is the probability that a vacationer will visit at least one of these magnificent attractions?*
 
-answer
+Let A represent visiting Yellowstone Park, and B represent visiting the Grand Tetons, and both are distinct possible outcomes.
+
+P(A) = 0.5
+P(B) = 0.4
+P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9
 
 **4.** *Why is randomization/random assignment such an important tool to establish causality?*
 
