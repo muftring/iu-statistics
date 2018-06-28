@@ -63,7 +63,9 @@ $E(x) = 12$
 
 **7.** *For a normal distribution, what is the likelihood (expressed as a percentage) that a random variable is within plus or minus two standard deviations of the mean? What about three standard deviations?*
 
-answer
+For a normal distribution, the likelihood that a random variable is within... 
+- plus or minus two standard deviations of the mean? 95%
+- plus or minus three standard deviations of the mean? 99.7%
 
 **8.** *In a management trainee program, 80% of the trainees are female, while 20% are male. Ninety percent of the females attended college; 78% of the males attended college. A management trainee is selected at random. What is the probability that the person selected is a female who attended college?*
 
