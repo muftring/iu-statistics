@@ -79,7 +79,15 @@ $P(female \: who \: attended \: college) = 0.72$
 
 **9.** *In a large metropolitan area, past records revealed that 30% of all the high school graduates go to college. From 20 graduates selected at random, what is the probability that exactly 8 will go to college?*
 
-answer
+Let A represent likelihood of going to college
+Let B represent exactly 8 of 20
+
+$P(A) = 0.3$
+$P(B) = \frac{8}{20} = 0.4$
+
+The probability that exactly 8 will go to college ($B$) given that 30% of all the high school graduates go to college ($A$) is:
+
+$P(B \: given \: A) = 0.3 \times 0.4 = 0.12$
 
 **10.** *What is the area under the normal curve between z = -1.0 and z = -2.0? What about between z=1.0 and z=3.0? What about z=-1.0 and z=3.0?*
 
