@@ -31,9 +31,9 @@ The mode is the value occurring most often in a sample. It is a count, and repre
 
 Let A represent visiting Yellowstone Park, and B represent visiting the Grand Tetons, and both are distinct possible outcomes.
 
-P(A) = 0.5
-P(B) = 0.4
-P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9
+$P(A) = 0.5$
+$P(B) = 0.4$
+$P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9$
 
 **4.** *Why is randomization/random assignment such an important tool to establish causality?*
 
@@ -69,7 +69,13 @@ For a normal distribution, the likelihood that a random variable is within...
 
 **8.** *In a management trainee program, 80% of the trainees are female, while 20% are male. Ninety percent of the females attended college; 78% of the males attended college. A management trainee is selected at random. What is the probability that the person selected is a female who attended college?*
 
-answer
+Let A represent that a trainee is female.
+Let B represent female that attended college.
+
+$P(A) = 0.8$
+$P(B) = 0.9$
+$P(A \: and \: B) = P(A) \times P(B)$
+$P(female \: who \: attended \: college) = 0.72$
 
 **9.** *In a large metropolitan area, past records revealed that 30% of all the high school graduates go to college. From 20 graduates selected at random, what is the probability that exactly 8 will go to college?*
 
