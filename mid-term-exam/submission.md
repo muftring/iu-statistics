@@ -37,11 +37,15 @@ P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9
 
 **4.** *Why is randomization/random assignment such an important tool to establish causality?*
 
-answer
+Random selection from a population or random assignment of subjects into different treatment groups provides a certain level of confidence that the selection or groups are more likely to be representative of the overall population of interest. Because the groups are formed by a random selection/assignemnt, each group will likely contain the same balance of measured and unmeasured variables. Therefore, measuring the response on the variables of interest is free of any external or respondent/subject bias.
 
 **5.** *Briefly describe (in your own words – that means no copying and pasting directly from lecture slides) how the following types of bias might influence data collected from a survey: a) selection bias, b) nonresponse bias, c) social desirability bias.*
 
-answer
+**a)** Selection bias arises from convenience samples or volunteer samples. In these cases the selection of survey respondents is not random, and so there is reduced confidence that the sample is representative of the population of interest. When this happens the answers to survey questions will likely be representative of the survey conductor (convenience samples are likely friends or acquaintances) or people often in the area (concenience samples are in this case people who frequent the area where the survey is conducted). With volunteer samples the results will be biased toward people comfortable with taking surveys on the topic of interest. 
+
+**b)** Nonresponse bias means there are no answers to some questions on the survey from some respondents. This could arise from ambiguous questions which the respondent cannot understand, or questions the respondent deems sensitive or private and wishes not to answer. If there are too many missing responses in the sample for a question, then the responses that have been provided should not be considered for analysis.
+
+**c)** With social desirability bias the answers to survey questions are skewed towards what the respondents think is a correct answer, or what is believed to be a popular/desirable answer. This introduces risk that the answers do not represent the true sentiment or beliefs of the respondents.
 
 **6.** *What is the mean (expected value) for the random variable x in the following probability distribution)?*  
 
