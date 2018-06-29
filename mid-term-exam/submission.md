@@ -110,7 +110,20 @@ Consulting Table A, $z = 2.4 \rightarrow 0.0082$, so 0.82% of the students score
 
 **12.** *The Office of Student Services at a large state university maintains information on the study habits of its full-time students. Suppose we select a random sample of 35 current students and find a sample mean of 21.5 hours spent studying per week, with a sample standard deviation of 5.6 hours. Based on this survey data, test the claim that the average number of hours students spend studying per week is greater than 18 (use the 0.05 level of significance).*
 
-answer
+The null hypothesis claim is that the average number of hours students spend studying per week is equal to 18. The alternative hypothesis is that the average number of hours students spend studying per week is greater than 18.
+$H_{0}: \mu = 18$
+$H_{a}: \mu > 18$
+
+We will compute standard error and use this to find the t-score.
+$n = 35$
+$\bar{y} = 21.5$
+$s = 5.6$
+$\mu_{0} = 18$
+
+$$se = \frac{s}{\sqrt{n}} = \frac{5.6}{\sqrt{35}} = 0.947$$
+$$t = \frac{\bar{y} - \mu_{0}}{se} = \frac{21.5 - 18}{0.947} = 3.696$$
+
+The degrees of freedom is $df = n - 1 = 35 - 1 = 34$. With a 0.05 level of significance we expect a t-score with $df = 34$ to be around 1.697; looking at the nearest $df$ row of 30 in Table B. Finding the t-score value of 3.696 in that same row of Table B indicates single-tail probability of 0.001. With the large t-score of 3.696 and the p-value 0.001 which is much less than the 0.05 significance level, the evidence against the null hypothesis is substantial. We can therefore reject the null hypotheses and accept the alternative hypothesis, and conclude that the average number of hours students spend studying per week is greater than 18.
 
 **13.** *A total of 500 voters are randomly selected and asked whether they plan to vote for the Democratic incumbent or the Republican challenger in an upcoming statewide election. Of the 500 surveyed, 350 said they would vote for the Democratic incumbent. Using the 0.95 confidence level, what are the confidence limits for the proportion that plan to vote for the Democratic incumbent?*
 
