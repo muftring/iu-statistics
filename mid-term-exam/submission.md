@@ -31,9 +31,9 @@ The mode is the value occurring most often in a sample. It is a count, and repre
 
 Let A represent visiting Yellowstone Park, and B represent visiting the Grand Tetons, and both are distinct possible outcomes.
 
-$P(A) = 0.5$
-$P(B) = 0.4$
-$P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9$
+$$P(A) = 0.5$$
+$$P(B) = 0.4$$
+$$P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9$$
 
 **4.** *Why is randomization/random assignment such an important tool to establish causality?*
 
@@ -57,9 +57,9 @@ Random selection from a population or random assignment of subjects into differe
 | 13  |   .25  |
 | 14  |   .1   |
 
-$E(x) = \sum xP(x)$
-$E(x) = (10 \times .1) + (11 \times .25) + (12 \times .3) + (13 \times .25) + (14 \times .1)$
-$E(x) = 12$
+$$E(x) = \sum xP(x)$$
+$$E(x) = (10 \times .1) + (11 \times .25) + (12 \times .3) + (13 \times .25) + (14 \times .1)$$
+$$E(x) = 12$$
 
 **7.** *For a normal distribution, what is the likelihood (expressed as a percentage) that a random variable is within plus or minus two standard deviations of the mean? What about three standard deviations?*
 
@@ -72,22 +72,22 @@ For a normal distribution, the likelihood that a random variable is within...
 Let A represent that a trainee is female.
 Let B represent female that attended college.
 
-$P(A) = 0.8$
-$P(B) = 0.9$
-$P(A \: and \: B) = P(A) \times P(B)$
-$P(female \: who \: attended \: college) = 0.72$
+$$P(A) = 0.8$$
+$$P(B) = 0.9$$
+$$P(A \: and \: B) = P(A) \times P(B)$$
+$$P(female \: who \: attended \: college) = 0.72$$
 
 **9.** *In a large metropolitan area, past records revealed that 30% of all the high school graduates go to college. From 20 graduates selected at random, what is the probability that exactly 8 will go to college?*
 
 Let A represent likelihood of going to college
 Let B represent exactly 8 of 20
 
-$P(A) = 0.3$
-$P(B) = \frac{8}{20} = 0.4$
+$$P(A) = 0.3$$
+$$P(B) = \frac{8}{20} = 0.4$$
 
 The probability that exactly 8 will go to college ($B$) given that 30% of all the high school graduates go to college ($A$) is:
 
-$P(B \: given \: A) = 0.3 \times 0.4 = 0.12$
+$$P(B \: given \: A) = 0.3 \times 0.4 = 0.12$$
 
 **10.** *What is the area under the normal curve between z = -1.0 and z = -2.0? What about between z=1.0 and z=3.0? What about z=-1.0 and z=3.0?*
 
@@ -101,8 +101,8 @@ Given that we know: the total area under the normal curve is 1.0, the area betwe
 
 To find the percent of students scoring below 320, we must compute the z-score. The z-score indicates the number of standard deviations that 320 is away from the mean of 500. Looking up the z-score in Table A will reveal the percentage value of interest.
 
-$z = \frac{y - \mu}{\sigma}$
-$z = \frac{320 - 500}{75} = \frac{-180}{75}= -2.4$
+$$z = \frac{y - \mu}{\sigma}$$
+$$z = \frac{320 - 500}{75} = \frac{-180}{75}= -2.4$$
 
 We will take the absolute value of this computed z-score as Table A only has positive values. The normal distribution is symmetric, so the positive and negative z-scores represent identical probabilities or percentages. The sign of the z-score reflects how far above $y$ is from the mean (positive z-score), or how far below $y$ is from the mean (negative z-score).
 
