@@ -157,22 +157,34 @@ answer
 
 The following questions require that you download the “university_data.csv” file from canvas and import this file into R. This dataset contains information on the amount charged for in-state tuition and fees (intuitfees) in the 2014-2015 school year, along with variables indicating the name of the institution (instnm), state (stateabbr) and whether the institution is a public or private university (sector). Note that not every institution in the country is included in this dataset (some institutions had missing data or did not respond to the survey). Please be sure to include both your code and the relevant output in your answers.
 
+> This dataset has four fields:
+> - `instnm` : the name of the institution
+> - `stateabbr` : state (abbreviated)
+> - `intuitfees` : amount charged for in-state tuition and fees
+> - `sector` : whether the institution is a public or private university
+
 **1.** *Calculate the following descriptive statistics for the in-state tuition and fees variable for the entire dataset: a) mean, b) standard deviation, c) number of observations, d) standard error of the mean.*
 
-answer
+| Variable | Mean | Standard<br>Deviation | Number of<br>Observations | Standard Error<br>of the Mean|
+| --- | --- | --- | --- | --- |
+| `intuitfees`   | 21403.28  | 12937.61  | 1487  | 335.5046  |
 
 **2.** *Now calculate those same descriptive statistics, but disaggregated by sector (i.e. compute the mean, standard deviation, number of observations, and standard error of the mean separately for public institutions and for private institutions).*
 
-answer
+| Sector<br>Variable | Mean | Standard<br>Deviation | Number of<br>Observations | Standard Error<br>of the Mean|
+| --- | --- | --- | --- | --- |
+| Public<br>`intuitfees`   |  8265.54  | 2520.57   | 531   | 109.3835   |
+| Private<br>`intuitfees`   | 28700.50   | 10375.40   | 956   | 335.5644   |
 
 **3.** *Construct histograms for in-state tuition and fees for both public and private universities (i.e. make two histograms, one for each sector). In constructing these histograms, change the color of the bars to be grey, and be sure to label both the X and Y axis. Add a title to each histogram to identify which group of universities it is describing.*
 
-answer
+![](public-universities-in-state-tuition-and-fees-histogram.png)
+![](private-universities-in-state-tuition-and-fees-histogram.png)
 
 **4.** *Because public universities receive state subsidies to help offset costs, they are generally thought to charge less in tuition and fees than their private counterparts.*
 
 **a)** *Conduct a hypothesis test, at the 0.05 significance level, to evaluate this hypothesis (that public universities have **lower** in-state tuition and fees than private institutions).*
-**\*\*\*Note this is NOT a single sample test. You should treat public and private institutions as separate samples, and thus should do a two-sample test). Briefly interpret the results.**
+**\*\*\*Note this is NOT a single sample test. You should treat public and private institutions as separate samples, and thus should do a two-sample test).** Briefly interpret the results.
 
 answer
 
