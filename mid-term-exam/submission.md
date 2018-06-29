@@ -151,7 +151,10 @@ answer
 
 *Assuming a normal distribution for both of these populations, derive and test the appropriate hypotheses that will allow you to answer your statistics professor’s question. Use α = 0.01. Briefly (2-3 sentences) interpret your results.*
 
-answer
+| Group | Sample Size | Annual Income<br>mean | Annual Income <br>standard<br>deviation |
+| --- | --- | --- | --- |
+| V506 students   | 20  | \$68,456  | \$9,568  |
+| others   | 25  | \$60,350  | \$9,378  |
 
 # Part II: R Programming Questions
 
