@@ -127,7 +127,15 @@ The degrees of freedom is $df = n - 1 = 35 - 1 = 34$. With a 0.05 level of signi
 
 **13.** *A total of 500 voters are randomly selected and asked whether they plan to vote for the Democratic incumbent or the Republican challenger in an upcoming statewide election. Of the 500 surveyed, 350 said they would vote for the Democratic incumbent. Using the 0.95 confidence level, what are the confidence limits for the proportion that plan to vote for the Democratic incumbent?*
 
-answer
+$n = 500$
+$\hat{\pi} = 350 / 500 = 0.7$
+
+$$se = \sqrt{\frac{\hat{\pi}(1 - \hat{\pi})}{n}} = \sqrt{\frac{0.7(1 - 0.7)}{500}} = 0.02$$
+
+Using the 0.95 confidence level, we lookup the single-tail probability of 0.025 in Table A to find the z-score of 1.96. So, the confidence interval is:
+$$\hat{\pi} \pm 1.96(se) = 0.7 \pm 1.96(0.020) = 0.7 \pm 0.0392$$
+
+This yields confidence limits: (0.6608, 0.7392).
 
 **14.** *Suppose that the Monroe County school district has proposed a small sales tax increase to help cover costs associated with the construction of a new middle school. The tax will only go into effect if a majority (more than 50%) of voters approve the increase during an upcoming vote. The local newspaper conducted a poll drawn from a random sample of Monroe County voters, and found that 320 out of 600 respondents indicated that they supported the new tax. The school district superintendent wants to know whether the new sales tax will pass, and has tasked you with analyzing the survey results.*
 
