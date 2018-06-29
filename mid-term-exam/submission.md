@@ -99,7 +99,14 @@ Given that we know: the total area under the normal curve is 1.0, the area betwe
 
 **11.** *The mean score of a college entrance test is 500; the population standard deviation is 75. The scores are normally distributed. What percent of the students scored below 320?*
 
-answer
+To find the percent of students scoring below 320, we must compute the z-score. The z-score indicates the number of standard deviations that 320 is away from the mean of 500. Looking up the z-score in Table A will reveal the percentage value of interest.
+
+$z = \frac{y - \mu}{\sigma}$
+$z = \frac{320 - 500}{75} = \frac{-180}{75}= -2.4$
+
+We will take the absolute value of this computed z-score as Table A only has positive values. The normal distribution is symmetric, so the positive and negative z-scores represent identical probabilities or percentages. The sign of the z-score reflects how far above $y$ is from the mean (positive z-score), or how far below $y$ is from the mean (negative z-score).
+
+Consulting Table A, $z = 2.4 \rightarrow 0.0082$, so 0.82% of the students scored below 320.
 
 **12.** *The Office of Student Services at a large state university maintains information on the study habits of its full-time students. Suppose we select a random sample of 35 current students and find a sample mean of 21.5 hours spent studying per week, with a sample standard deviation of 5.6 hours. Based on this survey data, test the claim that the average number of hours students spend studying per week is greater than 18 (use the 0.05 level of significance).*
 
