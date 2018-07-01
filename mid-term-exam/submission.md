@@ -79,7 +79,7 @@ $$P(female \: who \: attended \: college) = 0.72$$
 
 **9.** *In a large metropolitan area, past records revealed that 30% of all the high school graduates go to college. From 20 graduates selected at random, what is the probability that exactly 8 will go to college?*
 
-This is a case where we want to apply the Probability for a Binomial Distribution, because there (1) there are two possible outcomes for each observation, (2) using the historical values, the probability is the same for each observation, (3) the outcomes for each observation are independent.
+This is a case where we want to apply the Probability for a Binomial Distribution, because: (1) there are two possible outcomes for each observation, (2) using the historical values, the probability is the same for each observation, (3) the outcomes for each observation are independent.
 
 $x$ = the number of outcomes
 $n$ = the number of independent observations
@@ -152,11 +152,38 @@ This yields confidence limits: (0.6608, 0.7392).
 
 **a)** *Derive and test the appropriate hypotheses which will answer the superintendent’s question.  Use the p-value method, with α=0.05. Briefly (2-3 sentences) interpret the results.*
 
-answer
+$H_{0}: \pi = 0.5$, the proportion of voters in support is 50%
+$H_{a}: \pi > 0.5$, the proportion of voters in support is greater than 50%
+
+$z = \frac{\hat{\pi} - \pi_{0}}{se_{0}}$
+$se_{0} = \sqrt{\pi_{0}(1-\pi{0})/n}$
+
+$z$ is the test statistic
+$\hat{\pi}$ is the estimate of the parameter
+$\pi_{0}$ is the null hypotheses value of the parameter
+$se_{0}$ is the standard error of the estimator
+
+$n = 600$
+$\hat{\pi} = 320/600 = 0.53$
+$\pi_{0} = 0.5$
+
+$se_{0} = \sqrt{0.5(1-0.5)/600} = 0.02$
+
+$z = \frac{0.53 - 0.5}{???} = 1.67$
+
+For a z-score of 1.67, the P-score is 0.0475. This is a one-sided test as we are trying to determine if more than 50% of voters will support the tax increase. With a P-score of 0.0475 and $\alpha$ = 0.05, we can conclude that there is likely sufficient support for the proposed tax increase to pass, but there is not overwhelming support for it.
 
 **b)** *When you present your results to the superintendent, she asks how much confidence you place in the estimate for the proportion of voters supporting the initiative.  To answer this question, construct a confidence interval for the proportion of voters in favor of the new tax, using α = .05.  Briefly interpret the results.*
 
-answer
+The confidence interval is $\hat{\pi} \pm z(se)$, where:
+$\hat{\pi}$ is the estimate of the parameter
+$z$ is the z-score, or test statistic, and
+$se$ is the sample estimate of a standard Error
+
+$se = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}} = 0.02$
+$\hat{\pi} \pm z(se) = 0.533 \pm 1.67(0.020) = 0.533 \pm 0.0334$
+
+The confidence interval is therefore (0.4999, 0.5667), meaning that the proportion of support for the tax increase is between 49.99% and 56.67%. While not an absolute certainty, with the low-end of the confidence interval is at 1/100th of a percent below, and the vast majority of the confidence interval range is above the tipping point of 50%, we can conclude that there is a very good certainty that the voters will vote in favor of the tax increase and the measure will pass.
 
 **15.** *Suppose that you are a TA for wonderful, amazing, incredibly smart statistics professor. This professor has asked you to determine if former SPEA V506 have the same mean income after graduation compared to former students who took stats in a different department at IU. To answer this question, you randomly sample 20 former V506 students and ask them to report their annual income. Using this sample data, you determine that the average income for former SPEA V506 students is \$68,456, with a sample standard deviation of \$9,568. Next, you compile a random sample of 25 former students who took statistics in a different department at IU. The mean annual income within this sample is \$60,350, with a sample standard deviation of \$9,378. You may assume that the population standard deviation for former V506 students is equal to that for former students who took stats in other departments.*
 
