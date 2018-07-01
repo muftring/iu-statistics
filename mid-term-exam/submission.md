@@ -263,12 +263,27 @@ The following questions require that you download the “university_data.csv” 
 - group 2 will be private institutions
 
 $H_{0}: \mu_{1} = \mu_{2}$
-$H_{a}: \mu_{1} \ne \mu_{2}$
+$H_{a}: \mu_{1} \lt \mu_{2}$
+
+$se = \sqrt{(\frac{s_{1}^{2}}{n_{1}}) + (\frac{s_{2}^{2}}{n_{2}})} = 352.942$
+
+$t = \frac{\bar{y_{2}} - \bar{y_{1}} - 0}{se} = 57.899$
+
+The t-score is huge, and positive, which means the P-value is effectively zero. This indicates that the null hypothesis is absolutely rejected and the alternate hypothesis must be accepted. We can therefore conclude with absolute certainty that public universities have lower in-state tuition and fees than private institutions.
 
 **b)** *Next, construct a 95% confidence interval around the estimated* **difference** *in tuition and fees between the two groups (hint: remember that confidence intervals are never one-tailed). Briefly interpret the results.*
 
 **Confidence interval**
 
-$(\bar{y_{2}} - \bar{y_{1}}) \pm t(se)$
 
 $se = \sqrt{(\frac{s_{1}^{2}}{n_{1}}) + (\frac{s_{2}^{2}}{n_{2}})}$
+
+The confidence interval is defined as:
+$(\bar{y_{2}} - \bar{y_{1}}) \pm t(se)$
+
+With large sample sizes, so the t-score for the margin of error is essentially the z-score; at the 95% confidence interval we then have:
+$ = (28700.5 - 8265.54) \pm 1.96(352.942)$
+$ = 20434.96 \pm 691.76632$, or
+$(19743.19, 21126.73)$
+
+Both values in the confidence interval are positive, which indicates that $\mu_{2} - \mu_{1}$ is positive (private tuition and fees minus public tuition and fees will produce a positive value), and means the $\mu_{2}$ is larger than $\mu_{1}$. We can conclude with 95% confidence that private in-state tuition and fees are between \$19,743.19 and \$21,126.73 greater than public in-state tuition and fees.
