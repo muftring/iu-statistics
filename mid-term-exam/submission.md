@@ -194,6 +194,34 @@ The confidence interval is therefore (0.4999, 0.5667), meaning that the proporti
 | V506 students   | 20  | \$68,456  | \$9,568  |
 | others   | 25  | \$60,350  | \$9,378  |
 
+**Testing the hypotheses**
+
+> determine if former SPEA V506 have the same mean income after graduation compared to former students who took stats in a different department at IU
+
+- group 1 will be former V506 students
+- group 2 will be students who took stats in a different department at IU
+
+$H_{0}: \mu_{1} = \mu_{2}$
+$H_{a}: \mu_{1} \ne \mu_{2}$
+
+$se = \sqrt{(\frac{s_{1}^{2}}{n_{1}}) + (\frac{s_{2}^{2}}{n_{2}})}$
+$ = \sqrt{(\frac{9568^{2}}{20}) + (\frac{9378^{2}}{25})}$
+$ = 2845.208$
+
+$t = \frac{\bar{y_{2}} - \bar{y_{1}} - 0}{se}$
+$ = \frac{60350 - 68456}{2845.208}$
+$ = -2.849$
+
+> the mechanism for computing $df$ is complex, ... $df$ generally falls somewhere between $(n_{1} + n_{2} - 2)$ and the minimum of $(n_{1} - 1)$ and $(n_{2} - 1)$
+
+$(n_{1} + n_{2} - 2) = 20 + 25 - 2 = 43$
+$(n_{1} - 1) = (20 - 1) = 19$
+$(n_{2} - 1) = (25 - 1) = 24$
+
+So, $df$ is somewhere between 19 and 43.
+
+Consulting Table B for $\alpha = 0.01$, we find that the t-score when $df = 19$ to be 2.861. The absolute value of our computed t-score is 2.849 which is slightly less than that value, so we are within tolerance at the low-end of the possible degrees of freedom range. As our actual t-score is negative, it indicates that group 2 has a lower value than group 1. Given these results we can conclude with 99% confidence that after graduation V506 students have a higher mean income than students who took statistics in another IU department.
+
 # Part II: R Programming Questions
 
 The following questions require that you download the “university_data.csv” file from canvas and import this file into R. This dataset contains information on the amount charged for in-state tuition and fees (intuitfees) in the 2014-2015 school year, along with variables indicating the name of the institution (instnm), state (stateabbr) and whether the institution is a public or private university (sector). Note that not every institution in the country is included in this dataset (some institutions had missing data or did not respond to the survey). Please be sure to include both your code and the relevant output in your answers.
@@ -224,11 +252,23 @@ The following questions require that you download the “university_data.csv” 
 
 **4.** *Because public universities receive state subsidies to help offset costs, they are generally thought to charge less in tuition and fees than their private counterparts.*
 
-**a)** *Conduct a hypothesis test, at the 0.05 significance level, to evaluate this hypothesis (that public universities have **lower** in-state tuition and fees than private institutions).*
+**a)** *Conduct a hypothesis test, at the 0.05 significance level, to evaluate this hypothesis (that public universities have lower in-state tuition and fees than private institutions).*
 **\*\*\*Note this is NOT a single sample test. You should treat public and private institutions as separate samples, and thus should do a two-sample test).** Briefly interpret the results.
 
-answer
+**Testing the hypotheses**
+
+> public universities have lower in-state tuition and fees than private institutions
+
+- group 1 will be public institutions
+- group 2 will be private institutions
+
+$H_{0}: \mu_{1} = \mu_{2}$
+$H_{a}: \mu_{1} \ne \mu_{2}$
 
 **b)** *Next, construct a 95% confidence interval around the estimated* **difference** *in tuition and fees between the two groups (hint: remember that confidence intervals are never one-tailed). Briefly interpret the results.*
 
-answer
+**Confidence interval**
+
+$(\bar{y_{2}} - \bar{y_{1}}) \pm t(se)$
+
+$se = \sqrt{(\frac{s_{1}^{2}}{n_{1}}) + (\frac{s_{2}^{2}}{n_{2}})}$
