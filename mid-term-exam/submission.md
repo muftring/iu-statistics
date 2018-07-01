@@ -79,15 +79,26 @@ $$P(female \: who \: attended \: college) = 0.72$$
 
 **9.** *In a large metropolitan area, past records revealed that 30% of all the high school graduates go to college. From 20 graduates selected at random, what is the probability that exactly 8 will go to college?*
 
-Let A represent likelihood of going to college
-Let B represent exactly 8 of 20
+This is a case where we want to apply the Probability for a Binomial Distribution, because there (1) there are two possible outcomes for each observation, (2) using the historical values, the probability is the same for each observation, (3) the outcomes for each observation are independent.
 
-$$P(A) = 0.3$$
-$$P(B) = \frac{8}{20} = 0.4$$
+$x$ = the number of outcomes
+$n$ = the number of independent observations
+$P(x)$ = the probability that $x$ outcomes will fall into a single category
+$\pi$ = the probability that any one outcome will fall into a single category
+$1-\pi$ = the probability that any one outcome will fall into the other category
 
-The probability that exactly 8 will go to college ($B$) given that 30% of all the high school graduates go to college ($A$) is:
+$$P(x) = \frac{n!}{x!(n-x)!}\pi^{x}(1-\pi)^{n-x}$$
 
-$$P(B \: given \: A) = 0.3 \times 0.4 = 0.12$$
+In this problem,
+$n$ = 20
+$x$ = 8
+$\pi$ = 0.30
+
+$P(8) = \frac{20!}{8!(20-8)!}0.3^{8}(1.0-0.3)^{20-8}$
+$=\frac{20!}{8!(12)!}0.3^{8}(0.7)^{12}$
+$=0.114$
+
+Under these conditions, approximately 11.4% will got to college.
 
 **10.** *What is the area under the normal curve between z = -1.0 and z = -2.0? What about between z=1.0 and z=3.0? What about z=-1.0 and z=3.0?*
 
