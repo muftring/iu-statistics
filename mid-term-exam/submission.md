@@ -5,6 +5,8 @@ Mid-term Exam
 
 -----
 
+![](mid-term-exam-agreement.png)
+
 # Part I: Short Answer Questions
 
 **1.** *A company was studying the demographics of their customers. As part of the study, they collected the following variables: political party, marital status, credit rating (low, medium, high), annual income, and age. Label each variable as qualitative or quantitative, discrete or continuous, and nominal, ordinal, interval, or ratio.*
