@@ -21,7 +21,7 @@ Mid-term Exam
 
 **2.** *When describing a variable, we often want to know its central tendency (i.e. mean, median, mode). What are the advantages and disadvantages of each of these measures? Under what circumstances would it be best to use each measure?*
 
-We seek to know the central tendency of a variable in order to get a sense of what a typical, or expected, response might be from the population.
+We seek to know the central tendency of a variable in order to get a sense of what a typical response might be from the population.
 
 The mean tells us the average value of a variable from all observations in the sample. The mean is only applicable to quantitative variables. It is intended to tell us a typical value we might expect for the variable in the population. The mean is susceptible to outliers (values well outside the expected range). In the presence of outliers, the mean value can be skewed left or right (depending on where the outliers exist) and no longer represent a good indicator of the central tendency.
 
@@ -33,9 +33,9 @@ The mode is the value occurring most often in a sample. It is a count, and repre
 
 Let A represent visiting Yellowstone Park, and B represent visiting the Grand Tetons, and both are distinct possible outcomes.
 
-$$P(A) = 0.5$$
-$$P(B) = 0.4$$
-$$P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9$$
+$P(A) = 0.5$
+$P(B) = 0.4$
+$P(A or B) = P(A) + P(B) = 0.5 + 0.4 = 0.9$
 
 **4.** *Why is randomization/random assignment such an important tool to establish causality?*
 
@@ -43,9 +43,9 @@ Random selection from a population or random assignment of subjects into differe
 
 **5.** *Briefly describe (in your own words – that means no copying and pasting directly from lecture slides) how the following types of bias might influence data collected from a survey: a) selection bias, b) nonresponse bias, c) social desirability bias.*
 
-**a)** Selection bias arises from convenience samples or volunteer samples. In these cases the selection of survey respondents is not random, and so there is reduced confidence that the sample is representative of the population of interest. When this happens the answers to survey questions will likely be representative of the survey conductor (convenience samples are likely friends or acquaintances) or people often in the area (concenience samples are in this case people who frequent the area where the survey is conducted). With volunteer samples the results will be biased toward people comfortable with taking surveys on the topic of interest.
+**a)** Selection bias arises from convenience samples or volunteer samples. In these cases the selection of survey respondents is not random, and so there is reduced confidence that the sample is representative of the population of interest. When this happens the answers to survey questions will likely be representative of the survey conductor (convenience samples are likely friends or acquaintances) or people often in the area (convenience samples are in this case people who frequent the area where the survey is conducted). With volunteer samples the results will be biased towards the people comfortable with taking surveys on the topic of interest.
 
-**b)** Nonresponse bias means there are no answers to some questions on the survey from some respondents. This could arise from ambiguous questions which the respondent cannot understand, or questions the respondent deems sensitive or private and wishes not to answer. If there are too many missing responses in the sample for a question, then the responses that have been provided should not be considered for analysis.
+**b)** Nonresponse bias means there are no answers to some questions on the survey from some respondents. This could arise from ambiguous questions which the respondent cannot understand, or questions the respondent deems sensitive or private and wishes not to answer. If there are too many missing responses in the sample for a question, then the responses that have been provided may not be appropriate for analysis.
 
 **c)** With social desirability bias the answers to survey questions are skewed towards what the respondents think is a correct answer, or what is believed to be a popular/desirable answer. This introduces risk that the answers do not represent the true sentiment or beliefs of the respondents.
 
@@ -59,9 +59,9 @@ Random selection from a population or random assignment of subjects into differe
 | 13  |   .25  |
 | 14  |   .1   |
 
-$$E(x) = \sum xP(x)$$
-$$E(x) = (10 \times .1) + (11 \times .25) + (12 \times .3) + (13 \times .25) + (14 \times .1)$$
-$$E(x) = 12$$
+$E(x) = \sum xP(x)$
+$E(x) = (10 \times .1) + (11 \times .25) + (12 \times .3) + (13 \times .25) + (14 \times .1)$
+$E(x) = 12$
 
 **7.** *For a normal distribution, what is the likelihood (expressed as a percentage) that a random variable is within plus or minus two standard deviations of the mean? What about three standard deviations?*
 
@@ -74,14 +74,14 @@ For a normal distribution, the likelihood that a random variable is within...
 Let A represent that a trainee is female.
 Let B represent female that attended college.
 
-$$P(A) = 0.8$$
-$$P(B) = 0.9$$
-$$P(A \: and \: B) = P(A) \times P(B)$$
-$$P(female \: who \: attended \: college) = 0.72$$
+$P(A) = 0.8$
+$P(B) = 0.9$
+$P(A \: and \: B) = P(A) \times P(B)$
+$P(female \: who \: attended \: college) = 0.72$
 
 **9.** *In a large metropolitan area, past records revealed that 30% of all the high school graduates go to college. From 20 graduates selected at random, what is the probability that exactly 8 will go to college?*
 
-This is a case where we want to apply the Probability for a Binomial Distribution, because: (1) there are two possible outcomes for each observation, (2) using the historical values, the probability is the same for each observation, (3) the outcomes for each observation are independent.
+This is a case where we want to apply the Probability for a Binomial Distribution, because: (1) there are two possible outcomes for each observation, (2) using the historical values, the probability is deemed the same for each observation, (3) the outcomes for each observation are independent.
 
 $x$ = the number of outcomes
 $n$ = the number of independent observations
@@ -89,7 +89,7 @@ $P(x)$ = the probability that $x$ outcomes will fall into a single category
 $\pi$ = the probability that any one outcome will fall into a single category
 $1-\pi$ = the probability that any one outcome will fall into the other category
 
-$$P(x) = \frac{n!}{x!(n-x)!}\pi^{x}(1-\pi)^{n-x}$$
+$P(x) = \frac{n!}{x!(n-x)!}\pi^{x}(1-\pi)^{n-x}$
 
 In this problem,
 $n$ = 20
@@ -97,10 +97,12 @@ $x$ = 8
 $\pi$ = 0.30
 
 $P(8) = \frac{20!}{8!(20-8)!}0.3^{8}(1.0-0.3)^{20-8}$
+
 $=\frac{20!}{8!(12)!}0.3^{8}(0.7)^{12}$
+
 $=0.114$
 
-Under these conditions, approximately 11.4% will got to college.
+Under these conditions, approximately 11.4% will go to college.
 
 **10.** *What is the area under the normal curve between z = -1.0 and z = -2.0? What about between z=1.0 and z=3.0? What about z=-1.0 and z=3.0?*
 
@@ -114,10 +116,11 @@ Given that we know: the total area under the normal curve is 1.0, the area betwe
 
 To find the percent of students scoring below 320, we must compute the z-score. The z-score indicates the number of standard deviations that 320 is away from the mean of 500. Looking up the z-score in Table A will reveal the percentage value of interest.
 
-$$z = \frac{y - \mu}{\sigma}$$
-$$z = \frac{320 - 500}{75} = \frac{-180}{75}= -2.4$$
+$z = \frac{y - \mu}{\sigma}$
 
-We will take the absolute value of this computed z-score as Table A only has positive values. The normal distribution is symmetric, so the positive and negative z-scores represent identical probabilities or percentages. The sign of the z-score reflects how far above $y$ is from the mean (positive z-score), or how far below $y$ is from the mean (negative z-score).
+$z = \frac{320 - 500}{75} = \frac{-180}{75}= -2.4$
+
+We will take the absolute value of this computed z-score as Table A only has positive values. The normal distribution is symmetric, so the positive and negative z-scores represent identical probabilities or percentages. The sign of the z-score reflects how far $y$ is above the mean (positive z-score), or how far $y$ is below the mean (negative z-score).
 
 Consulting Table A, $z = 2.4 \rightarrow 0.0082$, so 0.82% of the students scored below 320.
 
@@ -133,8 +136,9 @@ $\bar{y} = 21.5$
 $s = 5.6$
 $\mu_{0} = 18$
 
-$$se = \frac{s}{\sqrt{n}} = \frac{5.6}{\sqrt{35}} = 0.947$$
-$$t = \frac{\bar{y} - \mu_{0}}{se} = \frac{21.5 - 18}{0.947} = 3.696$$
+$se = \frac{s}{\sqrt{n}} = \frac{5.6}{\sqrt{35}} = 0.947$
+
+$t = \frac{\bar{y} - \mu_{0}}{se} = \frac{21.5 - 18}{0.947} = 3.696$
 
 The degrees of freedom is $df = n - 1 = 35 - 1 = 34$. With a 0.05 level of significance we expect a t-score with $df = 34$ to be around 1.697; looking at the nearest $df$ row of 30 in Table B. Finding the t-score value of 3.696 in that same row of Table B indicates single-tail probability of 0.001. With the large t-score of 3.696 and the p-value 0.001 which is much less than the 0.05 significance level, the evidence against the null hypothesis is substantial. We can therefore reject the null hypotheses and accept the alternative hypothesis, and conclude that the average number of hours students spend studying per week is greater than 18.
 
@@ -143,10 +147,11 @@ The degrees of freedom is $df = n - 1 = 35 - 1 = 34$. With a 0.05 level of signi
 $n = 500$
 $\hat{\pi} = 350 / 500 = 0.7$
 
-$$se = \sqrt{\frac{\hat{\pi}(1 - \hat{\pi})}{n}} = \sqrt{\frac{0.7(1 - 0.7)}{500}} = 0.02$$
+$se = \sqrt{\frac{\hat{\pi}(1 - \hat{\pi})}{n}} = \sqrt{\frac{0.7(1 - 0.7)}{500}} = 0.02$
 
 Using the 0.95 confidence level, we lookup the single-tail probability of 0.025 in Table A to find the z-score of 1.96. So, the confidence interval is:
-$$\hat{\pi} \pm 1.96(se) = 0.7 \pm 1.96(0.020) = 0.7 \pm 0.0392$$
+
+$\hat{\pi} \pm 1.96(se) = 0.7 \pm 1.96(0.020) = 0.7 \pm 0.0392$
 
 This yields confidence limits: (0.6608, 0.7392).
 
@@ -158,6 +163,7 @@ $H_{0}: \pi = 0.5$, the proportion of voters in support is 50%
 $H_{a}: \pi > 0.5$, the proportion of voters in support is greater than 50%
 
 $z = \frac{\hat{\pi} - \pi_{0}}{se_{0}}$
+
 $se_{0} = \sqrt{\pi_{0}(1-\pi{0})/n}$
 
 $z$ is the test statistic
@@ -183,9 +189,10 @@ $z$ is the z-score, or test statistic, and
 $se$ is the sample estimate of a standard Error
 
 $se = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}} = 0.02$
+
 $\hat{\pi} \pm z(se) = 0.533 \pm 1.67(0.020) = 0.533 \pm 0.0334$
 
-The confidence interval is therefore (0.4999, 0.5667), meaning that the proportion of support for the tax increase is between 49.99% and 56.67%. While not an absolute certainty, with the low-end of the confidence interval is at 1/100th of a percent below, and the vast majority of the confidence interval range is above the tipping point of 50%, we can conclude that there is a very good certainty that the voters will vote in favor of the tax increase and the measure will pass.
+The confidence interval is therefore (0.4999, 0.5667), meaning that the proportion of support for the tax increase is between 49.99% and 56.67%. While not an absolute certainty, with the low-end of the confidence interval at 1/100th of a percent below the tipping point of 50%, the vast majority of the confidence interval range is above. We can conclude that there is a good amount of certainty, 95%, that enough voters will vote in favor of the tax increase and the measure will pass.
 
 **15.** *Suppose that you are a TA for wonderful, amazing, incredibly smart statistics professor. This professor has asked you to determine if former SPEA V506 have the same mean income after graduation compared to former students who took stats in a different department at IU. To answer this question, you randomly sample 20 former V506 students and ask them to report their annual income. Using this sample data, you determine that the average income for former SPEA V506 students is \$68,456, with a sample standard deviation of \$9,568. Next, you compile a random sample of 25 former students who took statistics in a different department at IU. The mean annual income within this sample is \$60,350, with a sample standard deviation of \$9,378. You may assume that the population standard deviation for former V506 students is equal to that for former students who took stats in other departments.*
 
@@ -206,13 +213,9 @@ The confidence interval is therefore (0.4999, 0.5667), meaning that the proporti
 $H_{0}: \mu_{1} = \mu_{2}$
 $H_{a}: \mu_{1} \ne \mu_{2}$
 
-$se = \sqrt{(\frac{s_{1}^{2}}{n_{1}}) + (\frac{s_{2}^{2}}{n_{2}})}$
-$ = \sqrt{(\frac{9568^{2}}{20}) + (\frac{9378^{2}}{25})}$
-$ = 2845.208$
+$se = \sqrt{(\frac{s_{1}^{2}}{n_{1}}) + (\frac{s_{2}^{2}}{n_{2}})} = \sqrt{(\frac{9568^{2}}{20}) + (\frac{9378^{2}}{25})} = 2845.208$
 
-$t = \frac{\bar{y_{2}} - \bar{y_{1}} - 0}{se}$
-$ = \frac{60350 - 68456}{2845.208}$
-$ = -2.849$
+$t = \frac{\bar{y_{2}} - \bar{y_{1}} - 0}{se} = \frac{60350 - 68456}{2845.208} = -2.849$
 
 > the mechanism for computing $df$ is complex, ... $df$ generally falls somewhere between $(n_{1} + n_{2} - 2)$ and the minimum of $(n_{1} - 1)$ and $(n_{2} - 1)$
 
@@ -289,3 +292,86 @@ $ = 20434.96 \pm 691.76632$, or
 $(19743.19, 21126.73)$
 
 Both values in the confidence interval are positive, which indicates that $\mu_{2} - \mu_{1}$ is positive (private tuition and fees minus public tuition and fees will produce a positive value), and means the $\mu_{2}$ is larger than $\mu_{1}$. We can conclude with 95% confidence that private in-state tuition and fees are between \$19,743.19 and \$21,126.73 greater than public in-state tuition and fees.
+
+# Appendix
+
+## R Script
+```
+# Michael Uftring
+# Indiana University
+# V506 - Statistical Analysis, Summer 2018
+# Min-term Exam : analysis of university data
+# --------------------------------------------------
+
+library(readr)
+
+compute.stats <- function(n, v) {
+  v.mean <- mean(v, na.rm=TRUE)
+  v.stddev <- sd(v, na.rm=TRUE)
+  v.nbobs <- length(v)
+  v.sem <- sd(v, na.rm=TRUE)/sqrt(length(v))
+  print(sprintf("%s", n))
+  print(sprintf("mean: %.2f stddev: %.2f observations: %d std err of the mean: %.4f", v.mean, v.stddev, v.nbobs, v.sem))
+}
+
+university_data <- read_csv("university_data.csv")
+#> This data set has four fields:
+#> - `instnm` : the name of the institution
+#> - `stateabbr` : state (abbreviated)
+#> - `intuitfees` : amount charged for in-state tuition and fees
+#> - `sector` : whether the institution is a public or private university
+
+# (1) Calculate the following descriptive statistics for the in-state tuition and fees
+# variable for the entire dataset:
+#   a) mean,
+#   b) standard deviation,
+#   c) number of observations,
+#   d) standard error of the mean.
+compute.stats("entire dataset (in-state tuition and fees)", university_data$intuitfees)
+
+# (2) Now calculate those same descriptive statistics, but disaggregated by sector
+# (i.e. compute the mean, standard deviation, number of observations, and standard error
+# of the mean separately for public institutions and for private institutions).
+univ_public <- subset(university_data, sector=="public")
+univ_private <- university_data[which(university_data$sector =="private"),]
+
+compute.stats("public institutions (in-state tuition and fees)", univ_public$intuitfees)
+compute.stats("private institutions (in-state tuition and fees)", univ_private$intuitfees)
+
+# (3) Construct histograms for in-state tuition and fees for both public and private
+# universities (i.e. make two histograms, one for each sector). In constructing these
+# histograms, change the color of the bars to be grey, and be sure to label both the
+# X and Y axis. Add a title to each histogram to identify which group of universities
+# it is describing.
+hist(univ_public$intuitfees,
+     main = "Public Universities: In-state Tuition and Fees",
+     col = "lightgray",
+     xlab = "Tuition and Fees (USD)",
+     ylab = "Number of Universities",
+     xlim = c(0, 19999))
+
+hist(univ_private$intuitfees,
+     main = "Private Universities: In-state Tuition and Fees",
+     col = "lightgray",
+     xlab = "Tuition and Fees (USD)",
+     ylab = "Number of Universities",
+     xlim = c(0,60000))
+```
+
+## Output
+```
+> source("mid-term-exam-analysis.R")
+Parsed with column specification:
+cols(
+  instnm = col_character(),
+  stateabbr = col_character(),
+  intuitfees = col_integer(),
+  sector = col_character()
+)
+[1] "entire dataset (in-state tuition and fees)"
+[1] "mean: 21403.28 stddev: 12937.61 observations: 1487 std err of the mean: 335.5046"
+[1] "public institutions (in-state tuition and fees)"
+[1] "mean: 8265.54 stddev: 2520.57 observations: 531 std err of the mean: 109.3835"
+[1] "private institutions (in-state tuition and fees)"
+[1] "mean: 28700.50 stddev: 10375.40 observations: 956 std err of the mean: 335.5644"
+```
