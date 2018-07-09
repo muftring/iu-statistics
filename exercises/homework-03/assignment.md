@@ -16,11 +16,17 @@ $\hat{y} = 61.4 + 2.4x$
 
 **(a)** *Identify the y-intercept and slope of the equation. Interpret the slope.*
 
-answer
+The y-intercept is: 61.4
+The slope is: 2.4
+
+A one-unit increase in length of the femur is associated with a 2.4 unit increase in height, both units being centimeters.
 
 **(b)** *A femur found at a particular site has length 50 cm. What is the predicted height of the person who had that femur?*
 
-answer
+The prediction equation is: $\hat{y} = 61.4 + 2.4x$
+We plug in 50 for $x$ to get: $\hat{y} = 61.4 + 2.4(50) = 181.4$
+
+The predicted height for a human with a 50 cm femur is 181.4 cm.
 
 ## 9.58:
 *The variables $y$ = annual income (thousands of dollars), $x_{1}$ = number of years of education, and $x_{2}$ = number of years experience in job are measured for all the employees having city-funded jobs, in Knoxville, Tennessee. The following prediction equations and correlations apply.*
