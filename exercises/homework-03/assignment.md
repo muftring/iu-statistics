@@ -38,28 +38,98 @@ The predicted height for a human with a 50 cm femur is 181.4 cm.
 
 *If true, briefly explain why.*
 
-**(a)** The strongest sample association is between $y$ and $x_{2}$.
+> Variables:
+> - $y$ = annual income (thousands of dollars)
+> - $x_{1}$ = number of years of education
+> - $x_{2}$ = number of years experience in job
 
-**(b)** The weakest sample association is between $x_{1}$ and $x_{2}$.
+**(a)** *The strongest sample association is between $y$ and $x_{2}$.*
 
-**(c)** The prediction equation using $x_{2}$ to predict $x_{1}$ has negative slope.
+True.
 
-**(d)** A standard deviation increase in education corresponds to a predicted increase of 0.3 standard deviations of income.
+Of the three reported $r$ values, the largest absolute value is 0.60 which is the correlation value between $y$ and $x_{2}$.
 
-**(e)** There is a 30% reduction in error in using education, instead of $\bar{y}$, to predict income.
+**(b)** *The weakest sample association is between $x_{1}$ and $x_{2}$.*
 
-**(f)** Each additional year on the job corresponds to a \$400 increase in predicted income.
+False.
 
-**(g)** When $x_{1}$ is the predictor of $y$, the sum of squared residuals (SSE) is larger than when $x_{2}$ is the predictor of $y$.
+The smallest absolute value of the correlation is 0.30, the correlation value between $y$ and $x_{1}$.
 
-**(h)** The predicted mean income for employees having 20 years of experience is \$4000 higher than the predicted mean income for employees having 10 years of experience.
+**(c)** *The prediction equation using $x_{2}$ to predict $x_{1}$ has negative slope.*
 
-**(i)** If $s = 8$ for the model using $x_{1}$ to predict $y$, then it is not unusual to observe an income of \$70,000 for an employee who has 10 years of education.
+True.
 
-**(j)** It is possible that $s_{y} = 12.0$ and $s_{x_{1}} = 3.6$
+The slope and correlation have the same sign, and correlation between $x_{1}$ and $x_{2}$ is -0.40.
 
-**(k)** It is possible that $\bar{y} = 20$ and $\bar{x_{1}} = 13.$
+**(d)** *A standard deviation increase in education corresponds to a predicted increase of 0.3 standard deviations of income.*
 
+True.
+
+An increase of $s_{x}$ in $x$ corresponds to a predicted change of $r$ standard deviations in the $y$ values.
+
+**(e)** *There is a 30% reduction in error in using education, instead of $\bar{y}$, to predict income.*
+
+False.
+
+The proportional reduction in error $= \frac{E_{1} - E_{2}}{E_{1}} = \frac{TSS-SSE}{TSS} = ... = r^{2}$
+For education ($x_{1}$), $r = 0.30$, and $r^{2} = 0.09$, so the proportional reduction in error when using education, instead of $\bar{y}$, to predict income is 9%.
+
+**(f)** *Each additional year on the job corresponds to a \$400 increase in predicted income.*
+
+True.
+
+The slope of the prediction formula for predicting annual income from experience is 0.4 and the units of $y$ are thousands of dollars. With a +1 increase to $x_{2}$ we can multiply the factors out: $0.4 \times 1 \times 1000 = \$400.$
+
+**(g)** *When $x_{1}$ is the predictor of $y$, the sum of squared residuals (SSE) is larger than when $x_{2}$ is the predictor of $y$.*
+
+True.
+
+The better a prediction is, the smaller its SSE value. The larger $r^{2}$ is, the stronger the linear association, and thus there is a smaller SSE value.
+
+$r^{2}_{x_{1}} = 0.30^{2} = 0.09$
+$r^{2}_{x_{2}} = 0.60^{2} = 0.36$
+
+Example:
+If TSS = 1.0, then SSE would be approximately 0.91 to achieve an $r^{2} = 0.09$.
+If TSS = 1.0, then SSE would be approximately 0.64 to achieve an $r^{2} = 0.36$.
+
+**(h)** *The predicted mean income for employees having 20 years of experience is \$4000 higher than the predicted mean income for employees having 10 years of experience.*
+
+True.
+
+We can solve this by computing the predicted values of $\hat{y}$ for the two $x_{2}$ values, and then take the difference.
+
+$\hat{y} = 14 + 0.4x_{2}$
+when $x_{2} = 20$, $\hat{y} = 14 + 0.4(20) = 22.0$
+when $x_{2} = 10$, $\hat{y} = 14 + 0.4(10) = 18.0$
+$22.0 - 18.0 = 4.0$
+The units of $y$ is annual income in thousands, so the result is \$4000.
+
+**(i)** *If $s = 8$ for the model using $x_{1}$ to predict $y$, then it is not unusual to observe an income of \$70,000 for an employee who has 10 years of education.*
+
+False.
+
+**(j)** *It is possible that $s_{y} = 12.0$ and $s_{x_{1}} = 3.6$*
+
+True.
+
+In fact, with $s_{y} = 12.0$, $s_{x_{1}} = 3.6$, and $b = 1.0$ (as given in the problem statement), we compute $r = 0.30$.
+
+$r = \left (\frac{s_{x_{1}}}{s_{y}} \right )b = \left (\frac{3.6}{12.0} \right )1.0 = 0.30$
+
+**(k)** *It is possible that $\bar{y} = 20$ and $\bar{x_{1}} = 13.$*
+
+False.
+
+We can solve the prediction equation for either $x$ or $y$ given these values.
+
+$\hat{y} = 10 + 1.0x{_1}$
+
+$y = 10 + 1.0(13) = 23$
+$x = (y - 10)/1.0 = (20 - 10) = 10$
+
+Thus, when $y = 20$, then $x = 10$.
+And, when $x = 13$, then $y = 23$.
 
 ## 9.61:
 The slope of the least squares prediction equation and the correlation are similar in the sense that:
