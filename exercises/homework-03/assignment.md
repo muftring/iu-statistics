@@ -217,16 +217,376 @@ False.
 
 **a)** *Estimate a model where College GPA (colgpa) is the dependent variable, and scores on the SAT test (sat) is the independent variable. At the 0.01 level, can we conclude that students who score better on the SAT generally perform better in college?*
 
+```
+> library(readr)
+> students <- read_csv("Wooldridge GPA2 Data Set.csv.xls")
+Parsed with column specification:
+cols(
+  sat = col_integer(),
+  tothrs = col_integer(),
+  colgpa = col_double(),
+  athlete = col_integer(),
+  verbmath = col_double(),
+  hsize = col_double(),
+  hsrank = col_integer(),
+  hsperc = col_double(),
+  female = col_integer(),
+  white = col_integer(),
+  black = col_integer(),
+  hsizesq = col_double()
+)
+> cor.test(students$sat, students$colgpa, conf.level = 0.99)
+
+	Pearson's product-moment correlation
+
+data:  students$sat and students$colgpa
+t = 28.797, df = 4135, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+99 percent confidence interval:
+ 0.3748055 0.4415272
+sample estimates:
+      cor
+0.4087123
+```
+
+We run the **R** `cor.test` function to determine the correlation between SAT Scores and College GPAs. We see for correlation that $r = 0.4087123$ which indicates a positive linear relationship. This means that as SAT Scores increase, so do College GPAs. The P-value at the 0.01 level is extremely small (< 2.2e-16), indicating that the results are significant and we can reject any null hypothesis. Therefore we can conclude that students who score better on the SAT generally perform better in college.
+
 ## Real Estate dataset
 **a)** *Let selling price be the dependent variable and size of the home the independent variable. Determine the regression equation. Estimate the selling price for a home with an area of 2,200 square feet.*
 
+```
+> library(readr)
+> properties <- read_csv("REAL-ESTATE-2003.csv.xls")
+Parsed with column specification:
+cols(
+  Price = col_double(),
+  Bedrooms = col_integer(),
+  Size = col_integer(),
+  Pool = col_integer(),
+  Distance = col_integer(),
+  Twnship = col_integer(),
+  Garage = col_integer(),
+  Baths = col_double()
+)
+> yhat <- function(a, b, x) {
++   return (a+(b*x))
++ }
+> lm(Price~Size, data=properties)
+
+Call:
+lm(formula = Price ~ Size, data = properties)
+
+Coefficients:
+(Intercept)         Size  
+   64.79312      0.07029  
+
+> model <- lm(Price~Size, data=properties)
+> summary(model)
+
+Call:
+lm(formula = Price ~ Size, data = properties)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-107.587  -32.058   -5.829   33.000  113.900
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 64.79312   38.78410   1.671   0.0978 .  
+Size         0.07029    0.01733   4.055 9.76e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 43.95 on 103 degrees of freedom
+Multiple R-squared:  0.1377,	Adjusted R-squared:  0.1293
+F-statistic: 16.44 on 1 and 103 DF,  p-value: 9.756e-05
+
+> a <- model$coefficients['(Intercept)']
+> b <- model$coefficients['Size']
+> yhat(a, b, 2200)
+(Intercept)
+   219.4293
+```
+
+The regression equation is:
+$\hat{y} = 64.79312 + 0.07029x$
+
+The estimated selling price for a home with an area of 2,200 square feet is:
+$\hat{y} = 64.79312 + 0.07029 \times 2200 = 219.4293$ (thousands of dollars).
+
 **b)** *Let selling price be the dependent variable and distance from the center of the city the independent variable. Determine the regression equation. Estimate the selling price of a home 20 miles from the center of the city.*
+
+```
+> lm(Price~Distance, data=properties)
+
+Call:
+lm(formula = Price ~ Distance, data = properties)
+
+Coefficients:
+(Intercept)     Distance  
+    270.167       -3.354  
+
+> model <- lm(Price~Distance, data=properties)
+> summary(model)
+
+Call:
+lm(formula = Price ~ Distance, data = properties)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-84.795 -34.335  -2.989  25.865 108.067
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 270.1670    13.7646  19.628  < 2e-16 ***
+Distance     -3.3540     0.8931  -3.755 0.000287 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 44.39 on 103 degrees of freedom
+Multiple R-squared:  0.1204,	Adjusted R-squared:  0.1119
+F-statistic:  14.1 on 1 and 103 DF,  p-value: 0.0002869
+
+> a <- model$coefficients['(Intercept)']
+> b <- model$coefficients['Distance']
+> yhat(a, b, 20)
+(Intercept)
+   203.0871
+```
+
+The regression equation is:
+$\hat{y} = 270.167 - 3.354x$
+
+The estimated selling price of a home 20 miles from the center of the city is:
+$\hat{y} = 270.167 - 3.354 \times 20 = 203.0871$ (thousands of dollars)
 
 ## 2009 Baseball dataset
 **a)** *Let attendance be the dependent variable and total team salary be the independent variable (note, both variables are measured in millions). Construct a scatterplot of the two variables. From the diagram, does there seem to be a direct relationship between the two variables?*
 
+![](analysis-baseball-scatterplot.png)
+
+Based on the scatterplot, there does appear to be a direct relationship between Salary and Attendance. We can see a positive linear relationship: as Salary increases, so does Attendance.
+
 **b)** *Estimate a linear regression model for these variables, and interpret all of your results.*
+
+```
+> library(readr)
+> baseball <- read_csv("2009Baseball.csv.xls")
+Parsed with column specification:
+cols(
+  Team = col_character(),
+  League = col_integer(),
+  Built = col_integer(),
+  Size = col_integer(),
+  Salary = col_double(),
+  Wins = col_integer(),
+  Attendance = col_double(),
+  BA = col_double(),
+  ERA = col_double(),
+  HR = col_integer(),
+  Errors = col_integer(),
+  SB = col_integer()
+)
+> yhat <- function(a, b, x) {
++   return (a+(b*x))
++ }
+> cor.test(baseball$Salary, baseball$Attendance)
+
+	Pearson's product-moment correlation
+
+data:  baseball$Salary and baseball$Attendance
+t = 5.7877, df = 28, p-value = 3.245e-06
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.5145922 0.8676138
+sample estimates:
+      cor
+0.7380357
+
+> lm(Attendance~Salary, data=baseball)
+
+Call:
+lm(formula = Attendance ~ Salary, data = baseball)
+
+Coefficients:
+(Intercept)       Salary  
+     1.1021       0.0152  
+
+> model <- lm(Attendance~Salary, data=baseball)
+> summary(model)
+
+Call:
+lm(formula = Attendance ~ Salary, data = baseball)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-0.6392 -0.2827 -0.1966  0.2823  1.1316
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1.102059   0.248432   4.436 0.000129 ***
+Salary      0.015202   0.002627   5.788 3.25e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4795 on 28 degrees of freedom
+Multiple R-squared:  0.5447,	Adjusted R-squared:  0.5284
+F-statistic:  33.5 on 1 and 28 DF,  p-value: 3.245e-06
+
+> a <- model$coefficients['(Intercept)']
+> b <- model$coefficients['Salary']
+```
+
+The regression equation is:
+$\hat{y} = 1.1021 + 0.0152x$
+
+As Salary increases by $1 million, Attendance increases by 0.015 million (15,000).
+
+The correlation between Salary and Attendance is $r = 0.7380357$ which indicates a significant positive linear relationship between the two variables. With a P-value of 3.245e-06 we can safely say that these results are significant with 95% confidence.
 
 **c)** *What is the expected attendance for a team with a salary of $80 million?*
 
+```
+> yhat(a, b, 80)
+   2.318244
+```
+
+The expected attendance for a team with a salary of $80 million is 2.318244 million.
+
 **d)** *If the owners pay an additional $30 million, how many more people could they expect to attend?*
+
+Here we can use the `yhat` function, passing in $a = 0$ and $x = 30$ (million). This has the effect of measuring the rise in $y$ across a span where $x = 30$. We ignore the y-intercept because we are only interested in that rise over the span of the run.
+
+```
+> yhat(0, b, 30)
+0.4560695
+```
+
+If the owners pay an additional $30 million, then can expect 0.4560695 million (approximately 456,000) more people to attend.
+
+
+# Appendix
+
+## R Source Files
+
+### Wooldridge GPA2 dataset Analysis
+```
+# Michael Uftring
+# Indiana University
+# V506 - Statistical Analysis, Summer 2018
+# Homework 3 : analysis of Students GPA and SAT scores
+# --------------------------------------------------
+
+library(readr)
+
+students <- read_csv("Wooldridge GPA2 Data Set.csv.xls")
+#View(students)
+
+# a) Estimate a model where College GPA (colgpa) is the dependent variable,
+# and scores on the SAT test (sat) is the independent variable. At the 0.01 level,
+# can we conclude that students who score better on the SAT generally perform
+# better in college?
+
+cor.test(students$sat, students$colgpa, conf.level = 0.99)
+```
+
+### Real Estate dataset Analysis
+```
+# Michael Uftring
+# Indiana University
+# V506 - Statistical Analysis, Summer 2018
+# Homework 3 : analysis of Real Estate data
+# --------------------------------------------------
+
+library(readr)
+
+properties <- read_csv("REAL-ESTATE-2003.csv.xls")
+#View(properties)
+
+yhat <- function(a, b, x) {
+  return (a+(b*x))
+}
+
+# (a) Let selling price be the dependent variable and size of the home the
+# independent variable. Determine the regression equation. Estimate the
+# selling price for a home with an area of 2,200 square feet.
+
+lm(Price~Size, data=properties)
+
+model <- lm(Price~Size, data=properties)
+summary(model)
+
+a <- model$coefficients['(Intercept)']
+b <- model$coefficients['Size']
+
+yhat(a, b, 2200)
+
+
+# (b) Let selling price be the dependent variable and distance from the
+# center of the city the independent variable. Determine the regression
+# equation. Estimate the selling price of a home 20 miles from the center
+# of the city.
+
+lm(Price~Distance, data=properties)
+
+model <- lm(Price~Distance, data=properties)
+summary(model)
+
+a <- model$coefficients['(Intercept)']
+b <- model$coefficients['Distance']
+
+yhat(a, b, 20)
+```
+
+### 2009 Baseball dataset Analysis
+```
+# Michael Uftring
+# Indiana University
+# V506 - Statistical Analysis, Summer 2018
+# Homework 3 : analysis of Baseball data
+# --------------------------------------------------
+
+library(readr)
+
+baseball <- read_csv("2009Baseball.csv.xls")
+#View(baseball)
+
+# (a) Let attendance be the dependent variable and total team salary be the
+# independent variable (note, both variables are measured in millions).
+# Construct a scatterplot of the two variables. From the diagram, does there
+# seem to be a direct relationship between the two variables?
+
+plot(baseball$Attendance~baseball$Salary,
+     pch=19,
+     col="blue",
+     main = "Major League Baseball Teams \n Salary vs. Attendance",
+     xlab = "Salary (millions)",
+     ylab = "Attendance (millions)")
+abline(lm(baseball$Attendance~baseball$Salary),col="red",lty=2,lwd=3)
+
+# (b) Estimate a linear regression model for these variables, and interpret
+# all of your results.
+
+yhat <- function(a, b, x) {
+  return (a+(b*x))
+}
+
+cor.test(baseball$Salary, baseball$Attendance)
+
+lm(Attendance~Salary, data=baseball)
+model <- lm(Attendance~Salary, data=baseball)
+
+summary(model)
+
+a <- model$coefficients['(Intercept)']
+b <- model$coefficients['Salary']
+
+# (c) What is the expected attendance for a team with a salary of $80 million?
+
+yhat(a, b, 80)
+
+# (d) If the owners pay an additional $30 million, how many more people could
+# they expect to attend?
+
+yhat(0, b, 30)
+```
