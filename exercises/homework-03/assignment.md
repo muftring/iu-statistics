@@ -136,18 +136,41 @@ The slope of the least squares prediction equation and the correlation are simil
 
 **(a)** They do not depend on the units.
 
+False.
+
+Slope is intrinsically linked to the units of measurement. Correlation does not depend on units.
+
 **(b)** They both must fall between -1 and +1.
+
+False.
+
+Slope can take on any positive or negative real value. Correlation is bound within the range -1 to +1.
 
 **(c)** They both have the same sign.
 
+True.
+
+A positive value for correlation indicates a positive linear relationship: as x increases, so does y. If x and y are increasing values with each other, then the slope of the line is a positive value.
+
 **(d)** They both equal 1 when there is the strongest association.
+
+False.
 
 **(e)** Their squares both have proportional reduction in error interpretations.
 
+False.
+
 **(f)** They have the same $t$ statistic value for testing $H_{0}$: Independence.
+
+True.
+
+Recall that when slope = 0, correlation = 0, and they have the same direction indicator (sign). The test statistic for testing $H_{0}: \rho = 0$ (where $\rho$ is the correlation value for the population) produces the same value as the test statistic for slope: $t = \frac{b}{se}$.
 
 **(g)** They both can be strongly affected by severe outliers.
 
+True.
+
+An outlier can have a significant effect because the underlying computations rely on the differences between observations and mean values. Outliers are far from all other values, and will skew the mean value and thus produce larger differences.
 
 ## 9.59:
 One can interpret $r = 0.30$ as follows:
