@@ -154,15 +154,37 @@ One can interpret $r = 0.30$ as follows:
 
 **(a)** A 30% reduction in error occurs in using $x$ to predict $y$.
 
+False.
+
 **(b)** A 9% reduction in error occurs in using $x$ to predict $y$ compared to using $\bar{y}$ to predict $y$.
+
+True.
+
+The proportional reduction in error $= \frac{E_{1} - E_{2}}{E_{1}} = \frac{TSS-SSE}{TSS} = ... = r^{2}$
+
+$r^{2} = 0.30^{2} = 0.09$, thus there is a 9% reduction in error in using $x$ to predict $y$ compared to using $\bar{y}$ to predict $y$.
 
 **(c)** 9% of the time $\hat{y} = y$.
 
+True.
+
+We can use $r^{2}$ to make claims like this based on the following:
+- $r^{2}$ always falls between 0 and 1
+- when $r^{2}$ is 1, SSE = 0, there is no prediction error, and all sample points fall exactly on the prediction line
+- the opposite is true when $r^{2}$ is 0
+- hence, we can posit that $r^{2}$ roughly represents the proportion of time that $\hat{y} = y$
+
 **(d)** $y$ changes 0.30 units for every one-unit increase in $x$.
+
+False.
 
 **(e)** When $x$ predicts $y$, the average residual is 0.3.
 
+False.
+
 **(f)** $x$ changes exactly 0.30 standard deviations when $y$ changes one standard deviation.
+
+False.
 
 
 # Part II - Bivariate Regression with R
