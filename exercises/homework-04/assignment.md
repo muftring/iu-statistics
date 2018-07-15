@@ -70,6 +70,58 @@ We are off by \$0.04, which is very close.
 The explanatory variables for home size ($x_{1}$) and lot size ($x_{2}$) have been calibrated for the selling price of home ($y$) in dollars. If we change the units of $y$ to be in thousands of dollars, we need a corresponding change to all other terms in the equation. The contribution of the explanatory variables is 1/1000th of a single unit of $y$ in the original equation. In order for the prediction equation to remain correct, but predict house selling price in thousands of dollars, we must divide the coefficients of each explanatory term by 1000.
 
 ## 11.17 (parts a, c, and d)
+For a random sample of 66 state precincts, data are available on:
+- $y$ = percentage of adult residents who are registered to vote
+- $x_{1}$ = percentage of adult residents owning a home
+- $x_{2}$ = percentage of adult residents who are non-white
+- $x_{3}$ = median family income (thousands of dollars)
+- $x_{4}$ = median age of residents
+- $x_{5}$ = percentage of residents who have lived in the precinct at least 10 years
+
+**(a)** *Fill in the missing values in the printout*
+
+|            | Sum of<br>Squares | DF     | Mean<br>Square | F     | Sig   |
+| ---------- | ----------------: | -----: | -------------: | ----: | ----: |
+| Regression |  813.3            | 5      | 162.66         | 3.320 | 0.01  |
+| Residual   | 2940.0            | 60     |  49.00         |       |   |
+| Total      | 3753.3            | 65     |                |       |   |
+
+| R-square |
+| -------: |
+|   0.2167 |
+
+| Root MSE |
+| -------: |
+| 7.0000   |
+
+| Variable   | Parameter<br>Estimate | Standard<br>Error | t      | Sig    |
+| ---------- | --------------------: | ----------------: | -----: | -----: |
+| Intercept  | 70.0000               |                   |        |        |
+| $x_{1}$    |  0.1000               | 0.0450            | 2.2222 | 0.030  |
+| $x_{2}$    | -0.1500               | 0.0750            |-2.0000 | 0.050  |
+| $x_{3}$    |  0.1000               | 0.2000            | 0.5000 | 0.620  |
+| $x_{4}$    | -0.0400               | 0.0500            |-0.8000 | 0.427  |
+| $x_{5}$    |  0.1200               | 0.0500            | 2.4000 | 0.020  |
+
+**(c)** *To what test does the "F" refer? Interpret the result of that test.*
+
+The "F" refers to the F-test, which is a test for the collective influence of explanatory variables. The idea is to test whether any of the explanatory variables have an effect on the dependent variable. The null hypothesis suggests that none of the explanatory variables have an effect. The alternative hypothesis suggests that at least one explanatory variables has an effect.
+
+$H_{0}: all \: \beta_{i} = 0$
+$H_{a}: at \: least \: one \: \beta_{i} \ne 0$
+
+Values of the F-statistic greater than 1 provide increasingly greater amounts of evidence against the null hypothesis.
+
+In this case the F-statistic is 3.320, which indicates that at least one explanatory variable has an effect on the dependent variable.
+
+**(d)** *To what test does the t-value opposite $x_{1}$ refer? Interpret the result of that test.*
+
+This represents the t-test on explanatory variable $x_{1}$, which is testing for partial effect of $x_{1}$ on the dependent variable $y$. The null hypothesis suggests that $x_{1}$ has no effect, and the alternative hypothesis suggests that $x_{1}$ has an effect.
+
+$H_{0}: \beta_{1} = 0$
+$H_{a}: \beta_{1} \ne 0$
+
+With a P-value of 0.03 we can conclude with 95% confidence (P-cutoff = 0.05) that explanatory variable $x_{1}$ has an effect on the dependent variable $y$ controlling for all other explanatory variables.
 
 # Part II: Multiple Regression in R
 
