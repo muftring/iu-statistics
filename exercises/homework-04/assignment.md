@@ -52,18 +52,18 @@ To determine how much lot size would need to increase, for fixed home size, to h
 
 $comparable \: cost \: impact =\frac{\beta_{1}}{\beta_{2}}$
 $= \frac{53.8}{2.84}$
-$=18.9$
+$=18.94$
 
-Rounding up a little, lot size would need to increase by approximately 19 square feet to have the same impact as home size increasing by one square-foot.
+Lot size would need to increase by approximately 18.94 square feet to have the same impact as home size increasing by one square-foot.
 
-We can validate this by calculating a few predicted cost estimates, the fist is the baseline:
+We can validate this by calculating a few predicted cost estimates, the first is the baseline:
 $\hat{y} = -10,536 + 53.8(1000) + 2.48(10,000) = 71664.00$
 increase home size by one square-foot:
 $\hat{y} = -10,536 + 53.8(1001) + 2.48(10,000) = 71717.80$
-and then increase lot size by 19
-$\hat{y} = -10,536 + 53.8(1001) + 2.48(10,019) = 71771.76$
+increase lot size by 18.94
+$\hat{y} = -10,536 + 53.8(1000) + 2.48(10,018.94) = 71717.79$
 
-We are off by \$0.04, which is very close.
+We are off by \$0.01.
 
 **(d)** *Suppose house selling prices are changed from dollars to thousands of dollars. Explain why the prediction equation changes to $\hat{y} = -10.536 + 0.0538x_{1} + 0.00284x_{2}$*
 
