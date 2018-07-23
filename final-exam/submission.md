@@ -5,7 +5,7 @@ Mid-term Exam
 
 -----
 
-![final exam agreement (signed)](final-exam-agreement.png)
+![](final-exam-agreement.png)
 
 # Part I: Short Answer Questions
 > Answer each of the questions below as completely as possible, showing work wherever appropriate, i.e. whenever computing values).
