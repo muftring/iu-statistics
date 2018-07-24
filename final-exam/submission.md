@@ -67,7 +67,7 @@ $\hat{y} = 3.664$
 
 **8.** *A multiple regression model includes the interaction term (X<sub>1</sub>)(X<sub>2</sub>), and the resulting coefficient is positive and statistically significant. What does this term imply about the effect of X<sub>1</sub> on Y?*
 
-The association between $x_{1}$ and $y$ varies according to the level of $x_{2}$.
+There is a positive association between $x_{1}$ and $y$ that varies according to the level of $x_{2}$.
 
 **9.** The sales manager of a large automotive parts distributor wants to estimate as early as April the total annual sales. According to the manager of the distribution warehouse, several factors are related to annual sales (measured in millions of dollars) (sales), including the number of retail outlets in the region stocking the company’s parts (outlets), the number of automobiles in the region registered as of April 1 (measured in millions) (cars), the total personal income for the first quarter of the year (measured in billions of dollars) (income), the average age of automobiles in years (age), and the number of supervisors at the distribution warehouse (bosses). The data for all these variables were gathered for a recent year.
 Consider the following correlation matrix.
@@ -81,7 +81,9 @@ Consider the following correlation matrix.
 |bosses |0.286 |0.183  |0.395 |0.155 |0.291|
 
 
-- A. Which single variable has the strongest correlation with the dependent variable?
+- *A. Which single variable has the strongest correlation with the dependent variable?*
+
+income
 
 - B. Is there evidence of multicollinearity? If so, between which variables?
 
