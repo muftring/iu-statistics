@@ -10,21 +10,51 @@ Mid-term Exam
 # Part I: Short Answer Questions
 > Answer each of the questions below as completely as possible, showing work wherever appropriate, i.e. whenever computing values).
 
-**1.** In OLS regression, what does the method of least squares refer to?
+**1.** *In OLS regression, what does the method of least squares refer to?*
 
-**2.** What does the F statistic in an OLS model (just one model) indicate? What is the null hypothesis regarding this statistic?
+least squares refers to the smallest sum of residuals
 
-**3.** What does the Pearson correlation coefficient tell us about the relationship between two variables? Suppose that this coefficient for two variables is 0.8. What would that indicate about the relationship between the two variables? What if the coefficient was -0.8. What if it was 0.1?
+**2.** *What does the F statistic in an OLS model (just one model) indicate? What is the null hypothesis regarding this statistic?*
+
+The F-statistic is an effectiveness measure for the overall model. It indicates the extent to which this model improves our prediction of the dependent variable compared to not having any independent variables and using the mean of the dependent variable for prediction.
+
+The null hypothesis in the case of the F-statistic is that none of the explanatory variables have a statistically significant effect on the response variable. This is expressed as all $\beta$ coefficients are equal to zero.
+
+$H_{0}: \beta_{1} = \beta_{2} = ... = \beta_{k} = 0$
+
+**3.** *What does the Pearson correlation coefficient tell us about the relationship between two variables? Suppose that this coefficient for two variables is 0.8. What would that indicate about the relationship between the two variables? What if the coefficient was -0.8. What if it was 0.1?*
+
+The correlation coefficient measures the strength of the relationship between two variables. The larger the absolute value of the correlation coefficient, the stronger the relationship. The sign indicates the direction of the relationship: positive or negative.
+
+A value of 0.8 indicates a very strong positive relationship.
+
+A value of -0.8 indicates a very strong negative relationship.
+
+A value of 0.1 indicates that there is essentially no relationship.
 
 **4.** Suppose that in a bivariate regression model, the effect of an independent variable on the dependent variable is positive and statistically significant, but when a second variable is added to the model, the effect of the original independent variable becomes negative and statistically significant. Explain why this would occur. What implications does this have for model specification in terms of omitting independent variables?
 
-**5.** Given the least squares regression equation, Ŷ = 1,202 + 1,133X, when X = 3, what does Ŷ equal?
+**5.** *Given the least squares regression equation, Ŷ = 1,202 + 1,133X, when X = 3, what does Ŷ equal?*
 
-**6.** It has been hypothesized that overall academic success for college freshmen as measured by grade point average (GPA) is a function of IQ scores = X<sub>1</sub>, and hours spent studying each week = X<sub>2</sub>. Suppose the regression equation is:
+$\hat{y} = 1202 + 1133x$
+$\hat{y} = 1202 + 1133(3)$
+$\hat{y} = 1202 + 3399$
+$\hat{y} = 4601$
+
+**6.** *It has been hypothesized that overall academic success for college freshmen as measured by grade point average (GPA) is a function of IQ scores = X<sub>1</sub>, and hours spent studying each week = X<sub>2</sub>. Suppose the regression equation is:*
 
 Ŷ = -5.7 + 0.055X<sub>1</sub> +0.107X<sub>2</sub>
 
-What is the predicted GPA for a student with an IQ of 108, and 32 hours spent studying per week?
+*What is the predicted GPA for a student with an IQ of 108, and 32 hours spent studying per week?*
+
+$x_{1}:$ IQ score
+$x_{2}:$ hours spent studying each week
+$\hat{y}:$ predicted grade point average
+
+$\hat{y} = -5.7 + 0.055x_{1} + 0.107x_{2}$
+$\hat{y} = -5.7 + 0.055(108) + 0.107(32)$
+$\hat{y} = -5.7 + 5.94 + 3.424$
+$\hat{y} = 3.664$
 
 **7.** A manager at a local bank analyzed the relationship between monthly salary and three independent variables: length of service (measured in months), gender (0 = female, 1 = male), and job type (0 = clerical, 1 = technical). The table below summarizes the regression results. Interpret the coefficients and t-statistics for the Job and Gender variables.
 
@@ -35,7 +65,9 @@ What is the predicted GPA for a student with an IQ of 108, and 32 hours spent st
 | Gender    | 222.78       |  89.00         |  2.50   | 0.02    |
 | Job       | -28.21       |  89.61         | -0.31   | 0.76    |
 
-**8.** A multiple regression model includes the interaction term (X<sub>1</sub>)(X<sub>2</sub>), and the resulting coefficient is positive and statistically significant. What does this term imply about the effect of X<sub>1</sub> on Y?
+**8.** *A multiple regression model includes the interaction term (X<sub>1</sub>)(X<sub>2</sub>), and the resulting coefficient is positive and statistically significant. What does this term imply about the effect of X<sub>1</sub> on Y?*
+
+The association between $x_{1}$ and $y$ varies according to the level of $x_{2}$.
 
 **9.** The sales manager of a large automotive parts distributor wants to estimate as early as April the total annual sales. According to the manager of the distribution warehouse, several factors are related to annual sales (measured in millions of dollars) (sales), including the number of retail outlets in the region stocking the company’s parts (outlets), the number of automobiles in the region registered as of April 1 (measured in millions) (cars), the total personal income for the first quarter of the year (measured in billions of dollars) (income), the average age of automobiles in years (age), and the number of supervisors at the distribution warehouse (bosses). The data for all these variables were gathered for a recent year.
 Consider the following correlation matrix.
