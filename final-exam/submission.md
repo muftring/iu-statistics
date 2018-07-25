@@ -186,7 +186,19 @@ Because you suspect that there may be an interactive effect between Landgrant in
 
 - **A)** Interpret the base coefficients for landgrant, and tot_rev_millions, as well as the interaction term (tot_rev_millions:landgrant), both in terms of statistical significance and in terms of their impact on the dependent variable.
 
-- **B)** Based on your regression model, what is the predicted faculty salary for the following two hypothetical institutions:
+- **B)** *Based on your regression model, what is the predicted faculty salary for the following two hypothetical institutions:*
+
+Using:
+
+$y$: faculty salary
+$x_{1}$: total enrollment (enart)
+$x_{2}$: % of students receiving federal aid (pfedaid)
+$x_{3}$: total revenues in millions of dollars (tot_rev_millions)
+$x_{4}$: whether an institution is a Landgrant college or university (landgrant)
+
+The multiple regression formula is:
+
+$\hat{y} = 70507.52921 + 0.43514x_{1} + -138.86349x_{2} + 10.31621x_{3} + 4519.55901x_{4} + -4.41862x{3}x{4}$
 
 ```
 Total Enrollment = 20,000
@@ -194,6 +206,9 @@ Total Enrollment = 20,000
 Total Revenues = $30 Million
 Landgrant = 1
 ```
+$\hat{y} = 70507.52921 + 0.43514(20000) + -138.86349(25) + 10.31621(30) + 4519.55901(1) + -4.41862(30)(1)$
+$\hat{y} = 70507.52921 + 8702.8 + -3471.58725 + 309.4863 + 4519.55901 + -132.5586$
+$\hat{y} = 80435.22867$ (dollars)
 
 ```
 Total Enrollment = 20,000
@@ -201,6 +216,9 @@ Total Enrollment = 20,000
 Total Revenues = $30 Million
 Landgrant = 0
 ```
+$\hat{y} = 70507.52921 + 0.43514(20000) + -138.86349(25) + 10.31621(30) + 4519.55901(0) + -4.41862(30)(0)$
+$\hat{y} = 70507.52921 + 8702.8 + -3471.58725 + 309.4863 + 0 + 0$
+$\hat{y} = 76048.22826$ (dollars)
 
 # Part II: R Programming
 > Include both the output and relevant R code in your answer.
