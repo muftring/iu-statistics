@@ -81,8 +81,9 @@ In this model Job has a negative association with Monthly Salary. Technical jobs
 
 There is a positive association between $x_{1}$ and $y$ that varies according to the level of $x_{2}$.
 
-**9.** *The sales manager of a large automotive parts distributor wants to estimate as early as April the total annual sales. According to the manager of the distribution warehouse, several factors are related to annual sales (measured in millions of dollars) (sales), including the number of retail outlets in the region stocking the company’s parts (outlets), the number of automobiles in the region registered as of April 1 (measured in millions) (cars), the total personal income for the first quarter of the year (measured in billions of dollars) (income), the average age of automobiles in years (age), and the number of supervisors at the distribution warehouse (bosses). The data for all these variables were gathered for a recent year.
-Consider the following correlation matrix.*
+**9.** *The sales manager of a large automotive parts distributor wants to estimate as early as April the total annual sales. According to the manager of the distribution warehouse, several factors are related to annual sales (measured in millions of dollars) (sales), including the number of retail outlets in the region stocking the company’s parts (outlets), the number of automobiles in the region registered as of April 1 (measured in millions) (cars), the total personal income for the first quarter of the year (measured in billions of dollars) (income), the average age of automobiles in years (age), and the number of supervisors at the distribution warehouse (bosses). The data for all these variables were gathered for a recent year.*
+
+*Consider the following correlation matrix.*
 
 |       |sales |outlets|cars  |income|age  |
 |-------|-----:|------:|-----:|-----:|----:|
@@ -160,9 +161,9 @@ This model predicts or explains approximately 99.4% of the variation in the depe
 
 - **C.** Interpret the results (both statistical significance and magnitude of effect) for each of the independent variables in the model. (Use a .05 level of significance)
 
-- **D.** *What would be the projected value in annual sales if the following were true?
-outlets = 1739, cars = 9.27, income  = 85.4, age  = 3.5, and bosses  = 9.0
-If these values are outside the range of values used for the regression, would this be a reliable forecast? Why or why not?*
+- **D.** *What would be the projected value in annual sales if the following were true?*
+*outlets = 1739, cars = 9.27, income  = 85.4, age  = 3.5, and bosses  = 9.0*
+*If these values are outside the range of values used for the regression, would this be a reliable forecast? Why or why not?*
 
 $x_{1}$: Outlets
 $x_{2}$: Cars
@@ -183,19 +184,23 @@ Because you suspect that there may be an interactive effect between Landgrant in
 
 ![](question-11-R-output.png)
 
-- A) Interpret the base coefficients for landgrant, and tot_rev_millions, as well as the interaction term (tot_rev_millions:landgrant), both in terms of statistical significance and in terms of their impact on the dependent variable.
+- **A)** Interpret the base coefficients for landgrant, and tot_rev_millions, as well as the interaction term (tot_rev_millions:landgrant), both in terms of statistical significance and in terms of their impact on the dependent variable.
 
-- B) Based on your regression model, what is the predicted faculty salary for the following two hypothetical institutions:
+- **B)** Based on your regression model, what is the predicted faculty salary for the following two hypothetical institutions:
 
+```
 Total Enrollment = 20,000
 % Receiving Federal Financial Aid = 25
 Total Revenues = $30 Million
 Landgrant = 1
+```
 
+```
 Total Enrollment = 20,000
 % Federal Receiving Financial Aid = 25
 Total Revenues = $30 Million
 Landgrant = 0
+```
 
 # Part II: R Programming
 > Include both the output and relevant R code in your answer.
@@ -214,13 +219,13 @@ Landgrant = 0
 
 Estimate an OLS model where life expectancy is the dependent variable, and the following are independent variables: murder rate, population, percent high-school graduates.
 
-- A) Construct a table containing summary descriptive statistics for all of the variables in the model (both IVs and DV), and construct histograms for each variable.
+- **A)** Construct a table containing summary descriptive statistics for all of the variables in the model (both IVs and DV), and construct histograms for each variable.
 
-- B) Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
+- **B)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
 
-- C) Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).
+- **C)** Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).
 
-- D) Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.
+- **D)** Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.
 
 **2.** Download the violent_dissent.csv file and load it into R. This data contains information about violent internal dissent, democracy and state repression for 1984. The variables in the dataset are as follows:
 
@@ -233,10 +238,10 @@ Estimate an OLS model where life expectancy is the dependent variable, and the f
 
 Estimate an OLS regression model where repression is the dependent variable, and pop, rgdpch, democracy, and vdissdum are the independent variables.
 
-- A) Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
+- **A)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
 
-- B) Some hypothesize that the effect of democracy on repression is conditional and works differently in peaceful countries than in countries in a state of violent conflict. To test this hypothesis, add a multiplicative interaction term to the model for democracy and vdissdum (democracy*vdissdum). Interpret the model results (using the same procedure as part A).
+- **B)** Some hypothesize that the effect of democracy on repression is conditional and works differently in peaceful countries than in countries in a state of violent conflict. To test this hypothesis, add a multiplicative interaction term to the model for democracy and vdissdum (democracy*vdissdum). Interpret the model results (using the same procedure as part A).
 
-- C) Next, conduct a nested F-test to determine if adding the interaction term for democracy*vdissdum improved the explanatory power of the model.
+- **C)** Next, conduct a nested F-test to determine if adding the interaction term for democracy*vdissdum improved the explanatory power of the model.
 
-- D) Finally, based on the model estimated in part B, construct an effects plot to show the effect of democracy on repression for peaceful and for violent countries. Be sure to include a legend and appropriately label your axes.
+- **D)** Finally, based on the model estimated in part B, construct an effects plot to show the effect of democracy on repression for peaceful and for violent countries. Be sure to include a legend and appropriately label your axes.
