@@ -178,13 +178,19 @@ $\hat{y} = 37.187$ (millions of dollars)
 
 If these values are outside the range of values used for the regression, then the forecast would not be reliable. Linear Regression, whether bivariate or multivariate, is best suited to interpolate values. Linear Regression is not suitable for extrapolation because we don't know if the linear prediction equation derived from the range of values in the sample data remains representative outside of their bounds.
 
-**11.** Suppose you are a research assistant to a young assistant professor who is very interested in predicting faculty salaries at US public colleges and universities. To do so, you estimate a linear regression model with faculty salaries (facsal) as the dependent variable, and you include four independent variables: total enrollment (enart), % of students receiving federal aid (pfedaid), whether an institution is a Landgrant college or university (landgrant), and total revenues in millions of dollars (tot_rev_millions). Note that landgrant is a dichotomous (dummy) variable while the other variables are all continuous variables.
+**11.** *Suppose you are a research assistant to a young assistant professor who is very interested in predicting faculty salaries at US public colleges and universities. To do so, you estimate a linear regression model with faculty salaries (facsal) as the dependent variable, and you include four independent variables: total enrollment (enart), % of students receiving federal aid (pfedaid), whether an institution is a Landgrant college or university (landgrant), and total revenues in millions of dollars (tot_rev_millions). Note that landgrant is a dichotomous (dummy) variable while the other variables are all continuous variables.*
 
-Because you suspect that there may be an interactive effect between Landgrant institutions (landgrant) and total revenues in $ millions (tot_rev_millions), you include an interaction term in the model for these two variables (landgrant*tot_rev). The the output of the linear regression model is below.
+*Because you suspect that there may be an interactive effect between Landgrant institutions (landgrant) and total revenues in $ millions (tot_rev_millions), you include an interaction term in the model for these two variables (landgrant\*tot_rev). The the output of the linear regression model is below.*
 
 ![](question-11-R-output.png)
 
-- **A)** Interpret the base coefficients for landgrant, and tot_rev_millions, as well as the interaction term (tot_rev_millions:landgrant), both in terms of statistical significance and in terms of their impact on the dependent variable.
+- **A)** *Interpret the base coefficients for landgrant, and tot_rev_millions, as well as the interaction term (tot_rev_millions:landgrant), both in terms of statistical significance and in terms of their impact on the dependent variable.*
+
+For this model, when an institution is a Landgrant college or university the faculty salary is on average 4519.55901 higher than non-Landgrant institutions. The P-value of 0.0172 indicates that this is statistrically significant with 95% confidence interval.
+
+The total revenue (in millions of dollars) is highly significant, it's P-value is extremely small and indicates a 99.9% confidence interval. For every one-unit increase in total revenue (in millions of dollars), the expected faculty salary increases by 10.31621 units (dollars).
+
+The interaction term between total revenue and landgrant status is indicating that there is a negative effect on faculty salary when an institution is a Landgrant college or university scaled by total revenue; when an institution is not (landgrant = 0), then this term will equal zero and have no positive or negative effect. With a P-value of 0.0175, this is statistically significant at the 95% level.
 
 - **B)** *Based on your regression model, what is the predicted faculty salary for the following two hypothetical institutions:*
 
