@@ -1,7 +1,7 @@
 Michael Uftring
 Indiana University
 V506 - Statistical Analysis, Summer 2018
-Mid-term Exam
+Final Exam
 
 -----
 
@@ -64,7 +64,7 @@ $\hat{y} = -5.7 + 0.055(108) + 0.107(32)$
 $\hat{y} = -5.7 + 5.94 + 3.424$
 $\hat{y} = 3.664$
 
-**7.** A manager at a local bank analyzed the relationship between monthly salary and three independent variables: length of service (measured in months), gender (0 = female, 1 = male), and job type (0 = clerical, 1 = technical). The table below summarizes the regression results. Interpret the coefficients and t-statistics for the Job and Gender variables.
+**7.** *A manager at a local bank analyzed the relationship between monthly salary and three independent variables: length of service (measured in months), gender (0 = female, 1 = male), and job type (0 = clerical, 1 = technical). The table below summarizes the regression results. Interpret the coefficients and t-statistics for the Job and Gender variables.*
 
 |           | Coefficients | Standard Error | t Stat  | p-value |
 | --------- | -----------: | -------------: | ------: | ------: |
@@ -72,6 +72,10 @@ $\hat{y} = 3.664$
 | Service   |   9.19       |   3.20         |  2.87   | 0.01    |
 | Gender    | 222.78       |  89.00         |  2.50   | 0.02    |
 | Job       | -28.21       |  89.61         | -0.31   | 0.76    |
+
+Gender has a positive association with Monthly Salary. Male employees (gender = 1) experience a 222.78 unit increase in Monthly Salary over females; and with a p-value of 0.02, there is strong evidence that Monthly Salary is related to Gender controlling for all other variables in the model.
+
+In this model Job has a negative association with Monthly Salary. Technical jobs may exhibit a 28.21 unit decrease in Monthly Salary compared to clerical jobs. But, with a p-value of 0.76 there is little to no statistical significance and we cannot conclude that Monthly Salary is related to Job even when controlling for all other variables in the model.
 
 **8.** *A multiple regression model includes the interaction term (X<sub>1</sub>)(X<sub>2</sub>), and the resulting coefficient is positive and statistically significant. What does this term imply about the effect of X<sub>1</sub> on Y?*
 
