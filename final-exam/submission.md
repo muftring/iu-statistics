@@ -119,15 +119,63 @@ ANOVA
 |Residual Error|4   |9.08          |2.27       |
 |Total         |9   |1602.89       |
 
-- A. State the null hypothesis concerning the statistical significance of the overall regression, test this hypothesis, and interpret the results. (use a .05 level of significance)
+- **A.** *State the null hypothesis concerning the statistical significance of the overall regression, test this hypothesis, and interpret the results. (use a .05 level of significance)*
 
-- B. What is the value of the coefficient of determination, i.e., r-squared (*note for this example, you do NOT need to compute adjusted r-squared*)? Based on this value, what percent of the variation in the dependent variable is explained by the regression equation?
+Here we are testing the collective influence of the explanatory variables. The null hypothesis claims that none of the explanatory variables have a relationship with the response variable. The alternative hypothesis claims that at least one of the explanatory variables has a relationship with the response variable.
 
-- C. Interpret the results (both statistical significance and magnitude of effect) for each of the independent variables in the model. (Use a .05 level of significance)
+$H_{0}: \beta_{1} = \beta_{2} = \beta_{3} = \beta_{4} = \beta_{5} = 0$
+$H_{a}: At \: least \: one \: \beta_{i} \ne 0$
 
-- D. What would be the projected value in annual sales if the following were true?
+We test this using the F-statistic
+
+$n$: the sample size (10)
+$k$: the number of parameters in the multiple regression (5)
+$df_{1}$: the number of explanatory variables in the model, $k$
+$df_{2}$: $n$ - the number of parameters in the regression equation, $n - (k + 1)$
+
+$F = \frac{R^{2}/k}{(1 - R^{2})/[n - (k + 1)]}$
+
+$F = \frac{0.994/5}{(1 - 0.994)/[10 - (5 + 1)]}$
+
+$F = 8.283$
+$df_{1} = k = 5$
+$df_{2} = n - (k + 1) = 4$
+
+Consulting Table D: F Distribution, with $df_{1} = k = 5$, and $df_{2} = n - (k + 1) = 4$, for $\alpha = 0.05$, the F-value is 6.26. Our observed F-statistic value of 8.238 is greater than this F-value, indicating it is further out in the tail and has smaller tail-probability than 0.05 (the P-value is < 0.05). This means that there is sufficient evidence to reject the null hypothesis and accept the alternative hypothesis: we can conclude that at least one of the explanatory variables has a relationship with the response variable with statistical significance and a 95% confidence interval.
+
+- **B.** *What is the value of the coefficient of determination, i.e., r-squared (note for this example, you do NOT need to compute adjusted r-squared)? Based on this value, what percent of the variation in the dependent variable is explained by the regression equation?*
+
+$TSS = 1602.89$
+$SSE = 9.08$
+
+$R^{2} = \frac{TSS-SSE}{TSS}$
+
+$R^{2} = \frac{1602.89-9.08}{1602.89}$
+
+$R^{2} = \frac{1593.81}{1602.89}$
+
+$R^{2} = 0.994$
+
+This model predicts or explains approximately 99.4% of the variation in the dependent variable.
+
+- **C.** Interpret the results (both statistical significance and magnitude of effect) for each of the independent variables in the model. (Use a .05 level of significance)
+
+- **D.** *What would be the projected value in annual sales if the following were true?
 outlets = 1739, cars = 9.27, income  = 85.4, age  = 3.5, and bosses  = 9.0
-If these values are outside the range of values used for the regression, would this be a reliable forecast? Why or why not?
+If these values are outside the range of values used for the regression, would this be a reliable forecast? Why or why not?*
+
+$x_{1}$: Outlets
+$x_{2}$: Cars
+$x_{3}$: Income
+$x_{4}$: Age
+$x_{5}$: Bosses
+
+$\hat{y} = \alpha + \beta_{1}x_{1} + \beta_{2}x_{2} + \beta_{3}x_{3} + \beta_{4}x_{4} + \beta_{5}x_{5}$
+$\hat{y} = -19.672 + -0.000629x_{1} + 1.7399x_{2} + 0.40994x_{3} + 2.0357x_{4} + -0.0344x_{5}$
+$\hat{y} = -19.672 + -0.000629(1739) + 1.7399(9.27) + 0.40994(85.4) + 2.0357(3.5) + -0.0344(9.0)$
+$\hat{y} = 37.187$ (millions of dollars)
+
+If these values are outside the range of values used for the regression, then the forecast would not be reliable. Linear Regression, whether bivariate or multivariate, is best suited to interpolate values. Linear Regression is not suitable for extrapolation because we don't know if the linear prediction equation derived from the range of values in the sample data remains representative outside of their bounds.
 
 **11.** Suppose you are a research assistant to a young assistant professor who is very interested in predicting faculty salaries at US public colleges and universities. To do so, you estimate a linear regression model with faculty salaries (facsal) as the dependent variable, and you include four independent variables: total enrollment (enart), % of students receiving federal aid (pfedaid), whether an institution is a Landgrant college or university (landgrant), and total revenues in millions of dollars (tot_rev_millions). Note that landgrant is a dichotomous (dummy) variable while the other variables are all continuous variables.
 
