@@ -300,7 +300,7 @@ cols(
 +   #             n, v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd, v.sem))
 +   print(sprintf("%s,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f",
 +                 n, v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd, v.sem))
-+   
++
 +   return(c(v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd, v.sem))
 + }
 > # (a) Construct a table containing summary descriptive statistics for all of the variables
@@ -317,18 +317,18 @@ cols(
 [1] "HS.Grad,53.108,53.250,38.500,29.500,37.800,67.300,65.238,8.077,1.142"
 > row.names(df) <- c("Variable","Life.Exp","Murder","Population","HS.Grad")
 > print(df)
-           [,1]      [,2]     [,3]    [,4]    [,5]    [,6]    [,7]               [,8]               
+           [,1]      [,2]     [,3]    [,4]    [,5]    [,6]    [,7]               [,8]
 Variable   "Mean"    "Median" "Mode"  "Range" "Min"   "Max"   "Variance"         "StandardDeviation"
 Life.Exp   "70.8786" "70.675" "70.55" "5.64"  "67.96" "73.6"  "1.80202044897959" "1.34239355219682"
 Murder     "7.378"   "6.85"   "2.3"   "13.7"  "1.4"   "15.1"  "13.6274653061224" "3.69153969315277"
 Population "4246.42" "2838.5" "365"   "20833" "365"   "21198" "19931683.7587755" "4464.49143338584"
 HS.Grad    "53.108"  "53.25"  "38.5"  "29.5"  "37.8"  "67.3"  "65.237893877551"  "8.07699782577357"
-           [,9]               
-Variable   "StandardError"    
+           [,9]
+Variable   "StandardError"
 Life.Exp   "0.189843116755894"
 Murder     "0.522062550009526"
 Population "631.374433419275"
-HS.Grad    "1.1422599868467"  
+HS.Grad    "1.1422599868467"
 > plot.histogram <- function(data, title, color, xlabel, filename) {
 +   png(filename, width = 640, height = 480)
 +   hist(data, main = title, col = color, xlab = xlabel)
@@ -362,11 +362,11 @@ Residuals:
 -1.60049 -0.45970  0.05036  0.44988  2.26044
 
 Coefficients:
-              Estimate Std. Error t value Pr(>|t|)    
+              Estimate Std. Error t value Pr(>|t|)
 (Intercept)  7.041e+01  9.686e-01  72.700  < 2e-16 ***
 Murder      -2.664e-01  3.574e-02  -7.454 1.91e-09 ***
-Population   6.250e-05  2.592e-05   2.411   0.0199 *  
-HS.Grad      4.075e-02  1.541e-02   2.644   0.0112 *  
+Population   6.250e-05  2.592e-05   2.411   0.0199 *
+HS.Grad      4.075e-02  1.541e-02   2.644   0.0112 *
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -374,6 +374,12 @@ Residual standard error: 0.758 on 46 degrees of freedom
 Multiple R-squared:  0.7007,	Adjusted R-squared:  0.6812
 F-statistic: 35.89 on 3 and 46 DF,  p-value: 4.15e-12
 ```
+
+With three explanatory variables, the adjusted $R^{2}$ value indicates that our model explains approximately 68.1% of the variation in the response variable: Life Expectancy. Our F-statistic of 35.89 indicates that the model as a whole significantly improves our predictive ability, and with P-value of 4.15e-12 we can conclude this is statistically significant at the 99% confidence interval.
+
+Of the three independent variables in the model, Murder is the most statistically significant; with an extremely small P-value of 1.91e-09 (0.00000000191) it is significant at >99% confidence interval. Murder has a negative association with Life Expectancy, where for every one-unit increase (per 100,000), Life Expectancy decreses by 0.2664 units (years) when controlling for other variables.
+
+Population (1000s of people) and High-School Graduation (percent) are less statistically significant, with P-values of 0.0199 and 0.0112 respectively they fall into the 95% confidence interval. Both have slight positive associations with Life Expectancy, where their single-unit increases incur only fractional increases in Life Expectancy.
 
 - **C)** *Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).*
 
@@ -390,12 +396,12 @@ Residuals:
 -1.47095 -0.53464 -0.03701  0.57621  1.50683
 
 Coefficients:
-              Estimate Std. Error t value Pr(>|t|)    
+              Estimate Std. Error t value Pr(>|t|)
 (Intercept)  7.103e+01  9.529e-01  74.542  < 2e-16 ***
 Murder      -3.001e-01  3.661e-02  -8.199 1.77e-10 ***
-Population   5.014e-05  2.512e-05   1.996  0.05201 .  
+Population   5.014e-05  2.512e-05   1.996  0.05201 .
 HS.Grad      4.658e-02  1.483e-02   3.142  0.00297 **
-Frost       -5.943e-03  2.421e-03  -2.455  0.01802 *  
+Frost       -5.943e-03  2.421e-03  -2.455  0.01802 *
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -403,6 +409,12 @@ Residual standard error: 0.7197 on 45 degrees of freedom
 Multiple R-squared:  0.736,	Adjusted R-squared:  0.7126
 F-statistic: 31.37 on 4 and 45 DF,  p-value: 1.696e-12
 ```
+
+Adding Frost (number of days) to the model has improved the ability of the model to explain variation in Life Expectancy to 71.3%. The F-statistic value has decreased some, but remains highly statistically significant at 99% confidence interval. Overall we can conclude that Frost is helping the predictive ability of the model, but not greatly.
+
+By itself, the coefficient for Frost indicates that the predicted difference in Life Expectancy is -5.943e-03 holding all other dependent variables constant. This is a negative association, which means for every one-unit increase in Frost (measured in days) results in a 0.005943 decrease in Life Expectancy (measured in years). This effectively means that there would need to be 168.265 days with minimum temperature below freezing in order to decrease Life Expectancy by 1 year. This is statistically significant at 95% confidence interval.
+
+Thre predictive nature of Murder, Population and High-School Graduation are not changed much in this model. Murder remains highly statistically significant, and has approximately the same negative association. Population has lost some statistical significance in this model, now falling into the 95% confidence interval; it has also lost some of its positive association power over Life Expectancy. The magnitude of positive association for High-School Graduation is approximately the same.
 
 - **D)** *Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.*
 
@@ -412,12 +424,14 @@ Analysis of Variance Table
 
 Model 1: Life.Exp ~ Murder + Population + HS.Grad
 Model 2: Life.Exp ~ Murder + Population + HS.Grad + Frost
-  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
-1     46 26.430                              
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)
+1     46 26.430
 2     45 23.308  1    3.1218 6.0271 0.01802 *
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
+
+The Nested F-test here tells us that with a P-value of 0.01802 the more complicated model (in Part C, with Frost) is better than the simpler model (without Frost) with a 95% confidence interval. So we can conclude that the more complicated model has improved our explanatory ability to predict Life Expectancy.
 
 **2.** Download the violent_dissent.csv file and load it into R. This data contains information about violent internal dissent, democracy and state repression for 1984. The variables in the dataset are as follows:
 
@@ -445,9 +459,9 @@ Residuals:
 -1.32767 -0.39815 -0.05255  0.34542  1.83781
 
 Coefficients:
-              Estimate Std. Error t value Pr(>|t|)    
+              Estimate Std. Error t value Pr(>|t|)
 (Intercept) -3.972e-01  1.420e-01  -2.797  0.00613 **
-pop          1.955e-07  4.460e-07   0.438  0.66196    
+pop          1.955e-07  4.460e-07   0.438  0.66196
 rgdpch      -3.294e-05  1.042e-05  -3.160  0.00205 **
 democracy   -1.311e-01  2.952e-02  -4.443 2.18e-05 ***
 vdissdum     1.076e+00  1.606e-01   6.700 1.01e-09 ***
@@ -458,6 +472,14 @@ Residual standard error: 0.5817 on 107 degrees of freedom
 Multiple R-squared:  0.5608,	Adjusted R-squared:  0.5444
 F-statistic: 34.16 on 4 and 107 DF,  p-value: < 2.2e-16
 ```
+
+The F-statistic of 34.16 with extremely small P-value generally indicate that this model is operating well overall, with a very high statistical significance of > 99%. But with only a 54.4% ability to explain variation in `repression` (violations of physical integrity rights), this model seems only moderately acceptable, and could use some improvement.
+
+Three of the four explanatory variables are highly statistically significant, at 99% and higer: `rgdpch`, `democracy`, and `vdissdum`. Real GPD per capita and the Behavioral measure of democracy both have negative associations with `repression` (violations of physical integrity rights). This seems logical: as a country's economy grows, and as the government moves more towards a democracy, the amount of violations of physical integrity rights should decrease.
+
+The `vdissdum` (binary: violent dissent) independent variable behaves as expected. When a country is peaceful (`vdissdum` = 0), violent dissent has no impact on `repression` (violations of physical integrity rights). However, when a country is in state of violent conflict (`vdissdum` = 0) this model predicts a 1.076 unit increase in `repression` (there are greater levels of repression: torture, forced disappearances, extrajudicial killings and political imprisonment), when controlling for all other variables. This is statistically significant at greater than the 99% confidence interval.
+
+Not unsurprisingly, the size of a country's population (in thousands) does not lend towards any predictive power of violations of physical integrity rights. These problems are not isolated to small or large countries; a country of any size could be susceptible.
 
 - **B)** *Some hypothesize that the effect of democracy on repression is conditional and works differently in peaceful countries than in countries in a state of violent conflict. To test this hypothesis, add a multiplicative interaction term to the model for democracy and vdissdum (democracy*vdissdum). Interpret the model results (using the same procedure as part A).*
 
@@ -474,13 +496,13 @@ Residuals:
 -1.35864 -0.38369 -0.03234  0.33612  1.85534
 
 Coefficients:
-                     Estimate Std. Error t value Pr(>|t|)    
+                     Estimate Std. Error t value Pr(>|t|)
 (Intercept)        -4.506e-01  1.417e-01  -3.180  0.00193 **
-pop                 2.120e-08  4.454e-07   0.048  0.96212    
+pop                 2.120e-08  4.454e-07   0.048  0.96212
 rgdpch             -3.040e-05  1.031e-05  -2.949  0.00392 **
 democracy          -1.493e-01  3.017e-02  -4.948 2.83e-06 ***
 vdissdum            1.621e+00  2.947e-01   5.502 2.63e-07 ***
-democracy:vdissdum  2.196e-01  1.002e-01   2.191  0.03063 *  
+democracy:vdissdum  2.196e-01  1.002e-01   2.191  0.03063 *
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -488,6 +510,10 @@ Residual standard error: 0.5716 on 106 degrees of freedom
 Multiple R-squared:  0.5799,	Adjusted R-squared:  0.5601
 F-statistic: 29.26 on 5 and 106 DF,  p-value: < 2.2e-16
 ```
+
+Adding the interaction term between `democracy` and `vdissdum` slightly increased $R^{2}$ which raises the ability to explain variation in `repression` from 54.4% to 56.0%. However, the F-statistic value decreased which suggests that this model is not improving our explanatory ability over the first model. These results remain highly statistically significant, over 99%, with a very small P-value < 2.2e-16.
+
+The results for all of the other independent variables are approximately the same.
 
 - **C)** *Next, conduct a nested F-test to determine if adding the interaction term for democracy*vdissdum improved the explanatory power of the model.*
 
@@ -497,12 +523,18 @@ Analysis of Variance Table
 
 Model 1: repression ~ pop + rgdpch + democracy + vdissdum
 Model 2: repression ~ pop + rgdpch + democracy * vdissdum
-  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
-1    107 36.202                              
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)
+1    107 36.202
 2    106 34.633  1    1.5687 4.8013 0.03063 *
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
+
+The null hypothesis suggests that the simpler model is better. The alternative hypothesis suggests that the more complex model is better. The nested F-test results help us determine which hypothesis to reject and which hypothesis to accept. Given the resulting P-value of 0.03063, we must carefully consider which $\alpha$ level we aim to measure the results against.
+
+The F-test results indicate that there is statistical significance at the 95% level, and sufficient evidence to therefore reject the null hypothesis and conclude that the more commplex model is better. But, it is not at an overwhelming level. If we were aiming for higher statistical significance levels we would be in the opposite position: reject the alternative hypothesis and accept the null; the simpler model is better.
+
+Given that the $R^{2}$ in each model reflected very similar ability to explain variation in `repression`, 54.4% ability for the simple model and 56.0% ability for the complex model, and that the nested F-test provided a P-value of 0.03063, which is only significant at 95%, we might conclude that it is a toss up: neither model performs significantly better (or worse) than the other.
 
 - **D)** *Finally, based on the model estimated in part B, construct an effects plot to show the effect of democracy on repression for peaceful and for violent countries. Be sure to include a legend and appropriately label your axes.*
 
