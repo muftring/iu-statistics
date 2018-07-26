@@ -348,7 +348,7 @@ RStudioGD
         2
 ```
 
-- **B)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
+- **B)** *Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).*
 
 ```
 > model1 <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
@@ -375,7 +375,34 @@ Multiple R-squared:  0.7007,	Adjusted R-squared:  0.6812
 F-statistic: 35.89 on 3 and 46 DF,  p-value: 4.15e-12
 ```
 
-- **C)** Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).
+- **C)** *Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).*
+
+```
+> model2 <- lm(Life.Exp~Murder+Population+HS.Grad+Frost, data=statelife_exp)
+> summary(model2)
+
+Call:
+lm(formula = Life.Exp ~ Murder + Population + HS.Grad + Frost,
+    data = statelife_exp)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-1.47095 -0.53464 -0.03701  0.57621  1.50683
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  7.103e+01  9.529e-01  74.542  < 2e-16 ***
+Murder      -3.001e-01  3.661e-02  -8.199 1.77e-10 ***
+Population   5.014e-05  2.512e-05   1.996  0.05201 .  
+HS.Grad      4.658e-02  1.483e-02   3.142  0.00297 **
+Frost       -5.943e-03  2.421e-03  -2.455  0.01802 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.7197 on 45 degrees of freedom
+Multiple R-squared:  0.736,	Adjusted R-squared:  0.7126
+F-statistic: 31.37 on 4 and 45 DF,  p-value: 1.696e-12
+```
 
 - **D)** Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.
 

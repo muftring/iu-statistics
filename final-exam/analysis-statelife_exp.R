@@ -75,3 +75,10 @@ plot.histogram(statelife_exp$HS.Grad, "High-school Graduates", "lavender",  "Hig
 
 model1 <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
 summary(model1)
+
+# (c) Estimate a new model with the same DV and set of IVs listed earlier, but 
+# add a new independent variable for the mean number of days with minimum temperature 
+# below freezing. Interpret the results of this model (same procedure as in part B).
+
+model2 <- lm(Life.Exp~Murder+Population+HS.Grad+Frost, data=statelife_exp)
+summary(model2)
