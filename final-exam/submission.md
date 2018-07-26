@@ -351,8 +351,8 @@ RStudioGD
 - **B)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
 
 ```
-> model <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
-> summary(model)
+> model1 <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
+> summary(model1)
 
 Call:
 lm(formula = Life.Exp ~ Murder + Population + HS.Grad, data = statelife_exp)

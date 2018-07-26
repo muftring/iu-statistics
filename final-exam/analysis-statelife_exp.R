@@ -68,11 +68,10 @@ plot.histogram(statelife_exp$Murder, "Murder Rate", "pink", "Murder and Non-negl
 plot.histogram(statelife_exp$Population, "Population", "lightblue", "Population Estimate (1000s of people)", "analysis-1a-population.png")
 plot.histogram(statelife_exp$HS.Grad, "High-school Graduates", "lavender",  "High-school Graduates (percent)", "analysis-1a-hsgrad.png")
 
-
 # (b) Interpret the results of the model, both substantively and statistically. 
 # Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), 
 # as well as the results for each independent variable in the model (coefficient, t-statistic, 
 # and p-value).
 
-model <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
-summary(model)
+model1 <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
+summary(model1)
