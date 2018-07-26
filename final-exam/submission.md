@@ -404,7 +404,20 @@ Multiple R-squared:  0.736,	Adjusted R-squared:  0.7126
 F-statistic: 31.37 on 4 and 45 DF,  p-value: 1.696e-12
 ```
 
-- **D)** Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.
+- **D)** *Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.*
+
+```
+> anova(model1, model2)
+Analysis of Variance Table
+
+Model 1: Life.Exp ~ Murder + Population + HS.Grad
+Model 2: Life.Exp ~ Murder + Population + HS.Grad + Frost
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+1     46 26.430                              
+2     45 23.308  1    3.1218 6.0271 0.01802 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
 
 **2.** Download the violent_dissent.csv file and load it into R. This data contains information about violent internal dissent, democracy and state repression for 1984. The variables in the dataset are as follows:
 

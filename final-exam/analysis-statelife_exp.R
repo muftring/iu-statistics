@@ -82,3 +82,8 @@ summary(model1)
 
 model2 <- lm(Life.Exp~Murder+Population+HS.Grad+Frost, data=statelife_exp)
 summary(model2)
+
+# (d) Next, conduct a nested F-test to determine if adding this new variable improved 
+# the explanatory power of the model.
+
+anova(model1, model2)
