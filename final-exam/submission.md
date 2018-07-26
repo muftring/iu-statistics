@@ -253,7 +253,19 @@ $\hat{y} = 76048.22826$ (dollars)
 
 Estimate an OLS model where life expectancy is the dependent variable, and the following are independent variables: murder rate, population, percent high-school graduates.
 
-- **A)** Construct a table containing summary descriptive statistics for all of the variables in the model (both IVs and DV), and construct histograms for each variable.
+- **A)** *Construct a table containing summary descriptive statistics for all of the variables in the model (both IVs and DV), and construct histograms for each variable.*
+
+|Variable  |Mean    |Median  |Mode   |Range    |Min    |Max      |Variance    |Standard<br>Deviation|Standard<br>Error|
+|----------|--------|--------|-------|---------|-------|---------|------------|------------------|--------------|
+|Life.Exp  |70.879  |70.675  |70.550 |5.640    |67.960 |73.600   |1.802       |1.342             |0.190         |
+|Murder    |7.378   |6.850   |2.300  |13.700   |1.400  |15.100   |13.627      |3.692             |0.522         |
+|Population|4246.420|2838.500|365.000|20833.000|365.000|21198.000|19931683.759|4464.491          |631.374       |
+|HS.Grad   |53.108  |53.250  |38.500 |29.500   |37.800 |67.300   |65.238      |8.077             |1.142         |
+
+![](analysis-1a-lifeexp.png)
+![](analysis-1a-murderp.png)
+![](analysis-1a-population.png)
+![](analysis-1a-hsgrad.png)
 
 - **B)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
 
