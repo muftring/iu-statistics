@@ -267,6 +267,87 @@ Estimate an OLS model where life expectancy is the dependent variable, and the f
 ![](analysis-1a-population.png)
 ![](analysis-1a-hsgrad.png)
 
+```
+> library(readr)
+> library(DescTools)
+> library(car)
+> statelife_exp <- read_csv("statelife_exp.csv")
+Parsed with column specification:
+cols(
+  State = col_character(),
+  Population = col_integer(),
+  Income = col_integer(),
+  Illiteracy = col_double(),
+  Life.Exp = col_double(),
+  Murder = col_double(),
+  HS.Grad = col_double(),
+  Frost = col_integer(),
+  Area = col_integer()
+)
+> View(statelife_exp)
+> compute.stats <- function(n, v) {
++   v.mean = mean(v, na.rm=T)
++   v.median = median(v, na.rm=T)
++   v.mode = Mode(v, na.rm=T)[1]
++   v.result <- range(v, na.rm=T)
++   v.min <-v.result[1]
++   v.max <- v.result[2]
++   v.range <- v.max - v.min
++   v.var = var(v, na.rm=T)
++   v.sd = sd(v, na.rm=T)
++   v.sem <- sd(v, na.rm=TRUE)/sqrt(length(v))
++   #print(sprintf("variable: %s mean: %.3f median: %.3f mode = %.3f range: %.3f (%.3f - %.3f) variance: %.3f stddev: %.3f stderr: %.3f",
++   #             n, v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd, v.sem))
++   print(sprintf("%s,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f",
++                 n, v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd, v.sem))
++   
++   return(c(v.mean, v.median, v.mode, v.range, v.min, v.max, v.var, v.sd, v.sem))
++ }
+> # (a) Construct a table containing summary descriptive statistics for all of the variables
+> # in the model (both IVs and DV), and construct histograms for each variable.
+> df <- data.frame(matrix(ncol = 9, nrow = 4))
+> df <- c("Mean","Median","Mode","Range","Min","Max","Variance","StandardDeviation","StandardError")
+> df <- rbind(df,compute.stats("Life.Exp", statelife_exp$Life.Exp))
+[1] "Life.Exp,70.879,70.675,70.550,5.640,67.960,73.600,1.802,1.342,0.190"
+> df <- rbind(df,compute.stats("Murder", statelife_exp$Murder))
+[1] "Murder,7.378,6.850,2.300,13.700,1.400,15.100,13.627,3.692,0.522"
+> df <- rbind(df,compute.stats("Population", statelife_exp$Population))
+[1] "Population,4246.420,2838.500,365.000,20833.000,365.000,21198.000,19931683.759,4464.491,631.374"
+> df <- rbind(df,compute.stats("HS.Grad", statelife_exp$HS.Grad))
+[1] "HS.Grad,53.108,53.250,38.500,29.500,37.800,67.300,65.238,8.077,1.142"
+> row.names(df) <- c("Variable","Life.Exp","Murder","Population","HS.Grad")
+> print(df)
+           [,1]      [,2]     [,3]    [,4]    [,5]    [,6]    [,7]               [,8]               
+Variable   "Mean"    "Median" "Mode"  "Range" "Min"   "Max"   "Variance"         "StandardDeviation"
+Life.Exp   "70.8786" "70.675" "70.55" "5.64"  "67.96" "73.6"  "1.80202044897959" "1.34239355219682"
+Murder     "7.378"   "6.85"   "2.3"   "13.7"  "1.4"   "15.1"  "13.6274653061224" "3.69153969315277"
+Population "4246.42" "2838.5" "365"   "20833" "365"   "21198" "19931683.7587755" "4464.49143338584"
+HS.Grad    "53.108"  "53.25"  "38.5"  "29.5"  "37.8"  "67.3"  "65.237893877551"  "8.07699782577357"
+           [,9]               
+Variable   "StandardError"    
+Life.Exp   "0.189843116755894"
+Murder     "0.522062550009526"
+Population "631.374433419275"
+HS.Grad    "1.1422599868467"  
+> plot.histogram <- function(data, title, color, xlabel, filename) {
++   png(filename, width = 640, height = 480)
++   hist(data, main = title, col = color, xlab = xlabel)
++   dev.off()
++ }
+> plot.histogram(statelife_exp$Life.Exp,"Life Expectancy", "lightgreen", "Life Expectancy (in years)", "analysis-1a-lifeexp.png")
+RStudioGD
+        2
+> plot.histogram(statelife_exp$Murder, "Murder Rate", "pink", "Murder and Non-negligent Manslaughter Rate\n(per 100,000 population)", "analysis-1a-murderp.png")
+RStudioGD
+        2
+> plot.histogram(statelife_exp$Population, "Population", "lightblue", "Population Estimate (1000s of people)", "analysis-1a-population.png")
+RStudioGD
+        2
+> plot.histogram(statelife_exp$HS.Grad, "High-school Graduates", "lavender",  "High-school Graduates (percent)", "analysis-1a-hsgrad.png")
+RStudioGD
+        2
+```
+
 - **B)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
 
 - **C)** Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).
@@ -291,3 +372,9 @@ Estimate an OLS regression model where repression is the dependent variable, and
 - **C)** Next, conduct a nested F-test to determine if adding the interaction term for democracy*vdissdum improved the explanatory power of the model.
 
 - **D)** Finally, based on the model estimated in part B, construct an effects plot to show the effect of democracy on repression for peaceful and for violent countries. Be sure to include a legend and appropriately label your axes.
+
+# Appendix - R Code
+## State Life Expectancy
+```
+![](analysis-statelife_exp.R)
+```

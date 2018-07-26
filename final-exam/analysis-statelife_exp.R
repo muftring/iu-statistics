@@ -45,9 +45,6 @@ compute.stats <- function(n, v) {
 # and the following are independent variables: murder rate, population, 
 # percent high-school graduates.
 
-model <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
-summary(model)
-
 # (a) Construct a table containing summary descriptive statistics for all of the variables 
 # in the model (both IVs and DV), and construct histograms for each variable.
 df <- data.frame(matrix(ncol = 9, nrow = 4))
