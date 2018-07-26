@@ -12,7 +12,7 @@ Final Exam
 
 **1.** *In OLS regression, what does the method of least squares refer to?*
 
-least squares refers to the smallest sum of residuals
+In the context of OLS, least squares refers to the method of finding the smallest sum of residuals. The objective is find the intercept and slope of a straight line (or plane) through a multi-dimensional space which has the smallest sum of residuals. Least squares finds the residuals for each point in the multi-dimensional space: the difference between the location of the point and the straight linear line (or plane) squared. Each of the residual values are then summed up. We can compare the sum of residuals for multiple placements of straight lines/planes. The one with the smaller sum of residuals is generally a better linear predictor. 
 
 **2.** *What does the F statistic in an OLS model (just one model) indicate? What is the null hypothesis regarding this statistic?*
 
