@@ -350,6 +350,31 @@ RStudioGD
 
 - **B)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole as well (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
 
+```
+> model <- lm(Life.Exp~Murder+Population+HS.Grad, data=statelife_exp)
+> summary(model)
+
+Call:
+lm(formula = Life.Exp ~ Murder + Population + HS.Grad, data = statelife_exp)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-1.60049 -0.45970  0.05036  0.44988  2.26044
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  7.041e+01  9.686e-01  72.700  < 2e-16 ***
+Murder      -2.664e-01  3.574e-02  -7.454 1.91e-09 ***
+Population   6.250e-05  2.592e-05   2.411   0.0199 *  
+HS.Grad      4.075e-02  1.541e-02   2.644   0.0112 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.758 on 46 degrees of freedom
+Multiple R-squared:  0.7007,	Adjusted R-squared:  0.6812
+F-statistic: 35.89 on 3 and 46 DF,  p-value: 4.15e-12
+```
+
 - **C)** Estimate a new model with the same DV and set of IVs listed earlier, but add a new independent variable for the mean number of days with minimum temperature below freezing. Interpret the results of this model (same procedure as in part B).
 
 - **D)** Next, conduct a nested F-test to determine if adding this new variable improved the explanatory power of the model.
