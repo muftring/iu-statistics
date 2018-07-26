@@ -430,16 +430,91 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 Estimate an OLS regression model where repression is the dependent variable, and pop, rgdpch, democracy, and vdissdum are the independent variables.
 
-- **A)** Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).
+- **A)** *Interpret the results of the model, both substantively and statistically. Be sure to discuss both the model as a whole (F statistic and adjusted r-squared), as well as the results for each independent variable in the model (coefficient, t-statistic, and p-value).*
 
-- **B)** Some hypothesize that the effect of democracy on repression is conditional and works differently in peaceful countries than in countries in a state of violent conflict. To test this hypothesis, add a multiplicative interaction term to the model for democracy and vdissdum (democracy*vdissdum). Interpret the model results (using the same procedure as part A).
+```
+> model1 <- lm(repression~pop+rgdpch+democracy+vdissdum , data=violent_dissent)
+> summary(model1)
 
-- **C)** Next, conduct a nested F-test to determine if adding the interaction term for democracy*vdissdum improved the explanatory power of the model.
+Call:
+lm(formula = repression ~ pop + rgdpch + democracy + vdissdum,
+    data = violent_dissent)
 
-- **D)** Finally, based on the model estimated in part B, construct an effects plot to show the effect of democracy on repression for peaceful and for violent countries. Be sure to include a legend and appropriately label your axes.
+Residuals:
+     Min       1Q   Median       3Q      Max
+-1.32767 -0.39815 -0.05255  0.34542  1.83781
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -3.972e-01  1.420e-01  -2.797  0.00613 **
+pop          1.955e-07  4.460e-07   0.438  0.66196    
+rgdpch      -3.294e-05  1.042e-05  -3.160  0.00205 **
+democracy   -1.311e-01  2.952e-02  -4.443 2.18e-05 ***
+vdissdum     1.076e+00  1.606e-01   6.700 1.01e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5817 on 107 degrees of freedom
+Multiple R-squared:  0.5608,	Adjusted R-squared:  0.5444
+F-statistic: 34.16 on 4 and 107 DF,  p-value: < 2.2e-16
+```
+
+- **B)** *Some hypothesize that the effect of democracy on repression is conditional and works differently in peaceful countries than in countries in a state of violent conflict. To test this hypothesis, add a multiplicative interaction term to the model for democracy and vdissdum (democracy*vdissdum). Interpret the model results (using the same procedure as part A).*
+
+```
+> model2 <- lm(repression~pop+rgdpch+democracy*vdissdum , data=violent_dissent)
+> summary(model2)
+
+Call:
+lm(formula = repression ~ pop + rgdpch + democracy * vdissdum,
+    data = violent_dissent)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-1.35864 -0.38369 -0.03234  0.33612  1.85534
+
+Coefficients:
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        -4.506e-01  1.417e-01  -3.180  0.00193 **
+pop                 2.120e-08  4.454e-07   0.048  0.96212    
+rgdpch             -3.040e-05  1.031e-05  -2.949  0.00392 **
+democracy          -1.493e-01  3.017e-02  -4.948 2.83e-06 ***
+vdissdum            1.621e+00  2.947e-01   5.502 2.63e-07 ***
+democracy:vdissdum  2.196e-01  1.002e-01   2.191  0.03063 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5716 on 106 degrees of freedom
+Multiple R-squared:  0.5799,	Adjusted R-squared:  0.5601
+F-statistic: 29.26 on 5 and 106 DF,  p-value: < 2.2e-16
+```
+
+- **C)** *Next, conduct a nested F-test to determine if adding the interaction term for democracy*vdissdum improved the explanatory power of the model.*
+
+```
+> anova(model1, model2)
+Analysis of Variance Table
+
+Model 1: repression ~ pop + rgdpch + democracy + vdissdum
+Model 2: repression ~ pop + rgdpch + democracy * vdissdum
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+1    107 36.202                              
+2    106 34.633  1    1.5687 4.8013 0.03063 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```
+
+- **D)** *Finally, based on the model estimated in part B, construct an effects plot to show the effect of democracy on repression for peaceful and for violent countries. Be sure to include a legend and appropriately label your axes.*
+
+![](analysis-2d-effects-plot.png)
 
 # Appendix - R Code
 ## State Life Expectancy
 ```
 ![](analysis-statelife_exp.R)
+```
+
+## Violent Internal Dissent
+```
+![](analysis-violent_dissent.R)
 ```
