@@ -159,7 +159,17 @@ $R^{2} = 0.994$
 
 This model predicts or explains approximately 99.4% of the variation in the dependent variable.
 
-- **C.** Interpret the results (both statistical significance and magnitude of effect) for each of the independent variables in the model. (Use a .05 level of significance)
+- **C.** *Interpret the results (both statistical significance and magnitude of effect) for each of the independent variables in the model. (Use a .05 level of significance)*
+
+The number of retail outlets in the region has a very small negative influence on total annual sales, for every one-unit change in outlets there is a -0.000629 unit change in total annual sales. This effect is 95% statistically significant with P-value 0.018.
+
+The number of automobiles in the region (in millions) has a positive association with total annual sales, for every one-unit it increases total sales increases 1.7399 units. While the P-value of 0.035 is the highest of all factors in the model, this explanatory variable is still statistically significant at the 95% confidence level in explaining variation in the response variable.
+
+The total personal income (in billions of dollars) is the most statistically significant in the model; the P-value of 0.001 is well within tolerance of the 95% confidence interval, and is in fact in the >99% confidence level. Still, the positive influence of total personal income is not as great as other factors, for every one-unit of increase we see a 0.40994 unit increase in total annual sales while controlling for all other explanatory variables.
+
+The average age of automobiles (in years) accounts for the greatest positive shift in total annual sales by all explanatory variables. For every one-unit increase in age the total annual sales increases 2.0357 units, holding all other explanatory variables constant at zero. With a P-value of 0.014, this is statistically significant at the 95% confidence level.
+
+Perhaps the most curious of factors in the model, the number of supervisors at the distribution warehouse is indeed a statistically significant predictor of variation of total annual sales. The P-value of 0.016 makes it significant within the 95% confidence level. The association is slightly negative; when controlling for all other variables, for every one-unit increase in bosses the total annual sales decreases by -0.0344 units.
 
 - **D.** *What would be the projected value in annual sales if the following were true?*
 *outlets = 1739, cars = 9.27, income  = 85.4, age  = 3.5, and bosses  = 9.0*
